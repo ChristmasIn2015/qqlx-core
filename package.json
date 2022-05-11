@@ -1,0 +1,16 @@
+{
+    "name": "qqlx-common",
+    "version": "0.0.1",
+    "description": "",
+    "scripts": {
+        "esbuild": "node ./esbuild.config.js"
+    },
+    "keywords": [
+        "qqlx"
+    ],
+    "author": "christmasin2015",
+    "license": "ISC",
+    "dependencies": {
+        "esbuild": "^0.14.38"
+    }
+}
