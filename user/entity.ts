@@ -1,4 +1,4 @@
-import {ObjectId}from "mongodb"
+import { ObjectId } from "mongodb";
 import { MongodbBase } from "../utils/database";
 import { UserScope } from "./enum";
 
@@ -18,4 +18,6 @@ export type UserWeChat = {
 	unionid: string;
 	/** 主体在某个应用下的唯一标识 */
 	openid: string;
+	/** 主体在某个应用下的唯一标识 */
+	jwt: string;
 } & MongodbBase;
