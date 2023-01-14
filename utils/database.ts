@@ -1,7 +1,7 @@
 import { ObjectId } from "mongodb";
 
 export type MongodbBase = {
-	_id: ObjectId;
+	// _id: ObjectId;
 	timeCreate: number;
 	timeCreateString: string;
 	timeUpdate: number;
