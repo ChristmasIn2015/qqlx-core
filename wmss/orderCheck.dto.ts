@@ -6,7 +6,6 @@ import { Ledger } from "./ledger.entity";
 import { Order } from "./order.entity";
 import { OrderCheck, OrderCheckDetail } from "./orderCheck.entity";
 
-export const ORDER_CHECK_PATH = "/qqlx/wmss/ledger/orderCheck";
 export type postCheckDto = { entity: OrderCheck; orderCheckDetailList: OrderCheckDetail[] };
 export type postCheckRes = null;
 

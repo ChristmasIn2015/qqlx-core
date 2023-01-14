@@ -3,9 +3,8 @@ import { Subject } from "../brand/entity";
 import { MongodbQuery, MongodbSort } from "../utils/database";
 
 import { Ledger } from "./ledger.entity";
-import { OrderCheck, OrderChecking } from "./orderCheck.entity";
+import { OrderCheck } from "./orderCheck.entity";
 
-export const LEDGER_PATH = "/qqlx/wmss/ledger";
 export type postLedgerDto = { entityList: Ledger[] };
 export type postLedgerRes = null;
 

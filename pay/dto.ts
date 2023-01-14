@@ -2,7 +2,6 @@ import { MongodbQuery } from "../utils/database";
 
 import { ScheduleCard, ScheduleCardOrder } from "./entity";
 
-export const SCHEDULE_CARD_PATH = "/qqlx/schedule/card";
 export type postScheduleCardDto = ScheduleCard;
 export type postScheduleCardRes = null;
 
@@ -12,7 +11,6 @@ export type getScheduleCardRes = MongodbQuery<ScheduleCard>;
 export type patchShopDto = ScheduleCard;
 export type patchShopRes = ScheduleCard;
 
-export const SCHEDULE_CARD_ORDER_PATH = "/qqlx/schedule/card/order";
 /** 微信支付流程
  * @step1 创建本地支付订单
  * @step2 创建微信支付订单（未创建成功）

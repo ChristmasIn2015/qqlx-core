@@ -5,7 +5,6 @@ import { MongodbQuery, MongodbSort } from "../utils/database";
 import { SkuScope, Sku } from "./sku.entity";
 import { Order } from "./order.entity";
 
-export const SKU_SCOPE_PATH = "/qqlx/wmss/sku/scope";
 export type postSkuScopeDto = SkuScope;
 export type postSkuScopeRes = null;
 
@@ -15,7 +14,6 @@ export type getSkuScopeRes = SkuScope[];
 export type patchSkuScopeDto = SkuScope;
 export type patchSkuScopeRes = SkuScope;
 
-export const SKU_PATH = "/qqlx/wmss/sku";
 export type SkuJoined = {
 	joinSkuScope?: SkuScope;
 	joinWarehouse?: Warehouse;

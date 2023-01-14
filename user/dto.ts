@@ -4,7 +4,6 @@ import { MongodbQuery } from "../utils/database";
 
 import { User } from "./entity";
 
-export const USER_PATH = "/qqlx/user";
 export type postUserWeChatDto = { wechatResponseCode: string };
 export type postUserWeChatRes = { jwt: string };
 

@@ -6,7 +6,6 @@ import { Ledger } from "./ledger.entity";
 import { InvoiceCheck, InvoiceCheckDetail } from "./invoiceCheck.entity";
 import { OrderCheck } from "./orderCheck.entity";
 
-export const INVOICE_CHECK_PATH = "/qqlx/wmss/ledger/invoiceCheck";
 export type postCheckDto = { entity: InvoiceCheck; invoiceCheckDetailList: InvoiceCheckDetail[] };
 export type postCheckRes = null;
 
