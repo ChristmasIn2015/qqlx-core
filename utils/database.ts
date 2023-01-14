@@ -5,7 +5,7 @@ export type MongodbBase = {
 	timeCreate: number;
 	timeCreateString: string;
 	timeUpdate: number;
-	timeUpdateString: number;
+	timeUpdateString: string;
 };
 
 export enum MongodbSort {
