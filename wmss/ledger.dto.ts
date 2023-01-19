@@ -1,10 +1,10 @@
-import { ObjectId } from "mongodb";
 import { Subject } from "../brand/entity";
 import { MongodbQuery, MongodbSort } from "../utils/database";
 
 import { Ledger } from "./ledger.entity";
 import { OrderCheck } from "./orderCheck.entity";
 
+export const LEDGER_PATH = "/qqlx/wmss/ledger";
 export type postLedgerDto = { entityList: Ledger[] };
 export type postLedgerRes = null;
 
@@ -19,7 +19,7 @@ export type getLedgerDto = {
 	sortByAmountOrderCheck?: MongodbSort;
 	sortByAmountOrderCheckRate?: MongodbSort;
 
-	entityIds?: ObjectId[];
+	entityIds?: string[];
 	entity?: Ledger;
 	page?: MongodbQuery<null>;
 };

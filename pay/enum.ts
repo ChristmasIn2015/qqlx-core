@@ -15,12 +15,3 @@ export enum StatusWeChatPay {
 	REFUND,
 }
 
-export const StatusWeChatPayMap = [
-	"NOTPAY",
-	"SUCCESS",
-	"CLOSED",
-	"USERPAYING",
-	"PAYERROR",
-	"REVOKED",
-	"REFUND",
-];

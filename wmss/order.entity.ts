@@ -1,4 +1,3 @@
-import { ObjectId } from "mongodb";
 import { SubjectContact } from "../brand/entity";
 import { MongodbBase } from "../utils/database";
 import { User } from "../user/entity";
@@ -11,13 +10,13 @@ export type Order = {
 	subjectId: string;
 
 	/** 根据哪张订单生成的 */
-	fromOrderCode: string;
+	fromOrderId: string;
 	fromOrderType: OrderType;
 
 	/** 钱货结清后，负责人签字 */
-	chargerId: ObjectId;
-	creatorId: ObjectId;
-	contactId: ObjectId;
+	chargerId: string;
+	creatorId: string;
+	contactId: string;
 
 	code: string;
 	type: OrderType;
@@ -36,7 +35,7 @@ export type Order = {
 
 /** 订单费用 */
 export type OrderFee = {
-	orderId: ObjectId;
+	orderId: string;
 
 	name: string;
 	desc: string;

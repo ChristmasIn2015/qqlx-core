@@ -1,4 +1,3 @@
-import { ObjectId } from "mongodb";
 import { SubjectContact, Subject } from "../brand/entity";
 import { MongodbBase } from "../utils/database";
 import { User } from "../user/entity";
@@ -21,6 +20,6 @@ export type InvoiceCheck = {
 
 /** 发票中的 (收付款单) 明细 */
 export type InvoiceCheckDetail = {
-	orderCheckId: ObjectId;
+	orderCheckId: string;
 	amount: number;
 } & MongodbBase;

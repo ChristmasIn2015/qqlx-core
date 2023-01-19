@@ -1,4 +1,3 @@
-import { ObjectId } from "mongodb";
 import { SubjectContact, Subject } from "../brand/entity";
 import { MongodbBase } from "../utils/database";
 import { User } from "../user/entity";
@@ -7,7 +6,7 @@ import { LedgerScope, LedgerType } from "./enum";
 
 /** 会计账簿 */
 export type Ledger = {
-	subjectId: ObjectId;
+	subjectId: string;
 	type: LedgerType;
 	scope: LedgerScope;
 

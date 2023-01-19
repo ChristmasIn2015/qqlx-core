@@ -1,4 +1,3 @@
-import { ObjectId } from "mongodb";
 import { Subject } from "../brand/entity";
 import { MongodbQuery, MongodbSort } from "../utils/database";
 
@@ -6,6 +5,7 @@ import { Ledger } from "./ledger.entity";
 import { Order } from "./order.entity";
 import { OrderCheck, OrderCheckDetail } from "./orderCheck.entity";
 
+export const ORDER_CHECK_PATH = "/qqlx/wmss/ledger/orderCheck";
 export type postCheckDto = { entity: OrderCheck; orderCheckDetailList: OrderCheckDetail[] };
 export type postCheckRes = null;
 
@@ -19,7 +19,7 @@ export type getOrderCheckDto = {
 	sortByAmountInvoice?: MongodbSort;
 	sortByAmountInvoiceRate?: MongodbSort;
 
-	entityIds?: ObjectId[];
+	entityIds?: string[];
 	entity?: OrderCheck;
 	page?: MongodbQuery<null>;
 };

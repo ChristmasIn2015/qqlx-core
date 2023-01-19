@@ -12,6 +12,8 @@ export const enum SubjectType {
 
 /** 某个用户在某个市场主体中的员工角色 */
 export const enum SubjectRole {
+	/** wms-steel 无 */
+	NONE = 1000,
 	/** wms-steel 管理员 */
 	MANAGER = 1001,
 	/** wms-steel 采购 */

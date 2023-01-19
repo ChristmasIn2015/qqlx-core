@@ -1,4 +1,3 @@
-import { ObjectId } from "mongodb";
 import { MongodbBase } from "../utils/database";
 import { OrderType, CountWay, PoundsWay } from "./enum";
 
@@ -21,7 +20,10 @@ import { OrderType, CountWay, PoundsWay } from "./enum";
  * @焊接钢管 （管材）将钢板或钢带卷曲成型，然后焊接制成的钢管
  */
 export type SkuScope = {
-	subjectId: ObjectId;
+	subjectId: string;
+
+	/** 本地排序顺序 */
+	subjectIdOrder: number;
 
 	name: string;
 	unit: string;
@@ -34,25 +36,37 @@ export type SkuScope = {
 	/** 数量统计（不可编辑） */
 	countWay: CountWay;
 	countTotal: number;
-};
+} & MongodbBase;
+
+/** Sku分类汇总
+ * @单独计价的入库Sku 需要统计 joinedPounds joinedCount；
+ * @加权平均的入库Sku 需要统计相同名称规格Sku的 pounds count；
+ */
+export type SkuCounter = {
+	scopeId: string;
+	name: string;
+	norm: string;
+	pounds: number;
+	count: number;
+
+	/** 推荐单价 */
+	price: number;
+} & MongodbBase;
 
 /** Sku */
 export type Sku = {
-	subjectId: ObjectId;
-	houseId: ObjectId;
-
-	/** 分类 */
-	scopeId: ObjectId;
+	subjectId: string;
 
 	/** 订单 */
-	fromOrderId: ObjectId;
-	fromOrderType: OrderType;
+	orderId: string;
+	orderType: OrderType;
+	isConfirmed: boolean;
 
-	/** 根据其他sku生成 */
-	fromSkuId: ObjectId;
-	fromSkuOrderType: OrderType;
-	/** 生成了多少sku */
-	toSkuCount: number;
+	pounds: number;
+	count: number;
+
+	/** 说明此商品是根据其他商品生成的 */
+	copyingSkuId: string;
 
 	/** 用户自定义编号 */
 	keyCode: string;
@@ -60,15 +74,19 @@ export type Sku = {
 	keyOrigin: string;
 	/** 材质 HABCD */
 	keyFeat: string;
+	/** 当前所在仓库 */
+	keyHouseId: string;
 
 	name: string;
 	norm: string;
-	pounds: number;
-	isPriceInPounds: boolean;
-	count: number;
-	price: number;
-	remark: string;
 
-	/** 是否已经入库、发货 */
-	isConfirmed: boolean;
+	/** 关联计算结果
+	 * @入库商品 单独计价实际应剩余 = 入库 -材料 -发货
+	 */
+	joinedPounds: number;
+	joinedCount: number;
+
+	isPriceInPounds: boolean;
+	remark: string;
+	price: number;
 } & MongodbBase;

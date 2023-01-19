@@ -4,3 +4,11 @@ export interface ResponseREST<T> {
 	data: T;
 	message: string;
 }
+
+/** 实体合计 */
+export type Calculation<T> = {
+	list: T[];
+	pounds: number;
+	count: number;
+	amount: number;
+};

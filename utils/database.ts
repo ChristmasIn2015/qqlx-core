@@ -1,7 +1,5 @@
-import { ObjectId } from "mongodb";
-
 export type MongodbBase = {
-	// _id: ObjectId;
+	_id: string;
 	timeCreate: number;
 	timeCreateString: string;
 	timeUpdate: number;
@@ -12,7 +10,7 @@ export enum MongodbSort {
 	/** 升序，从小到大 */
 	ASC = 1,
 	/** 降序，从大到小 */
-	DES,
+	DES = -1,
 }
 
 export interface MongodbQuery<T> {

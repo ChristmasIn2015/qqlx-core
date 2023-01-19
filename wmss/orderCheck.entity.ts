@@ -1,4 +1,3 @@
-import { ObjectId } from "mongodb";
 import { SubjectContact, Subject } from "../brand/entity";
 import { MongodbBase } from "../utils/database";
 import { User } from "../user/entity";
@@ -21,7 +20,7 @@ export type OrderCheck = {
 
 /** 货款凭证的订单明细 */
 export type OrderCheckDetail = {
-	checkId: ObjectId;
-	orderId: ObjectId;
+	checkId: string;
+	orderId: string;
 	amount: number;
 } & MongodbBase;

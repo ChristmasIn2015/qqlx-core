@@ -1,14 +1,18 @@
 {
 	"name": "qqlx-core",
-	"version": "0.0.5",
+	"version": "0.0.32",
 	"description": "",
-	"scripts": {},
+	"main": "index.js",
+	"scripts": {
+		"build": "node ./esbuild.build.js && npm publish"
+	},
 	"keywords": [
 		"qqlx"
 	],
 	"author": "christmasin2015",
 	"license": "ISC",
 	"dependencies": {
+		"esbuild": "^0.17.0",
 		"mongodb": "^4.13.0"
 	}
 }

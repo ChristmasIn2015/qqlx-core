@@ -1,4 +1,3 @@
-import { ObjectId } from "mongodb";
 import { MongodbBase } from "../utils/database";
 import { ProjectEnum } from "../pmo/enum";
 
@@ -19,7 +18,7 @@ export type ScheduleCard = {
 
 /** 某个主体 购买的时长卡 */
 export type ScheduleCardOrder = {
-	subjectId: ObjectId;
-	cardId: ObjectId;
+	subjectId: string;
+	cardId: string;
 	statusWeChatPay: StatusWeChatPay;
 } & MongodbBase;

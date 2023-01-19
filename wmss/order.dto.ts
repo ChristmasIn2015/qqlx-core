@@ -1,4 +1,3 @@
-import { ObjectId } from "mongodb";
 import { SubjectContact, Warehouse } from "../brand/entity";
 import { User } from "../user/entity";
 import { MongodbQuery, MongodbSort } from "../utils/database";
@@ -7,6 +6,7 @@ import { Order, OrderFee } from "./order.entity";
 import { SkuJoined } from "./sku.dto";
 import { Sku } from "./sku.entity";
 
+export const ORDER_PATH = "/qqlx/wmss/order";
 /** 包含了钱货票等信息 */
 export type OrderJoined = {
 	joinCreator?: User;
@@ -29,7 +29,7 @@ export type getOrderDto = {
 	sortByAmountInvoiceDetail?: MongodbSort;
 	sortByAmountOrderCheckDetail?: MongodbSort;
 
-	entityIds?: ObjectId[];
+	entityIds?: string[];
 	entity?: Order;
 	page?: MongodbQuery<null>;
 };
@@ -37,3 +37,5 @@ export type getOrderRes = MongodbQuery<OrderJoined>;
 
 export type putOrderDto = { entity: Order; skuList?: Sku[]; orderFeeList?: OrderFee[] };
 export type putOrderRes = Order;
+
+export const ORDER_FEE_PATH = "/qqlx/wmss/order/fee";

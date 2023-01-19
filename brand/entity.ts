@@ -1,4 +1,3 @@
-import { ObjectId } from "mongodb";
 import { MongodbBase } from "../utils/database";
 import { SubjectType, SubjectRole } from "./enum";
 
@@ -19,27 +18,27 @@ export type Subject = {
 
 /** @related 经营主体 + 用户 + 角色 */
 export type UserSubjectRole = {
-	userId: ObjectId;
-	subjectId: ObjectId;
+	userId: string;
+	subjectId: string;
 	role: SubjectRole;
 } & MongodbBase;
 
 /** 经营主体的仓库 */
 export type Warehouse = {
-	subjectId: ObjectId;
+	subjectId: string;
 	name: string;
 	address: string;
 } & MongodbBase;
 
 /** 经营主体的公告（放银行等信息） */
 export type SubjectBoardcast = {
-	subjectId: ObjectId;
+	subjectId: string;
 	title: string;
 	content: string;
 } & MongodbBase;
 
 /** 经营主体的联系人 */
 export type SubjectContact = {
-	subjectId: ObjectId;
+	subjectId: string;
 	isDisabled: boolean;
 } & (Subject & MongodbBase);
