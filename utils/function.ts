@@ -1,12 +1,12 @@
-/** 遍历一个对象的 key，如果是字符串，则x去除所有空格性质的字符 */
-export function trimObject(object: Object): object {
-	if (object !== null && typeof object === "object") {
-		for (let key in object) {
-			if (typeof object[key] === "string") {
-				object[key] = object[key].replace(/\s/g, "");
-			}
+/** 遍历一个对象的 key，如果是字符串，则去除所有空格性质的字符 */
+export function trimObject<T extends Object>(incoming: T) {
+	if (!incoming) return;
+
+	for (let key in incoming) {
+		// @ts-ignore
+		if (typeof incoming[key] === "string") {
+			// @ts-ignore
+			(incoming[key] as string) = (incoming[key] as string).replace(/\s/g, "");
 		}
 	}
-
-	return object;
 }
