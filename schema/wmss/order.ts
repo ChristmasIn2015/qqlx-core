@@ -24,8 +24,8 @@ export type Order = {
 	isDisabled: boolean;
 
 	/** 此订单开出了多少金额的收付款证明 @以后需要拆分出去 */
-	amountBook: number;
-	amountBookRest: number;
+	amountBookOfOrder: number;
+	amountBookOfOrderRest: number;
 } & MongodbBase;
 
 /** 单据分类 */

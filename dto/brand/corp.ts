@@ -1,11 +1,12 @@
 import { Corp } from "../../schema/brand/corp";
+import { RoleWMSS } from "../../schema/wmss/role";
 
 export const PATH_CORP = "/qqlx/corp";
 export type postCorpDto = Corp;
 export type postCorpRes = Corp;
 
 export type getCorpDto = null;
-export type getCorpRes = Corp[];
+export type getCorpRes = (Corp & { joinRole: RoleWMSS })[];
 
 export type patchCorpDto = Corp;
 export type patchCorpRes = Corp;

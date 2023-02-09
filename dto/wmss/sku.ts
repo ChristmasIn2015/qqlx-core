@@ -5,25 +5,20 @@ import { Contact } from "../../schema/brand/contact";
 import { Warehouse } from "../../schema/brand/warehouse";
 import { Order } from "../../schema/wmss/order";
 import { Sku } from "../../schema/wmss/sku";
-import { SkuRelated } from "../../schema/wmss/skuRelated";
 import { Fee } from "../../schema/wmss/fee";
 
 export const PATH_SKU = "/qqlx/wmss/sku";
 
-export type SkuInView = SkuRelated & {
+export type SkuInView = Sku & {
 	joinWarehouse?: Warehouse;
-	joinSku?: Sku;
-	joinOrder?: Order;
-	joinOrderContact?: Contact;
-};
-
-export type SkuInSearch = SkuRelated & {
-	joinSku?: Sku;
+	joinSku: Sku;
+	joinOrder: Order;
+	joinOrderContact: Contact;
 };
 
 export type getSkuDto = {
-	sortByPounds?: MongodbSort;
-	sortByCount?: MongodbSort;
+	sortByPoundsFinal?: MongodbSort;
+	sortByCountFinal?: MongodbSort;
 
 	page: MongodbPage;
 	search: Sku;

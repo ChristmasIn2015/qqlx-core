@@ -20,12 +20,12 @@ export type Book = {
 	keyHouse: string;
 
 	/** 此流水开出了多少金额的收付款证明 @以后需要拆分出去 */
-	amountOrder: number;
-	amountOrderRest: number;
+	amountBookOfOrder: number;
+	amountBookOfOrderRest: number;
 
 	/** 此流水开出了多少金额的发票证明 @以后需要拆分出去 */
-	amountSelf: number;
-	amountSelfRest: number;
+	amountBookOfSelf: number;
+	amountBookOfSelfRest: number;
 } & MongodbBase;
 
 /** 会计分录 借贷方向 */

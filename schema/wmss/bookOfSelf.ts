@@ -2,10 +2,10 @@ import { MongodbBase } from "../../utils/database";
 
 export type BookOfSelf = {
 	/** @foreign */
-	bookId: string;
+	invoiceId: string;
 
 	/** @foreign */
-	selfId: string;
+	bookId: string;
 
 	amount: number;
 } & MongodbBase;

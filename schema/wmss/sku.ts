@@ -29,4 +29,20 @@ export type Sku = {
 	keyOrigin: string;
 	/** 材质 HABCD */
 	keyFeat: string;
+
+	/** @foreign */
+	corpId: string;
+
+	/** @foreign 当前所在仓库 */
+	warehouseId: string;
+
+	/** @foreign */
+	skuId: string;
+
+	/** @foreign */
+	orderId: string;
+	orderContactId: string;
+
+	/** @foreign 选择的入库、加工商品，用于领料、发货 */
+	deductionSkuId: string;
 } & MongodbBase;

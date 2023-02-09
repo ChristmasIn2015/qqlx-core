@@ -7,6 +7,7 @@ export type ScheduleCardOrder = {
 	cardId: string;
 
 	statusWeChatPay: ENUM_PAY_STATUS_WECHAT;
+	amount: number;
 } & MongodbBase;
 
 export enum ENUM_PAY_STATUS_WECHAT {

@@ -6,8 +6,6 @@ import { Order } from "../../schema/wmss/order";
 import { Sku } from "../../schema/wmss/sku";
 import { Fee } from "../../schema/wmss/fee";
 
-import { SkuInSearch } from "./sku";
-
 export const PATH_ORDER = "/qqlx/wmss/order";
 export type postOrderDto = { schema: Order; skuList?: Sku[]; feeList?: Fee[] };
 export type postOrderRes = Order;
@@ -20,7 +18,7 @@ export type OrderInView = Order & {
 	joinManager?: User;
 	joinAccounter?: User;
 
-	joinSku?: SkuInSearch[];
+	joinSku?: Sku[];
 	joinFee?: Fee[];
 };
 export type OrderInSearch = Order & {
@@ -29,8 +27,8 @@ export type OrderInSearch = Order & {
 
 export type getOrderDto = {
 	sortByAmount?: MongodbSort;
-	sortByAmountBook?: MongodbSort;
-	sortByAmountBookRest?: MongodbSort;
+	sortByAmountBookOfOrder?: MongodbSort;
+	sortByAmountBookOfOrderRest?: MongodbSort;
 
 	/** 是否可复核 */
 	managerIdRequired?: boolean;

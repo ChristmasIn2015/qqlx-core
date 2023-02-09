@@ -1,5 +1,12 @@
 import { MongodbBase } from "../../utils/database";
 
+export type RoleMarket = {
+	/** @foreign */
+	userId: string;
+
+	role: ENUM_ROLE_MARKET;
+} & MongodbBase;
+
 export const enum ENUM_ROLE_MARKET {
 	/** 无 */
 	NONE = 1000,
@@ -10,10 +17,3 @@ export const MAP_ENUM_ROLE_MARKET = [
 	{ key: "", value: ENUM_ROLE_MARKET.NONE, text: "普通用户" },
 	{ key: "", value: ENUM_ROLE_MARKET.ROOT, text: "管理员" },
 ];
-
-export type RoleMarket = {
-	/** @foreign */
-	userId: string;
-
-	role: ENUM_ROLE_MARKET;
-} & MongodbBase;
