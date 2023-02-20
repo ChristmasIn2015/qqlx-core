@@ -1,22 +1,23 @@
 import { MongodbPage, MongodbPageRes, MongodbSort } from "../../utils/database";
 
-import { User } from "../../schema/user/user";
-import { Contact } from "../../schema/brand/contact";
-import { Order } from "../../schema/wmss/order";
-import { Sku } from "../../schema/wmss/sku";
-import { Fee } from "../../schema/wmss/fee";
+import type { UserWeChat } from "../../schema/user/userWeChat";
+import type { Contact } from "../../schema/brand/contact";
+import type { Order } from "../../schema/wmss/order";
+import type { Sku } from "../../schema/wmss/sku";
+import type { Fee } from "../../schema/wmss/fee";
 
 export const PATH_ORDER = "/qqlx/wmss/order";
 export type postOrderDto = { schema: Order; skuList?: Sku[]; feeList?: Fee[] };
 export type postOrderRes = Order;
 
 export type OrderInView = Order & {
-	// joinParentOrder?: Order;
+	joinChildOrder?: Order;
+	joinParentOrder?: Order;
 
-	joinCreator?: User;
+	joinCreator?: UserWeChat;
 	joinContact?: Contact;
-	joinManager?: User;
-	joinAccounter?: User;
+	joinManager?: UserWeChat;
+	joinAccounter?: UserWeChat;
 
 	joinSku?: Sku[];
 	joinFee?: Fee[];
@@ -26,9 +27,8 @@ export type OrderInSearch = Order & {
 };
 
 export type getOrderDto = {
-	sortByAmount?: MongodbSort;
-	sortByAmountBookOfOrder?: MongodbSort;
-	sortByAmountBookOfOrderRest?: MongodbSort;
+	sortKey?: string;
+	sortValue?: MongodbSort;
 
 	/** 是否可复核 */
 	managerIdRequired?: boolean;
@@ -37,6 +37,7 @@ export type getOrderDto = {
 
 	page: MongodbPage;
 	search: Order;
+	noJoin: boolean;
 };
 export type getOrderRes = MongodbPageRes<OrderInView>;
 

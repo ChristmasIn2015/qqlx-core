@@ -1,7 +1,7 @@
 import { MongodbPage, MongodbPageRes } from "../../utils/database";
 
-import { ScheduleCard } from "../../schema/market/scheduleCard";
-import { ScheduleCardOrder, ENUM_PAY_STATUS_WECHAT } from "../../schema/market/scheduleCardOrder";
+import type { ScheduleCard } from "../../schema/market/scheduleCard";
+import type { ScheduleCardOrder, ENUM_PAY_STATUS_WECHAT } from "../../schema/market/scheduleCardOrder";
 
 export const PATH_SCHEDULE_CARD_ORDER = "/qqlx/schedule/card/order";
 /** 微信支付流程

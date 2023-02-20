@@ -1,11 +1,11 @@
 import { MongodbPage, MongodbPageRes, MongodbSort } from "../../utils/database";
 
-import { User } from "../../schema/user/user";
-import { Contact } from "../../schema/brand/contact";
-import { Warehouse } from "../../schema/brand/warehouse";
-import { Order } from "../../schema/wmss/order";
-import { Sku } from "../../schema/wmss/sku";
-import { Fee } from "../../schema/wmss/fee";
+import type { User } from "../../schema/user/user";
+import type { Contact } from "../../schema/brand/contact";
+import type { Warehouse } from "../../schema/brand/warehouse";
+import type { Order, ENUM_ORDER } from "../../schema/wmss/order";
+import type { Sku } from "../../schema/wmss/sku";
+import type { Fee } from "../../schema/wmss/fee";
 
 export const PATH_SKU = "/qqlx/wmss/sku";
 
@@ -17,11 +17,13 @@ export type SkuInView = Sku & {
 };
 
 export type getSkuDto = {
-	sortByPoundsFinal?: MongodbSort;
-	sortByCountFinal?: MongodbSort;
+	sortKey?: string;
+	sortValue?: MongodbSort;
+	groupKey?: string;
 
 	page: MongodbPage;
 	search: Sku;
+	types: ENUM_ORDER[];
 };
 export type getSkuRes = MongodbPageRes<SkuInView>;
 

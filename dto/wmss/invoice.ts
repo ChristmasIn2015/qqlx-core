@@ -1,31 +1,30 @@
 import { MongodbPage, MongodbPageRes, MongodbSort } from "../../utils/database";
 
-import { Corp } from "../../schema/brand/corp";
-import { Book } from "../../schema/wmss/book";
-import { Invoice } from "../../schema/wmss/invoice";
-import { BookOfSelf } from "../../schema/wmss/bookOfSelf";
-import { BookOfSelfInView } from "../../dto/wmss/book";
+import type { Corp } from "../../schema/brand/corp";
+import type { Book } from "../../schema/wmss/book";
+import type { Invoice } from "../../schema/wmss/invoice";
+import type { BookOfSelf } from "../../schema/wmss/bookOfSelf";
 
-export const PATH_BOOK = "/qqlx/wmss/invoice";
+export const PATH_INVOICE = "/qqlx/wmss/invoice";
 export type postInvoiceDto = { excels: Invoice[] };
-export type postInvoiceRes = null;
+export type postInvoiceRes = Invoice[];
 
+export type BookOfSelfInView = BookOfSelf & { joinBook?: Book };
 export type InvoiceInView = Invoice & {
-	joinCorp: Corp;
-	joinOfSelf: BookOfSelfInView[];
+	joinHeader?: Corp;
+	joinBookOfSelf?: BookOfSelfInView[];
 };
 export type getInvoiceDto = {
-	sortByAmount?: MongodbSort;
-	sortByAmountBookOfSelf?: MongodbSort;
-	sortByAmountBookOfSelfRest?: MongodbSort;
+	sortKey?: string;
+	sortValue?: MongodbSort;
 
 	search: Invoice;
 	page: MongodbPage;
 };
 export type getInvoiceRes = MongodbPageRes<InvoiceInView>;
 
-export type patchInvoiceDto = Invoice;
-export type patchInvoiceRes = null;
+export type putInvoiceDto = { entity: Invoice; books?: Book[] };
+export type putInvoiceRes = null;
 
-export type deleteInvoiceDto = { invoiceId: string };
+export type deleteInvoiceDto = { invoiceIds: string[] };
 export type deleteInvoiceRes = null;

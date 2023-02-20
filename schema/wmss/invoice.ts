@@ -1,9 +1,15 @@
-import { MongodbBase } from "../../utils/database";
+import type { MongodbBase } from "../../utils/database";
+import { ENUM_BOOK_DIRECTION, ENUM_BOOK_TYPE } from "./book";
 
 export type Invoice = {
 	/** @foreign */
 	corpId: string;
 
+	type: ENUM_BOOK_TYPE;
+	direction: ENUM_BOOK_DIRECTION;
+
+	/** @foreign 业务抬头 */
+	headerId: string;
 	code: string;
 	amount: number;
 	remark: string;

@@ -1,6 +1,6 @@
 import { MongodbBase, MongodbPage, MongodbPageRes } from "../../utils/database";
 
-import { Log } from "../../schema/devops/log";
+import type { Log } from "../../schema/devops/log";
 
 export const PATH_DEVOPS_LOG = "/qqlx/devops/log";
 

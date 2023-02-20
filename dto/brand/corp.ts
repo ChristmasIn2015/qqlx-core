@@ -1,5 +1,5 @@
-import { Corp } from "../../schema/brand/corp";
-import { RoleWMSS } from "../../schema/wmss/role";
+import type { Corp } from "../../schema/brand/corp";
+import type { RoleWMSS } from "../../schema/wmss/role";
 
 export const PATH_CORP = "/qqlx/corp";
 export type postCorpDto = Corp;

@@ -1,4 +1,4 @@
-import { Warehouse } from "../../schema/brand/warehouse";
+import type { Warehouse } from "../../schema/brand/warehouse";
 
 export const PATH_WAREHOUSE = "/qqlx/corp/warehouse";
 export type postWarehouseDto = Warehouse;

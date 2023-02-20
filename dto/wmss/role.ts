@@ -1,5 +1,5 @@
-import { UserWeChat } from "../../schema/user/userWechat";
-import { RoleWMSS } from "../../schema/wmss/role";
+import type { UserWeChat } from "../../schema/user/userWechat";
+import type { RoleWMSS } from "../../schema/wmss/role";
 
 export const PATH_WMSS_ROLE = "/qqlx/wmss/role";
 export type postRoleWMSSDto = RoleWMSS;

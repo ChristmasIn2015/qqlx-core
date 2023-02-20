@@ -1,4 +1,4 @@
-import { MongodbBase } from "../../utils/database";
+import type { MongodbBase } from "../../utils/database";
 
 /** @primary */
 export type User = {

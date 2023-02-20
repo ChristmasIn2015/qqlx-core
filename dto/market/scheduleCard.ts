@@ -1,5 +1,5 @@
-import { ScheduleCard } from "../../schema/market/scheduleCard";
-import { ENUM_PROJECT } from "../../schema/pmo/project";
+import type { ScheduleCard } from "../../schema/market/scheduleCard";
+import type { ENUM_PROJECT } from "../../schema/pmo/project";
 
 export const PATH_SCHEDULE_CARD = "/qqlx/schedule/card";
 export type postScheduleCardDto = { schema: ScheduleCard; corpId?: string };

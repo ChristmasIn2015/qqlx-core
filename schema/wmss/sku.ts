@@ -1,7 +1,7 @@
-import { MongodbBase } from "../../utils/database";
+import type { MongodbBase } from "../../utils/database";
 
-import { ENUM_LAYOUT_CABINET, ENUM_POUNDS_FORMULA } from "../../schema/wmss/cabinet";
-import { ENUM_ORDER } from "../../schema/wmss/order";
+import type { ENUM_LAYOUT_CABINET, ENUM_POUNDS_FORMULA } from "../../schema/wmss/cabinet";
+import type { ENUM_ORDER } from "../../schema/wmss/order";
 
 export type Sku = {
 	type: ENUM_ORDER;
@@ -37,11 +37,9 @@ export type Sku = {
 	warehouseId: string;
 
 	/** @foreign */
-	skuId: string;
-
-	/** @foreign */
 	orderId: string;
 	orderContactId: string;
+	orderIsDisabled: boolean;
 
 	/** @foreign 选择的入库、加工商品，用于领料、发货 */
 	deductionSkuId: string;

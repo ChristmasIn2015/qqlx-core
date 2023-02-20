@@ -1,4 +1,4 @@
-import { MongodbBase } from "../../utils/database";
+import type { MongodbBase } from "../../utils/database";
 
 /** Sku的分类
  * @按成形方法分类 锻钢 铸钢 热轧钢 冷拉钢
@@ -37,7 +37,7 @@ export enum ENUM_POUNDS_FORMULA {
 	STEEL_PLATE,
 }
 export const MAP_ENUM_POUNDS_FORMULA = [
-	{ key: "", value: ENUM_POUNDS_FORMULA.NONE, text: "无", tip: "" },
+	{ key: "", value: ENUM_POUNDS_FORMULA.NONE, text: "-", tip: "" },
 	{ key: "", value: ENUM_POUNDS_FORMULA.STEEL_PLATE, text: "板材自动理算", tip: "如：1张 1.0mm*1250mm*2500mm 的钢板理算重量为 0.025 吨" },
 ];
 
@@ -47,6 +47,11 @@ export enum ENUM_LAYOUT_CABINET {
 	INDIVIDUAL,
 }
 export const MAP_ENUM_LAYOUT_CABINET = [
-	{ key: "", value: ENUM_LAYOUT_CABINET.SUMMARY, text: "无", tip: "" },
-	{ key: "", value: ENUM_LAYOUT_CABINET.INDIVIDUAL, text: "单独核算库存", tip: "" },
+	{ key: "", value: ENUM_LAYOUT_CABINET.SUMMARY, text: "-", tip: "" },
+	{
+		key: "",
+		value: ENUM_LAYOUT_CABINET.INDIVIDUAL,
+		text: "单独选择",
+		tip: "在发货、领料、加工时，需要单独选择某项入库库存，如：冷/热轧卷等大宗原材料型商品",
+	},
 ];

@@ -23,4 +23,8 @@ export interface MongodbPage {
 export interface MongodbPageRes<T> {
 	total: number;
 	list: T[];
+	group?: {
+		key: string;
+		value: number;
+	};
 }

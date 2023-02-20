@@ -1,6 +1,6 @@
 import { MongodbPage, MongodbPageRes } from "../../utils/database";
 
-import { Contact } from "../../schema/brand/contact";
+import type { Contact } from "../../schema/brand/contact";
 
 export const PATH_CONTACT = "/qqlx/corp/contact";
 export type postContactDto = { excels: Contact[] };

@@ -1,4 +1,4 @@
-import { Cabinet } from "../../schema/wmss/cabinet";
+import type { Cabinet } from "../../schema/wmss/cabinet";
 
 export const PATH_CABINET = "/qqlx/wmss/cabinet";
 export type postCabinetDto = Cabinet;

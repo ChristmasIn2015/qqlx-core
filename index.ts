@@ -57,6 +57,7 @@ import { PATH_SCHEDULE_CARD } from "./dto/market/scheduleCard";
 import { PATH_SCHEDULE_CARD_ORDER } from "./dto/market/scheduleCardOrder";
 import { PATH_USER } from "./dto/user/user";
 import { PATH_BOOK } from "./dto/wmss/book";
+import { PATH_INVOICE } from "./dto/wmss/invoice";
 import { PATH_CABINET } from "./dto/wmss/cabinet";
 import { PATH_CABINET_UNIT } from "./dto/wmss/cabinetUnit";
 import { PATH_ORDER } from "./dto/wmss/order";
@@ -71,6 +72,7 @@ export {
 	PATH_SCHEDULE_CARD,
 	PATH_SCHEDULE_CARD_ORDER,
 	PATH_BOOK,
+	PATH_INVOICE,
 	PATH_CABINET,
 	PATH_CABINET_UNIT,
 	PATH_ORDER,

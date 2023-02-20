@@ -1,4 +1,4 @@
-import { MongodbBase } from "../../utils/database";
+import type { MongodbBase } from "../../utils/database";
 
 /** 商品重量、数量汇总，名称规格全量不重复 */
 export type CabinetUnit = {

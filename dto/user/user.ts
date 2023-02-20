@@ -1,7 +1,7 @@
-import { User } from "../../schema/user/user";
-import { UserWeChat } from "../../schema/user/userWeChat";
-import { RoleMarket } from "../../schema/market/role";
-import { RoleWMSS } from "../../schema/wmss/role";
+import type { User } from "../../schema/user/user";
+import type { UserWeChat } from "../../schema/user/userWeChat";
+import type { RoleMarket } from "../../schema/market/role";
+import type { RoleWMSS } from "../../schema/wmss/role";
 
 export type UserRoleJoined = User & {
 	joinWeChat: UserWeChat;

@@ -1,4 +1,4 @@
-import { MongodbBase } from "../../utils/database";
+import type { MongodbBase } from "../../utils/database";
 
 export type BookOfOrder = {
 	/** @foreign */
@@ -6,6 +6,7 @@ export type BookOfOrder = {
 
 	/** @foreign */
 	orderId: string;
+	orderContactId: string;
 
 	amount: number;
 } & MongodbBase;

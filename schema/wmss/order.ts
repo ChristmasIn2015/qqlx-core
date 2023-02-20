@@ -1,4 +1,4 @@
-import { MongodbBase } from "../../utils/database";
+import type { MongodbBase } from "../../utils/database";
 
 export type Order = {
 	/** @foreign */
@@ -46,4 +46,12 @@ export enum ENUM_ORDER {
 	MATERIAL = 4004,
 }
 
-export const MAP_ENUM_ORDER = [];
+export const MAP_ENUM_ORDER = [
+	{ text: "异常", value: ENUM_ORDER.NONE },
+	{ text: "采购单", value: ENUM_ORDER.PURCHASE },
+	{ text: "销售单", value: ENUM_ORDER.SALES },
+	{ text: "入库单", value: ENUM_ORDER.GETIN },
+	{ text: "加工单", value: ENUM_ORDER.PROCESS },
+	{ text: "发货单", value: ENUM_ORDER.GETOUT },
+	{ text: "领料单", value: ENUM_ORDER.MATERIAL },
+];
