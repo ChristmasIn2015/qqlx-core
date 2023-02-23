@@ -51,7 +51,7 @@ export const MAP_ENUM_LAYOUT_CABINET = [
 	{
 		key: "",
 		value: ENUM_LAYOUT_CABINET.INDIVIDUAL,
-		text: "单独选择",
-		tip: "在发货、领料、加工时，需要单独选择某项入库库存，如：冷/热轧卷等大宗原材料型商品",
+		text: "大件商品",
+		tip: "大件商品在发货、领料时，需要单独选择某项入库的库存进行扣减，如：冷/热轧卷等大件原材料",
 	},
 ];

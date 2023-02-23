@@ -32,7 +32,7 @@ export {
 	MAP_ENUM_ORDER,
 };
 
-const ROLE_WMSS_ALL = [ENUM_ROLE_WMSS.BASE, ENUM_ROLE_WMSS.ROOT];
+// const ROLE_WMSS_ALL = [ENUM_ROLE_WMSS.BASE, ENUM_ROLE_WMSS.ROOT];
 const ROLE_WMSS_WM = [
 	ENUM_ROLE_WMSS.ROOT,
 	ENUM_ROLE_WMSS.PURCHASE,
@@ -44,6 +44,7 @@ const ROLE_WMSS_WM = [
 	ENUM_ROLE_WMSS.WM_MATERIAL,
 ];
 const ROLE_WMSS_FINANCE = [ENUM_ROLE_WMSS.ROOT, ENUM_ROLE_WMSS.FINANCE, ENUM_ROLE_WMSS.FINANCE_CHUNA, ENUM_ROLE_WMSS.FINANCE_FAPIAO];
+const ROLE_WMSS_ALL = [ENUM_ROLE_WMSS.BASE, ENUM_ROLE_WMSS.ROOT, ...ROLE_WMSS_WM, ...ROLE_WMSS_FINANCE];
 export { ROLE_WMSS_ALL, ROLE_WMSS_WM, ROLE_WMSS_FINANCE };
 
 import { trimObject } from "./utils/function";
@@ -63,6 +64,7 @@ import { PATH_CABINET_UNIT } from "./dto/wmss/cabinetUnit";
 import { PATH_ORDER } from "./dto/wmss/order";
 import { PATH_WMSS_ROLE } from "./dto/wmss/role";
 import { PATH_SKU } from "./dto/wmss/sku";
+import { PATH_ANALYSIS } from "./dto/wmss/analysis";
 export {
 	PATH_USER,
 	PATH_CONTACT,
@@ -78,4 +80,5 @@ export {
 	PATH_ORDER,
 	PATH_WMSS_ROLE,
 	PATH_SKU,
+	PATH_ANALYSIS,
 };

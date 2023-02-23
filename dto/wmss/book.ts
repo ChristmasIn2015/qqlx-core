@@ -18,6 +18,9 @@ export type getBookDto = {
 	sortKey?: string;
 	sortValue?: MongodbSort;
 
+	// 是否仅查看可以开票的资金
+	isAmountBookOfSelfRest: boolean;
+
 	search: Book;
 	page: MongodbPage;
 };
