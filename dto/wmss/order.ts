@@ -34,10 +34,17 @@ export type getOrderDto = {
 	managerIdRequired?: boolean;
 	/** 是否可结清 */
 	accounterIdIdRequired?: boolean;
+	// 聚合客户
+	joinContact: boolean;
+	// 聚合各类用户 及客户
+	joinUser: boolean;
+	// 聚合Sku
+	joinSku: boolean;
+	// 全部都要
+	join: boolean;
 
 	page: MongodbPage;
 	search: Order;
-	noJoin: boolean;
 };
 export type getOrderRes = MongodbPageRes<OrderInView>;
 

@@ -11,7 +11,6 @@ export const PATH_SKU = "/qqlx/wmss/sku";
 
 export type SkuInView = Sku & {
 	joinWarehouse?: Warehouse;
-	joinSku: Sku;
 	joinOrder: Order;
 	joinOrderContact: Contact;
 };
@@ -20,12 +19,17 @@ export type getSkuDto = {
 	sortKey?: string;
 	sortValue?: MongodbSort;
 	groupKey?: string;
+	isIndividual?: boolean;
 
 	page: MongodbPage;
 	search: Sku;
-	types: ENUM_ORDER[];
 };
 export type getSkuRes = MongodbPageRes<SkuInView>;
+
+export type getSkuByOrderDto = {
+	orderId: string;
+};
+export type getSkuByOrderRes = SkuInView[];
 
 /** 仅用于入库、发货 */
 export type patchSkuDto = { entity: Sku };
