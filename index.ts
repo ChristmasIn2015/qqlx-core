@@ -32,7 +32,6 @@ export {
 	MAP_ENUM_ORDER,
 };
 
-// const ROLE_WMSS_ALL = [ENUM_ROLE_WMSS.BASE, ENUM_ROLE_WMSS.ROOT];
 const ROLE_WMSS_WM = [
 	ENUM_ROLE_WMSS.ROOT,
 	ENUM_ROLE_WMSS.PURCHASE,
@@ -65,7 +64,11 @@ import { PATH_ORDER } from "./dto/wmss/order";
 import { PATH_WMSS_ROLE } from "./dto/wmss/role";
 import { PATH_SKU } from "./dto/wmss/sku";
 import { PATH_ANALYSIS } from "./dto/wmss/analysis";
+import { PATH_CONFIG_CORP } from "./dto/brand/configCorp";
+import { PATH_ANNOUNCE } from "./dto/brand/announce";
 export {
+	PATH_CONFIG_CORP,
+	PATH_ANNOUNCE,
 	PATH_USER,
 	PATH_CONTACT,
 	PATH_CORP,
