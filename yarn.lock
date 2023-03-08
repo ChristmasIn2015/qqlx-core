@@ -976,6 +976,14 @@ punycode@^2.1.1:
   resolved "https://registry.npmmirror.com/punycode/-/punycode-2.2.0.tgz#2092cc57cd2582c38e4e7e8bb869dc8d3148bc74"
   integrity sha512-LN6QV1IJ9ZhxWTNdktaPClrNfp8xdSAYS0Zk2ddX7XsXZAxckMHPCBcHRo0cTcEIgYPRiGEkmji3Idkh2yFtYw==
 
+qqlx-core@^0.1.81:
+  version "0.1.81"
+  resolved "https://registry.npmjs.org/qqlx-core/-/qqlx-core-0.1.81.tgz#74beeacd84585e4e85237a4b86b863e4473eff59"
+  integrity sha512-1rtkj5gDCvkFLs7c9VR38YqGrix6d0QRdDfbUMcucGciz1Pa/jep7F0DGYFEd1/cwDCGOgR7aVZcTDhCi9tMJA==
+  dependencies:
+    esbuild "^0.17.0"
+    mongodb "^4.13.0"
+
 saslprep@^1.0.3:
   version "1.0.3"
   resolved "https://registry.npmmirror.com/saslprep/-/saslprep-1.0.3.tgz#4c02f946b56cf54297e347ba1093e7acac4cf226"

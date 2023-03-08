@@ -1,6 +1,6 @@
 {
 	"name": "qqlx-core",
-	"version": "0.1.81",
+	"version": "0.1.83",
 	"description": "",
 	"main": "index.js",
 	"scripts": {
@@ -13,6 +13,7 @@
 	"license": "ISC",
 	"dependencies": {
 		"esbuild": "^0.17.0",
-		"mongodb": "^4.13.0"
+		"mongodb": "^4.13.0",
+		"qqlx-core": "^0.1.81"
 	}
 }
