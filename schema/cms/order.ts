@@ -4,10 +4,12 @@ import type { MongodbBase } from "../../utils/database";
 export type Order = {
 	/** @foreign */
 	corpId: string;
-	creator: string;
+
+	/** 其他用户userId */
+	contactId: string;
 
 	type: ENUM_CMS_ORDER;
-	price: number;
+	amount: number;
 	remark: string;
 	isDisabled: boolean;
 } & MongodbBase;

@@ -1,5 +1,6 @@
 import type { MongodbBase } from "../../utils/database";
 
+/** 订单明细 */
 export type Sku = {
 	/** @foreign */
 	corpId: string;
@@ -9,4 +10,6 @@ export type Sku = {
 	desc: string;
 	images: string;
 	price: number;
+
+	count: number
 } & MongodbBase;

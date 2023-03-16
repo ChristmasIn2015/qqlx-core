@@ -9,18 +9,18 @@ export const PATH_CMS_ORDER = "/qqlx/cms/order";
 export type postOrderDto = { schema: Order; spus: Spu[] };
 export type postOrderRes = null;
 
-export type OrderJoined = Order & { joinUser: User; joinWeChat: UserWeChat; joinSku: Sku[] };
+export type OrderJoined = Order & { joinContact: User; joinWeChat: UserWeChat; joinSku: Sku[] };
 export type getOrderDto = {
 	page: MongodbPage;
-	search: {
-		nickname: string;
-		phone: string;
-	};
+	search: Order;
+
+	/** 用户昵称或者手机号 */
+	keyword: string;
 };
 export type getOrderRes = MongodbPageRes<OrderJoined>;
 
 export type patchOrderDto = { entity: OrderJoined };
 export type patchOrderRes = null;
 
-export type deleteOrderDto = { spuId: string };
+export type deleteOrderDto = { orderId: string };
 export type deleteOrderRes = null;
