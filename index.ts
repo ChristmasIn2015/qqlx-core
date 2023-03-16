@@ -8,11 +8,13 @@ import { ENUM_PROJECT } from "./schema/pmo/project";
 import { ENUM_ROLE_DEVOPS, MAP_ENUM_ROLE_DEVOPS } from "./schema/devops/role";
 import { ENUM_ROLE_MARKET, MAP_ENUM_ROLE_MARKET } from "./schema/market/role";
 import { ENUM_ROLE_WMSS, MAP_ENUM_ROLE_WMSS } from "./schema/wmss/role";
+import { ENUM_CMS_ROLE } from "./schema/cms/role";
 import { ENUM_CORP } from "./schema/brand/corp";
 import { ENUM_PAY_STATUS_WECHAT, MAP_ENUM_PAY_STATUS_WECHAT } from "./schema/market/scheduleCardOrder";
 import { ENUM_BOOK_TYPE, ENUM_BOOK_DIRECTION } from "./schema/wmss/book";
 import { ENUM_LAYOUT_CABINET, MAP_ENUM_LAYOUT_CABINET, ENUM_POUNDS_FORMULA, MAP_ENUM_POUNDS_FORMULA } from "./schema/wmss/cabinet";
 import { ENUM_ORDER, MAP_ENUM_ORDER } from "./schema/wmss/order";
+import { ENUM_CMS_ORDER } from "./schema/cms/order";
 
 const ROLE_WMSS_WM = [
 	ENUM_ROLE_WMSS.ROOT,
@@ -40,6 +42,8 @@ export {
 	ENUM_LAYOUT_CABINET,
 	ENUM_POUNDS_FORMULA,
 	ENUM_ORDER,
+	ENUM_CMS_ROLE,
+	ENUM_CMS_ORDER,
 	//
 	MAP_ENUM_ROLE_MARKET,
 	MAP_ENUM_ROLE_DEVOPS,
