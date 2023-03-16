@@ -10,11 +10,11 @@ export type UserRoleJoined = User & {
 };
 
 export const PATH_USER = "/qqlx/user/wechat";
-export type postUserWeChatDto = { wechatResponseCode: string };
+export type postUserWeChatDto = { wechatResponseCode: string; isWxmp?: boolean };
 export type postUserWeChatRes = User & UserWeChat;
 
 export type getUserWeChatDto = null;
 export type getUserWeChatRes = UserWeChat;
 
-export type patchUserWeChatDto = UserWeChat;
-export type patchUserWeChatRes = UserWeChat;
+export type patchUserWeChatDto = User & UserWeChat;
+export type patchUserWeChatRes = null;

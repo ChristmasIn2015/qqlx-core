@@ -1,15 +1,13 @@
 import type { MongodbBase } from "../../utils/database";
 
-/** 订单明细 */
-export type Sku = {
+/** 打卡分类箱 */
+export type Box = {
 	/** @foreign */
 	corpId: string;
-	orderId: string;
 
 	name: string;
 	desc: string;
 	images: string;
-	price: number;
 
-	count: number
+	isDisabled: boolean;
 } & MongodbBase;
