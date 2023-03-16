@@ -6,6 +6,7 @@ export type UserWeChat = {
 
 	/** 主体在 “开放平台” “公众平台” 唯一标识 */
 	unionId: string;
+
 	nickname: string;
 	avator: string;
 } & MongodbBase;
