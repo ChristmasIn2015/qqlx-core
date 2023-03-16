@@ -6,11 +6,11 @@ export type RoleCMS = {
 	/** @foreign */
 	userId: string;
 
-	role: ENUM_CMS_ROLE;
+	role: ENUM_ROLE_CMS;
 } & MongodbBase;
 
 /** 电商后台角色 */
-export enum ENUM_CMS_ROLE {
+export enum ENUM_ROLE_CMS {
 	/** 管理员 */
 	ROOT = 1,
 
