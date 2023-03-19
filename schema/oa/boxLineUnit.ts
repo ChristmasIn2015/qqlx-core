@@ -4,6 +4,7 @@ import type { MongodbBase } from "../../utils/database";
 export type BoxLineUnit = {
     /** @foreign */
     corpId: string;
+    lineId: string;
     boxId: string;
 
     /** 打卡箱的顺序，如：首先要进行考勤打卡，再进行领取打卡 */

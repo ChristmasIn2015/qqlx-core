@@ -6,15 +6,19 @@
 
 import { MongodbSort } from "./utils/database";
 import { ENUM_ROLE_DEVOPS, MAP_ENUM_ROLE_DEVOPS } from "./schema/devops/role";
-import { ENUM_ROLE_MARKET, MAP_ENUM_ROLE_MARKET } from "./schema/market/role";
-import { ENUM_PROJECT } from "./schema/market/project";
-import { ENUM_ROLE_WMSS, MAP_ENUM_ROLE_WMSS } from "./schema/wmss/role";
-import { ENUM_ROLE_OA } from "./schema/oa/role";
+
 import { ENUM_CORP } from "./schema/brand/corp";
+
+import { ENUM_PROJECT } from "./schema/market/project";
+import { ENUM_ROLE_MARKET, MAP_ENUM_ROLE_MARKET } from "./schema/market/role";
 import { ENUM_PAY_STATUS_WECHAT, MAP_ENUM_PAY_STATUS_WECHAT } from "./schema/market/scheduleCardOrder";
-import { ENUM_BOOK_TYPE, ENUM_BOOK_DIRECTION } from "./schema/wmss/book";
-import { ENUM_LAYOUT_CABINET, MAP_ENUM_LAYOUT_CABINET, ENUM_POUNDS_FORMULA, MAP_ENUM_POUNDS_FORMULA } from "./schema/wmss/cabinet";
+
+import { ENUM_ROLE_OA } from "./schema/oa/role";
+
+import { ENUM_ROLE_WMSS, MAP_ENUM_ROLE_WMSS } from "./schema/wmss/role";
 import { ENUM_ORDER, MAP_ENUM_ORDER } from "./schema/wmss/order";
+import { ENUM_LAYOUT_CABINET, MAP_ENUM_LAYOUT_CABINET, ENUM_POUNDS_FORMULA, MAP_ENUM_POUNDS_FORMULA } from "./schema/wmss/cabinet";
+import { ENUM_BOOK_TYPE, ENUM_BOOK_DIRECTION } from "./schema/wmss/book";
 
 const ROLE_WMSS_WM = [
     ENUM_ROLE_WMSS.ROOT,
@@ -63,13 +67,13 @@ export {
 // *************************** Path ***************************
 import { PATH_USER } from "./dto/user/user";
 
+import { PATH_DEVOPS_LOG } from "./dto/devops/log";
+
 import { PATH_CORP } from "./dto/brand/corp";
 import { PATH_CONTACT } from "./dto/brand/contact";
 import { PATH_WAREHOUSE } from "./dto/brand/warehouse";
 import { PATH_CONFIG_CORP } from "./dto/brand/configCorp";
 import { PATH_ANNOUNCE } from "./dto/brand/announce";
-
-import { PATH_DEVOPS_LOG } from "./dto/devops/log";
 
 import { PATH_SCHEDULE_CARD } from "./dto/market/scheduleCard";
 import { PATH_SCHEDULE_CARD_ORDER } from "./dto/market/scheduleCardOrder";
@@ -79,12 +83,14 @@ import { PATH_CABINET } from "./dto/wmss/cabinet";
 import { PATH_CABINET_UNIT } from "./dto/wmss/cabinetUnit";
 import { PATH_ORDER } from "./dto/wmss/order";
 import { PATH_SKU } from "./dto/wmss/sku";
-import { PATH_ANALYSIS } from "./dto/wmss/analysis";
 import { PATH_BOOK } from "./dto/wmss/book";
 import { PATH_INVOICE } from "./dto/wmss/invoice";
+import { PATH_ANALYSIS } from "./dto/wmss/analysis";
 
 import { PATH_OA_ROLE } from "./dto/oa/role";
 import { PATH_OA_BOX } from "./dto/oa/box";
+import { PATH_OA_BOXLINE } from "./dto/oa/boxLine";
+import { PATH_OA_BOXLINE_UNIT } from "./dto/oa/boxLineUnit";
 import { PATH_OA_CHECK } from "./dto/oa/check";
 
 export {
@@ -112,6 +118,8 @@ export {
     //
     PATH_OA_ROLE,
     PATH_OA_BOX,
+    PATH_OA_BOXLINE,
+    PATH_OA_BOXLINE_UNIT,
     PATH_OA_CHECK,
 };
 
