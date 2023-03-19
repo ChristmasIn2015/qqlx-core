@@ -1,2 +1,0 @@
-# qqlx-core
-

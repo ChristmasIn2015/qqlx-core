@@ -5,9 +5,9 @@
 // *************************** ENUM ***************************
 
 import { MongodbSort } from "./utils/database";
-import { ENUM_PROJECT } from "./schema/pmo/project";
 import { ENUM_ROLE_DEVOPS, MAP_ENUM_ROLE_DEVOPS } from "./schema/devops/role";
 import { ENUM_ROLE_MARKET, MAP_ENUM_ROLE_MARKET } from "./schema/market/role";
+import { ENUM_PROJECT } from "./schema/market/project";
 import { ENUM_ROLE_WMSS, MAP_ENUM_ROLE_WMSS } from "./schema/wmss/role";
 import { ENUM_ROLE_OA } from "./schema/oa/role";
 import { ENUM_CORP } from "./schema/brand/corp";

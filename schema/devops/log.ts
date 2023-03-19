@@ -1,12 +1,11 @@
 import type { MongodbBase } from "../../utils/database";
 
-import { ENUM_PROJECT } from "../../schema/pmo/project";
-import { ENUM_ROLE_DEVOPS } from "../../schema/devops/role";
+import { ENUM_PROJECT } from "../../schema/market/project";
 
 export type Log = {
-	scope: ENUM_PROJECT;
+    scope: ENUM_PROJECT;
 
-	chain: string;
-	title: string;
-	json: string;
+    chain: string;
+    title: string;
+    json: string;
 } & MongodbBase;
