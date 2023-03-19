@@ -17,3 +17,6 @@ export type getCheckDto = {
     keyword: string;
 };
 export type getCheckRes = MongodbPageRes<CheckJoined>;
+
+export type deleteCheckDto = { entityId: string };
+export type deleteCheckRes = null;
