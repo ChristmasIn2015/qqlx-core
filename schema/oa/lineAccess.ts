@@ -1,10 +1,9 @@
 import type { MongodbBase } from "../../utils/database";
 
-/** 打卡箱的规则 */
-export type BoxLine = {
+/** 场景中的白名单 */
+export type LineAccess = {
     /** @foreign */
     corpId: string;
-
-    title: string;
-    desc: string;
+    lineId: string;
+    accessId: string;
 } & MongodbBase;

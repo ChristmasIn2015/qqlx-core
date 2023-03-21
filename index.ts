@@ -88,9 +88,11 @@ import { PATH_INVOICE } from "./dto/wmss/invoice";
 import { PATH_ANALYSIS } from "./dto/wmss/analysis";
 
 import { PATH_OA_ROLE } from "./dto/oa/role";
+import { PATH_OA_ACCESS } from "./dto/oa/access";
 import { PATH_OA_BOX } from "./dto/oa/box";
-import { PATH_OA_BOXLINE } from "./dto/oa/boxLine";
-import { PATH_OA_BOXLINE_UNIT } from "./dto/oa/boxLineUnit";
+import { PATH_OA_LINE } from "./dto/oa/line";
+import { PATH_OA_LINEACCESS } from "./dto/oa/lineAccess";
+import { PATH_OA_LINEBOX } from "./dto/oa/lineBox";
 import { PATH_OA_CHECK } from "./dto/oa/check";
 
 export {
@@ -117,9 +119,11 @@ export {
     PATH_INVOICE,
     //
     PATH_OA_ROLE,
+    PATH_OA_ACCESS,
     PATH_OA_BOX,
-    PATH_OA_BOXLINE,
-    PATH_OA_BOXLINE_UNIT,
+    PATH_OA_LINE,
+    PATH_OA_LINEACCESS,
+    PATH_OA_LINEBOX,
     PATH_OA_CHECK,
 };
 

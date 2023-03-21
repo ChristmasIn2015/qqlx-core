@@ -1,20 +1,19 @@
-import type { User } from "../../schema/user/user";
-import type { UserWeChat } from "../../schema/user/userWeChat";
-import type { RoleMarket } from "../../schema/market/role";
-import type { RoleWMSS } from "../../schema/wmss/role";
-
-export type UserRoleJoined = User & {
-	joinWeChat: UserWeChat;
-	joinRoleMarket: RoleMarket;
-	joinRoleWMSS: RoleWMSS;
+/** 非泄密的用户信息 */
+export type UserInfo = {
+    userId: string;
+    phone: string;
+    nickname: string;
+    avator: string;
+    /** 仅登陆成功后返回 */
+    jwt?: string;
 };
 
 export const PATH_USER = "/qqlx/user/wechat";
 export type postUserWeChatDto = { wechatResponseCode: string; isWxmp?: boolean };
-export type postUserWeChatRes = User & UserWeChat;
+export type postUserWeChatRes = UserInfo;
 
 export type getUserWeChatDto = null;
-export type getUserWeChatRes = UserWeChat;
+export type getUserWeChatRes = UserInfo;
 
-export type patchUserWeChatDto = User & UserWeChat;
+export type patchUserWeChatDto = UserInfo;
 export type patchUserWeChatRes = null;

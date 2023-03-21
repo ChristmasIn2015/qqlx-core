@@ -1,7 +1,7 @@
 import type { MongodbBase } from "../../utils/database";
 
-/** 打卡箱的规则明细 */
-export type BoxLineUnit = {
+/** 场景中的打卡箱 */
+export type LineBox = {
     /** @foreign */
     corpId: string;
     lineId: string;
