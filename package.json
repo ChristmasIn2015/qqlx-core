@@ -1,6 +1,6 @@
 {
     "name": "qqlx-core",
-    "version": "1.0.4",
+    "version": "1.0.11",
     "description": "",
     "main": "index.js",
     "scripts": {

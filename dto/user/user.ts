@@ -15,5 +15,5 @@ export type postUserWeChatRes = UserInfo;
 export type getUserWeChatDto = null;
 export type getUserWeChatRes = UserInfo;
 
-export type patchUserWeChatDto = UserInfo;
+export type patchUserWeChatDto = UserInfo & { clientPhoneCode?: string };
 export type patchUserWeChatRes = null;

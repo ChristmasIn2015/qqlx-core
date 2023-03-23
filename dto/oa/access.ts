@@ -6,7 +6,7 @@ export type postAccessDto = Access[];
 export type postAccessRes = null;
 
 export type AccessJoined = Access & { joinUserInfo?: UserInfo };
-export type getAccessDto = null;
+export type getAccessDto = { search: Access };
 export type getAccessRes = AccessJoined[];
 
 export type deleteAccessDto = { entityId: string };
