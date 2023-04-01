@@ -1,10 +1,11 @@
 {
     "name": "qqlx-core",
-    "version": "1.0.11",
+    "version": "1.0.12",
     "description": "",
-    "main": "index.js",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
     "scripts": {
-        "build": "node ./esbuild.build.js && npm publish"
+        "build": "tsc && npm publish"
     },
     "keywords": [
         "qqlx"
@@ -12,7 +13,10 @@
     "author": "christmasin2015",
     "license": "ISC",
     "dependencies": {
-        "esbuild": "^0.17.0",
-        "mongodb": "^4.13.0"
+        "mongodb": "^4.13.0",
+        "qqlx-cdk": "^0.0.4"
+    },
+    "devDependencies": {
+        "typescript": "^5.0.2"
     }
 }
