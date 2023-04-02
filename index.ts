@@ -16,6 +16,7 @@ export * from "./src/devops/role.schema";
 
 export * from "./src/log/log.dto";
 export * from "./src/log/log.schema";
+export * from "./src/log/error.schema";
 
 export * from "./src/market/project.dto";
 export * from "./src/market/project.schema";

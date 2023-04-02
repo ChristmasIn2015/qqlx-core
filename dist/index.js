@@ -30,6 +30,7 @@ __exportStar(require("./src/devops/role.dto"), exports);
 __exportStar(require("./src/devops/role.schema"), exports);
 __exportStar(require("./src/log/log.dto"), exports);
 __exportStar(require("./src/log/log.schema"), exports);
+__exportStar(require("./src/log/error.schema"), exports);
 __exportStar(require("./src/market/project.dto"), exports);
 __exportStar(require("./src/market/project.schema"), exports);
 __exportStar(require("./src/market/role.dto"), exports);
