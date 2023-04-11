@@ -29,7 +29,7 @@ export type patchScheduleCardOrderDto = { corpId: string };
 export type patchScheduleCardOrderRes = null;
 
 export const PATH_MARKET_SCO_ANALYSIS = "/qqlx/market/wmss/analysis";
-export type getScoAnalysisDto = null;
+export type getScoAnalysisDto = { corpId: string };
 export type getScoAnalysisRes = {
     // 最后的已支付订单
     lastActiveSCO: ScheduleCardOrderJoined;

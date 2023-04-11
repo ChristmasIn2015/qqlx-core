@@ -1,5 +1,5 @@
 import type { MongodbBase, EnumMapOption } from "qqlx-cdk";
-export declare const enum ENUM_MARKET_ROLE {
+export declare enum ENUM_MARKET_ROLE {
     /** 内部：营销中心超级管理员 */
     ROOT = 2000,
     /** 内部：营销中心操作员 */

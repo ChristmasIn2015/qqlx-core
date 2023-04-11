@@ -1,6 +1,6 @@
 import type { MongodbBase, EnumMapOption } from "qqlx-cdk";
 
-export const enum ENUM_CORP {
+export enum ENUM_CORP {
     /** 未认证 */
     NONE,
     /** 个体户 */

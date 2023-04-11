@@ -1,6 +1,6 @@
 import type { MongodbBase, EnumMapOption } from "qqlx-cdk";
 
-export const enum ENUM_DEVOPS_ROLE {
+export enum ENUM_DEVOPS_ROLE {
     /** 内部：开发中心超级管理员 */
     ROOT = 1000,
     /** 内部：开发中心操作员 */

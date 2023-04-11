@@ -1,11 +1,11 @@
 {
     "name": "qqlx-core",
-    "version": "1.0.14",
+    "version": "1.0.28",
     "description": "",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
     "scripts": {
-        "build": "tsc && npm publish"
+        "build": "tsc && yarn add qqlx-cdk && npm publish"
     },
     "keywords": [
         "qqlx"
@@ -14,7 +14,7 @@
     "license": "ISC",
     "dependencies": {
         "mongodb": "^4.13.0",
-        "qqlx-cdk": "^0.0.4"
+        "qqlx-cdk": "^0.0.13"
     },
     "devDependencies": {
         "typescript": "^5.0.2"

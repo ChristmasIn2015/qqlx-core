@@ -14,15 +14,13 @@ export type SkuJoined = Sku & {
 export type getSkuDto = {
     page: Page;
     search: Sku;
+    types: ENUM_ORDER[];
 
     sortKey?: string;
     sortValue?: MongodbSort;
     groupKey?: string;
 };
 export type getSkuRes = PageRes<SkuJoined>;
-
-export type getSkuByOrderDto = { orderId: string };
-export type getSkuByOrderRes = SkuJoined[];
 
 /** 仅用于入库、发货 */
 export type patchSkuDto = { entity: Sku };
@@ -32,10 +30,15 @@ export const PATH_SKU_ANALYSIS = "/qqlx/wmss/sku/analysis";
 export type getSkuAnalysisDto = {
     startTime: number;
     endTime: number;
-};
+}[];
 export type getSkuAnalysisRes = {
-    // 未处理的Sku
-    skuNotConfirmed: Record<ENUM_ORDER, number>;
-    // 大件商品未入库/发货
-    coutIndividualSkuNotConfirmed: number;
-};
+    startTime: number;
+    endTime: number;
+    calcu: Record<
+        ENUM_ORDER,
+        {
+            confirmed: number;
+            total: number;
+        }
+    >;
+}[];

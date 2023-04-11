@@ -1,5 +1,6 @@
 import { EnumMapOption } from "qqlx-cdk";
 /** 固定业务错误
+ * @BadRequest 400 明显的客户端错误
  * @Unauthorized 401 请求要求用户的身份认证
  * @Forbidden 403 服务器理解请求客户端的请求，但是拒绝执行此请求
  * @NotFound 404
@@ -12,7 +13,10 @@ export declare enum ENUM_ERROR_CODE {
     SCHEDULE_MARKET_BELOW = 40302,
     NOT_FOUND_USER = 40401,
     NOT_FOUND_BRAND = 40402,
-    BUSY_REMOTE_WECHAT = 50401
+    UNKNOWN = 500,
+    BUSY_REMOTE_WECHAT = 50401,
+    /** 不理想的返回值 */
+    MESS_REMOTE_WECHAT = 50402
 }
 declare const MAP_ENUM_ERROR_CODE: Map<ENUM_ERROR_CODE, EnumMapOption>;
 export { MAP_ENUM_ERROR_CODE };

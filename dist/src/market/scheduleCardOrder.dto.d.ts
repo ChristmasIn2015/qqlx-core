@@ -34,7 +34,9 @@ export type patchScheduleCardOrderDto = {
 };
 export type patchScheduleCardOrderRes = null;
 export declare const PATH_MARKET_SCO_ANALYSIS = "/qqlx/market/wmss/analysis";
-export type getScoAnalysisDto = null;
+export type getScoAnalysisDto = {
+    corpId: string;
+};
 export type getScoAnalysisRes = {
     lastActiveSCO: ScheduleCardOrderJoined;
 };

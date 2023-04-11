@@ -1,6 +1,6 @@
 import type { MongodbBase, EnumMapOption } from "qqlx-cdk";
 
-export const enum ENUM_BRAND_ROLE {
+export enum ENUM_BRAND_ROLE {
     /** 公司创建者 */
     ROOT = 3000,
     /** 实习生 */

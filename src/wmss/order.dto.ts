@@ -1,23 +1,27 @@
 import { Page, PageRes, MongodbSort } from "qqlx-cdk";
 
-import type { UserWeChat } from "../user/user.schema";
+import type { UserInfo } from "../user/user.dto";
 import type { Contact } from "../brand/contact.schema";
-import type { Order } from "./order.schema";
+import type { Order, ENUM_ORDER } from "./order.schema";
 import type { Sku } from "./sku.schema";
+import type { Book, BookOfOrder } from "./book.schema";
+import { SkuJoined } from "./sku.dto";
 
 export const PATH_ORDER = "/qqlx/wmss/order";
 export type postOrderDto = { schema: Order; skuList?: Sku[] };
 export type postOrderRes = Order;
 
+type _Book = { joinBook: Book } & BookOfOrder;
 export type OrderJoined = Order & {
     joinChildOrder?: Order[];
     joinParentOrder?: Order[];
 
-    joinCreator?: UserWeChat;
+    joinCreator?: UserInfo;
     joinContact?: Contact;
-    joinManager?: UserWeChat;
-    joinAccounter?: UserWeChat;
+    joinManager?: UserInfo;
+    joinAccounter?: UserInfo;
     joinSku?: Sku[];
+    joinBookOfOrder?: _Book[];
 };
 
 export type getOrderDto = {
@@ -47,30 +51,27 @@ export type putOrderRes = Order;
 export type deleteOrderDto = { orderId: string };
 export type deleteOrderRes = null;
 
+type _book = { joinBook: Book } & BookOfOrder;
+export type getSkuByOrderDto = { orderId: string };
+export type getSkuByOrderRes = {
+    skuList: SkuJoined[];
+    bookOfOrderList: _book[];
+};
+
 export const PATH_ORDER_ANALYSIS = "/qqlx/wmss/order/analysis";
 
 export type getOrderAnalysisDto = {
     startTime: number;
     endTime: number;
-};
+}[];
 export type getOrderAnalysisRes = {
-    // 销售订单
-    amountSaleOrder: number;
-    countSaleOrder: number;
-    // 仓库订单
-    countGetInOrder: number;
-    countGetOutOrder: number;
-    countMaterialOrder: number;
-    countProcessOrder: number;
-
-    amountBook: {
-        /** 实收货款 */
-        YSZK_DAI: number;
-        /** 实开发票 */
-        YSZK_VAT_JIE: number;
-        /** 实付货款 */
-        YFZK_JIE: number;
-        /** 实收发票 */
-        YFZK_VAT_DAI: number;
-    };
-};
+    startTime: number;
+    endTime: number;
+    calcu: Record<
+        ENUM_ORDER,
+        {
+            amount: number;
+            count: number;
+        }
+    >;
+}[];

@@ -93,10 +93,10 @@ export type BookOfOrder = {
  */
 export type BookOfSelf = {
     /** @foreign */
-    bookId: string;
+    invoiceId: string;
 
     /** @foreign */
-    invoiceId: string;
+    bookId: string;
 
     amount: number;
 } & MongodbBase;
