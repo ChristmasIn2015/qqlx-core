@@ -56,6 +56,11 @@ export type getSkuByOrderDto = { orderId: string };
 export type getSkuByOrderRes = {
     skuList: SkuJoined[];
     bookOfOrderList: _book[];
+    joinCreator?: UserInfo;
+    joinManager?: UserInfo;
+    joinAccounter?: UserInfo;
+    joinChildOrder?: Order[];
+    joinParentOrder?: Order[];
 };
 
 export const PATH_ORDER_ANALYSIS = "/qqlx/wmss/order/analysis";

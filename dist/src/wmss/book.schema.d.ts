@@ -72,8 +72,8 @@ export type BookOfOrder = {
  */
 export type BookOfSelf = {
     /** @foreign */
-    bookId: string;
-    /** @foreign */
     invoiceId: string;
+    /** @foreign */
+    bookId: string;
     amount: number;
 } & MongodbBase;
