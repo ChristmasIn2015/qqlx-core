@@ -11,7 +11,10 @@ export declare const PATH_LOG_ANALYSIS = "/qqlx/log/analysis";
 export type postLogAnalysisDto = LogAnalysis;
 export type postLogAnalysisRes = null;
 export type LogAnalysisJoined = LogAnalysis & {
-    classes: Record<ENUM_LOG, number>[];
+    classes: {
+        type: ENUM_LOG;
+        count: number;
+    }[];
 };
 export type getLogAnalysisDto = {
     page: Page;
