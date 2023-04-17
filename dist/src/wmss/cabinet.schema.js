@@ -56,7 +56,7 @@ RECOMAND_POUNDS_FORMULA.push({ name: "圆管", unit: "米", formula: ENUM_POUNDS
 MAP_ENUM_POUNDS_FORMULA.set(ENUM_POUNDS_FORMULA.TS_WFGG, {
     value: ENUM_POUNDS_FORMULA.TS_WFGG,
     text: "圆管专用",
-    tip: "如：1支 273*20 / 外径mm*厚度mm 的圆管理算重量将会计算为 0.250 吨",
+    tip: "如：273*20 / 外径mm*厚度mm 的圆管理，每米重量将会计算为 0.124 吨",
 });
 RECOMAND_POUNDS_FORMULA.push({ name: "方管", unit: "米", formula: ENUM_POUNDS_FORMULA.TS_FG, layout: ENUM_LAYOUT_CABINET.SUMMARY });
 MAP_ENUM_POUNDS_FORMULA.set(ENUM_POUNDS_FORMULA.TS_FG, {
@@ -87,7 +87,7 @@ RECOMAND_POUNDS_FORMULA.push({ name: "H型钢", unit: "米", formula: ENUM_POUND
 MAP_ENUM_POUNDS_FORMULA.set(ENUM_POUNDS_FORMULA.TS_HXG, {
     value: ENUM_POUNDS_FORMULA.TS_HXG,
     text: "H型钢专用",
-    tip: "如：1支 400*150*8*13 / 外径mm*厚度mm 的不等边角钢理算重量将会计算为 649.22 kg",
+    tip: "如：1支 400*150*8*13 / 外径mm*厚度mm 的不等边角钢，每米重量将会计算为 649.22 kg",
 });
 RECOMAND_POUNDS_FORMULA.push({ name: "方钢", unit: "米", formula: ENUM_POUNDS_FORMULA.NONE, layout: ENUM_LAYOUT_CABINET.SUMMARY });
 RECOMAND_POUNDS_FORMULA.push({ name: "槽钢", unit: "米", formula: ENUM_POUNDS_FORMULA.NONE, layout: ENUM_LAYOUT_CABINET.SUMMARY });
