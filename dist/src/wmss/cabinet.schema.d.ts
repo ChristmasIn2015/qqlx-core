@@ -9,18 +9,20 @@ export { MAP_ENUM_LAYOUT_CABINET };
 /** 开单时的自动称重方法 */
 export declare enum ENUM_POUNDS_FORMULA {
     NONE = 1,
-    /** 碳素钢板 厚度mm*宽度mm*长度mm */
+    /** 碳素钢板 厚度mm*宽度mmm */
     TS_PLATE = 2,
-    /** 无缝钢管 外径mm*厚度mm*长度m */
-    TS_WFGG = 3,
-    /** 无缝方管 长度mm*宽度mm*厚度mm*长度m */
-    TS_WFFG = 4,
-    /** 等边角钢 边框mm*厚度mm*长度m */
-    TS_DBJG = 5,
-    /** 不等边角钢 边框mm*厚度mm*长度m */
-    TS_BDBJG = 6,
-    /** H型钢（工字钢的一种） 腹板长mm*翼板长mm*腹板厚度mm*翼板厚度mm*长度m */
-    TS_HXG = 7
+    /** 圆管 外径mm*厚度mm */
+    TS_WFGG = 3001,
+    /** 方管 长度mm*宽度mm*厚度mm */
+    TS_FG = 3002,
+    /** 矩形方管 长度mm*宽度mm*厚度mm */
+    TS_JXFG = 3003,
+    /** 等边角钢 长mm*厚度mm */
+    TS_DBJG = 5000,
+    /** 不等边角钢 长mm*宽mm*厚度mm */
+    TS_BDBJG = 5001,
+    /** H型钢（工字钢的一种） 腹板长mm*翼板长mm*腹板厚度mm*翼板厚度mm */
+    TS_HXG = 6001
 }
 declare const RECOMAND_POUNDS_FORMULA: {
     name: string;
