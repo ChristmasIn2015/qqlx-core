@@ -62,21 +62,3 @@ export type getSkuByOrderRes = {
     joinChildOrder?: Order[];
     joinParentOrder?: Order[];
 };
-
-export const PATH_ORDER_ANALYSIS = "/qqlx/wmss/order/analysis";
-
-export type getOrderAnalysisDto = {
-    startTime: number;
-    endTime: number;
-}[];
-export type getOrderAnalysisRes = {
-    startTime: number;
-    endTime: number;
-    calcu: Record<
-        ENUM_ORDER,
-        {
-            amount: number;
-            count: number;
-        }
-    >;
-}[];

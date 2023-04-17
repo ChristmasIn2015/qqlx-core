@@ -25,20 +25,3 @@ export type getSkuRes = PageRes<SkuJoined>;
 /** 仅用于入库、发货 */
 export type patchSkuDto = { entity: Sku };
 export type patchSkuRes = null;
-
-export const PATH_SKU_ANALYSIS = "/qqlx/wmss/sku/analysis";
-export type getSkuAnalysisDto = {
-    startTime: number;
-    endTime: number;
-}[];
-export type getSkuAnalysisRes = {
-    startTime: number;
-    endTime: number;
-    calcu: Record<
-        ENUM_ORDER,
-        {
-            confirmed: number;
-            total: number;
-        }
-    >;
-}[];

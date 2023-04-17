@@ -9,11 +9,27 @@ export { MAP_ENUM_LAYOUT_CABINET };
 /** 开单时的自动称重方法 */
 export declare enum ENUM_POUNDS_FORMULA {
     NONE = 1,
-    /** 薄钢板理算 厚度mm*宽度mm*长度mm */
-    STEEL_PLATE = 2
+    /** 碳素钢板 厚度mm*宽度mm*长度mm */
+    TS_PLATE = 2,
+    /** 无缝钢管 外径mm*厚度mm*长度m */
+    TS_WFGG = 3,
+    /** 无缝方管 长度mm*宽度mm*厚度mm*长度m */
+    TS_WFFG = 4,
+    /** 等边角钢 边框mm*厚度mm*长度m */
+    TS_DBJG = 5,
+    /** 不等边角钢 边框mm*厚度mm*长度m */
+    TS_BDBJG = 6,
+    /** H型钢（工字钢的一种） 腹板长mm*翼板长mm*腹板厚度mm*翼板厚度mm*长度m */
+    TS_HXG = 7
 }
+declare const RECOMAND_POUNDS_FORMULA: {
+    name: string;
+    unit: string;
+    formula: ENUM_POUNDS_FORMULA;
+    layout: ENUM_LAYOUT_CABINET;
+}[];
 declare const MAP_ENUM_POUNDS_FORMULA: Map<ENUM_POUNDS_FORMULA, EnumMapOption>;
-export { MAP_ENUM_POUNDS_FORMULA };
+export { MAP_ENUM_POUNDS_FORMULA, RECOMAND_POUNDS_FORMULA };
 /** Sku的分类
  * @按成形方法分类 锻钢 铸钢 热轧钢 冷拉钢
  * @按外形分类 型材、板材、管材、金属制品 (钢丝、钢丝绳、钢绞线等)

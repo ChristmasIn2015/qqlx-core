@@ -21,16 +21,3 @@ export type patchSkuDto = {
     entity: Sku;
 };
 export type patchSkuRes = null;
-export declare const PATH_SKU_ANALYSIS = "/qqlx/wmss/sku/analysis";
-export type getSkuAnalysisDto = {
-    startTime: number;
-    endTime: number;
-}[];
-export type getSkuAnalysisRes = {
-    startTime: number;
-    endTime: number;
-    calcu: Record<ENUM_ORDER, {
-        confirmed: number;
-        total: number;
-    }>;
-}[];

@@ -22,18 +22,76 @@ export { MAP_ENUM_LAYOUT_CABINET };
 /** 开单时的自动称重方法 */
 export enum ENUM_POUNDS_FORMULA {
     NONE = 1,
-    /** 薄钢板理算 厚度mm*宽度mm*长度mm */
-    STEEL_PLATE = 2,
+    /** 碳素钢板 厚度mm*宽度mm*长度mm */
+    TS_PLATE,
+    /** 无缝钢管 外径mm*厚度mm*长度m */
+    TS_WFGG,
+    /** 无缝方管 长度mm*宽度mm*厚度mm*长度m */
+    TS_WFFG,
+    /** 等边角钢 边框mm*厚度mm*长度m */
+    TS_DBJG,
+    /** 不等边角钢 边框mm*厚度mm*长度m */
+    TS_BDBJG,
+    /** H型钢（工字钢的一种） 腹板长mm*翼板长mm*腹板厚度mm*翼板厚度mm*长度m */
+    TS_HXG,
 }
 
+const RECOMAND_POUNDS_FORMULA: { name: string; unit: string; formula: ENUM_POUNDS_FORMULA; layout: ENUM_LAYOUT_CABINET }[] = [];
 const MAP_ENUM_POUNDS_FORMULA = new Map<ENUM_POUNDS_FORMULA, EnumMapOption>();
+
 MAP_ENUM_POUNDS_FORMULA.set(ENUM_POUNDS_FORMULA.NONE, { value: ENUM_POUNDS_FORMULA.NONE, text: "无", tip: "" });
-MAP_ENUM_POUNDS_FORMULA.set(ENUM_POUNDS_FORMULA.STEEL_PLATE, {
-    value: ENUM_LAYOUT_CABINET.INDIVIDUAL,
-    text: "板材专用",
-    tip: "如：1张 1.0mm*1250mm*2500mm 的钢板理算重量将会计算为 0.025 吨",
+RECOMAND_POUNDS_FORMULA.push({ name: "费用", unit: "-", formula: ENUM_POUNDS_FORMULA.NONE, layout: ENUM_LAYOUT_CABINET.SUMMARY });
+RECOMAND_POUNDS_FORMULA.push({ name: "冷轧卷", unit: "个", formula: ENUM_POUNDS_FORMULA.NONE, layout: ENUM_LAYOUT_CABINET.INDIVIDUAL });
+RECOMAND_POUNDS_FORMULA.push({ name: "冷轧板", unit: "张", formula: ENUM_POUNDS_FORMULA.TS_PLATE, layout: ENUM_LAYOUT_CABINET.SUMMARY });
+MAP_ENUM_POUNDS_FORMULA.set(ENUM_POUNDS_FORMULA.TS_PLATE, {
+    value: ENUM_POUNDS_FORMULA.TS_PLATE,
+    text: "板材（碳素）专用",
+    tip: "如：1张 1.0*1250*2500 / 厚度mm*宽度mm*长度mm 的碳素钢板理算重量将会计算为 0.025 吨（密度以 7.85g/cm³ 为准）",
 });
-export { MAP_ENUM_POUNDS_FORMULA };
+
+RECOMAND_POUNDS_FORMULA.push({ name: "焊管", unit: "支", formula: ENUM_POUNDS_FORMULA.NONE, layout: ENUM_LAYOUT_CABINET.SUMMARY });
+RECOMAND_POUNDS_FORMULA.push({ name: "无缝钢管", unit: "支", formula: ENUM_POUNDS_FORMULA.TS_WFGG, layout: ENUM_LAYOUT_CABINET.SUMMARY });
+MAP_ENUM_POUNDS_FORMULA.set(ENUM_POUNDS_FORMULA.TS_WFGG, {
+    value: ENUM_POUNDS_FORMULA.TS_WFGG,
+    text: "无缝钢管专用",
+    tip: "如：1根 114*4*6 / 外径mm*厚度mm*长度m 的无缝钢管理算重量将会计算为 ？？？ 吨（密度以 0.02466kg/m 为准）",
+});
+RECOMAND_POUNDS_FORMULA.push({ name: "方管", unit: "支", formula: ENUM_POUNDS_FORMULA.TS_WFFG, layout: ENUM_LAYOUT_CABINET.SUMMARY });
+MAP_ENUM_POUNDS_FORMULA.set(ENUM_POUNDS_FORMULA.TS_WFFG, {
+    value: ENUM_POUNDS_FORMULA.TS_WFFG,
+    text: "方管专用",
+    tip: "如：1根 200*150*10*6 / 外径mm*厚度mm*长度m 的无缝钢管理算重量将会计算为 ？？？ 吨（密度以 0.02466kg/m 为准）",
+});
+
+RECOMAND_POUNDS_FORMULA.push({ name: "等边角钢", unit: "支", formula: ENUM_POUNDS_FORMULA.NONE, layout: ENUM_LAYOUT_CABINET.SUMMARY });
+MAP_ENUM_POUNDS_FORMULA.set(ENUM_POUNDS_FORMULA.TS_DBJG, {
+    value: ENUM_POUNDS_FORMULA.TS_WFGG,
+    text: "等边角钢专用",
+    tip: "如：1根 20*5*6 / 外径mm*厚度mm*长度m 的等边角钢理算重量将会计算为 ？？？ 吨（密度以 7.85g/cm³ 为准）",
+});
+
+RECOMAND_POUNDS_FORMULA.push({ name: "不等边角钢", unit: "支", formula: ENUM_POUNDS_FORMULA.NONE, layout: ENUM_LAYOUT_CABINET.SUMMARY });
+MAP_ENUM_POUNDS_FORMULA.set(ENUM_POUNDS_FORMULA.TS_BDBJG, {
+    value: ENUM_POUNDS_FORMULA.TS_BDBJG,
+    text: "不等边角钢专用",
+    tip: "如：1根 25*16*5*6 / 外径mm*厚度mm*长度m 的不等边角钢理算重量将会计算为 ？？？ 吨（密度以 7.85g/cm³ 为准）",
+});
+
+RECOMAND_POUNDS_FORMULA.push({ name: "工字钢", unit: "支", formula: ENUM_POUNDS_FORMULA.NONE, layout: ENUM_LAYOUT_CABINET.SUMMARY });
+RECOMAND_POUNDS_FORMULA.push({ name: "H型钢", unit: "支", formula: ENUM_POUNDS_FORMULA.NONE, layout: ENUM_LAYOUT_CABINET.SUMMARY });
+MAP_ENUM_POUNDS_FORMULA.set(ENUM_POUNDS_FORMULA.TS_HXG, {
+    value: ENUM_POUNDS_FORMULA.TS_HXG,
+    text: "H型钢专用",
+    tip: "如：1根 25*16*10*6 / 外径mm*厚度mm*长度m 的不等边角钢理算重量将会计算为 ？？？ 吨（密度以 7.85g/cm³ 为准）",
+});
+
+RECOMAND_POUNDS_FORMULA.push({ name: "方钢", unit: "支", formula: ENUM_POUNDS_FORMULA.NONE, layout: ENUM_LAYOUT_CABINET.SUMMARY });
+RECOMAND_POUNDS_FORMULA.push({ name: "槽钢", unit: "支", formula: ENUM_POUNDS_FORMULA.NONE, layout: ENUM_LAYOUT_CABINET.SUMMARY });
+RECOMAND_POUNDS_FORMULA.push({ name: "扁钢", unit: "支", formula: ENUM_POUNDS_FORMULA.NONE, layout: ENUM_LAYOUT_CABINET.SUMMARY });
+RECOMAND_POUNDS_FORMULA.push({ name: "圆钢", unit: "支", formula: ENUM_POUNDS_FORMULA.NONE, layout: ENUM_LAYOUT_CABINET.SUMMARY });
+RECOMAND_POUNDS_FORMULA.push({ name: "螺纹钢", unit: "支", formula: ENUM_POUNDS_FORMULA.NONE, layout: ENUM_LAYOUT_CABINET.SUMMARY });
+
+export { MAP_ENUM_POUNDS_FORMULA, RECOMAND_POUNDS_FORMULA };
 
 /** Sku的分类
  * @按成形方法分类 锻钢 铸钢 热轧钢 冷拉钢

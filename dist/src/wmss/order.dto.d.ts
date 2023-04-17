@@ -1,7 +1,7 @@
 import { Page, PageRes, MongodbSort } from "qqlx-cdk";
 import type { UserInfo } from "../user/user.dto";
 import type { Contact } from "../brand/contact.schema";
-import type { Order, ENUM_ORDER } from "./order.schema";
+import type { Order } from "./order.schema";
 import type { Sku } from "./sku.schema";
 import type { Book, BookOfOrder } from "./book.schema";
 import { SkuJoined } from "./sku.dto";
@@ -65,17 +65,4 @@ export type getSkuByOrderRes = {
     joinChildOrder?: Order[];
     joinParentOrder?: Order[];
 };
-export declare const PATH_ORDER_ANALYSIS = "/qqlx/wmss/order/analysis";
-export type getOrderAnalysisDto = {
-    startTime: number;
-    endTime: number;
-}[];
-export type getOrderAnalysisRes = {
-    startTime: number;
-    endTime: number;
-    calcu: Record<ENUM_ORDER, {
-        amount: number;
-        count: number;
-    }>;
-}[];
 export {};
