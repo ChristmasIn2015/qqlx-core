@@ -1,12 +1,10 @@
 import type { MongodbBase, EnumMapOption } from "qqlx-cdk";
 import { ENUM_PROJECT } from "./project.schema";
 
-/** 开发中心：角色 */
-export type ProjectHelp = {
+export type IntroGroup = {
     scope: ENUM_PROJECT;
-
-    title: string;
-    content: string;
-    /** 路径列表 */
+    /** 在哪些路径、优先展示 */
+    path: string;
+    /** 帮助跳转按钮 */
     actions: string;
 } & MongodbBase;

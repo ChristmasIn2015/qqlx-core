@@ -1,0 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PATH_INTRO = void 0;
+exports.PATH_INTRO = "/qqlx/market/intro";
+// export type postIntroDto = { groupId: string; schemas: Intro[] };
+// export type postIntroRes = null;
+// export type getIntroDto = { search: Intro };
+// export type getIntroRes = Intro[];
+// export type patchIntroDto = { entity: Intro };
+// export type patchIntroRes = null;
+// export type deleteIntroDto = { entityId: string };
+// export type deleteIntroRes = null;
