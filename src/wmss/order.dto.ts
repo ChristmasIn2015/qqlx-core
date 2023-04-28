@@ -2,7 +2,7 @@ import { Page, PageRes, MongodbSort } from "qqlx-cdk";
 
 import type { UserInfo } from "../user/user.dto";
 import type { Contact } from "../brand/contact.schema";
-import type { Order, ENUM_ORDER } from "./order.schema";
+import type { Order } from "./order.schema";
 import type { Sku } from "./sku.schema";
 import type { Book, BookOfOrder } from "./book.schema";
 import { SkuJoined } from "./sku.dto";
@@ -13,13 +13,14 @@ export type postOrderRes = Order;
 
 type _Book = { joinBook: Book } & BookOfOrder;
 export type OrderJoined = Order & {
+    joinContact?: Contact;
+
+    joinCreator?: UserInfo;
+    joinManager?: UserInfo;
+    joinAccounter?: UserInfo;
     joinChildOrder?: Order[];
     joinParentOrder?: Order[];
 
-    joinCreator?: UserInfo;
-    joinContact?: Contact;
-    joinManager?: UserInfo;
-    joinAccounter?: UserInfo;
     joinSku?: Sku[];
     joinBookOfOrder?: _Book[];
 };
@@ -36,12 +37,6 @@ export type getOrderDto = {
     requireManagerId?: boolean;
     /** 是否可结清 */
     requireAccounterId?: boolean;
-
-    joinCreator?: boolean;
-    joinContact?: boolean;
-    joinManager?: boolean;
-    joinAccounter?: boolean;
-    joinSku?: boolean;
 };
 export type getOrderRes = PageRes<OrderJoined>;
 
@@ -52,13 +47,14 @@ export type deleteOrderDto = { orderId: string };
 export type deleteOrderRes = null;
 
 type _book = { joinBook: Book } & BookOfOrder;
-export type getSkuByOrderDto = { orderId: string };
-export type getSkuByOrderRes = {
+export type getOrderInfoDto = { orderId: string };
+export type getOrderInfoRes = {
+    joinCreator: UserInfo;
+    joinManager: UserInfo;
+    joinAccounter: UserInfo;
+    joinChildOrder: Order[];
+    joinParentOrder: Order[];
+
     skuList: SkuJoined[];
     bookOfOrderList: _book[];
-    joinCreator?: UserInfo;
-    joinManager?: UserInfo;
-    joinAccounter?: UserInfo;
-    joinChildOrder?: Order[];
-    joinParentOrder?: Order[];
 };

@@ -9,7 +9,10 @@ export type ContactAnalysis = {
     type: ENUM_ORDER;
     /** 订单数量 */
     count: number;
+
     amountOrder: number;
     amountBookOfOrder: number;
     amountBookOfOrderRest: number;
+    amountBookOfOrderVAT: number;
+    amountBookOfOrderVATRest: number;
 } & MongodbBase;

@@ -38,17 +38,12 @@ export type Order = {
     /** @foreign */
     corpId: string;
 
-    /** @foreign */
     parentOrderId: string;
     parentOrderType: ENUM_ORDER;
 
-    /** @foreign */
     creatorId: string;
-    /** @foreign */
     contactId: string;
-    /** @foreign 销售/采购负责人签字 */
     managerId: string;
-    /** @foreign 钱货结清后，财务负责人签字 */
     accounterId: string;
 
     type: ENUM_ORDER;
@@ -57,7 +52,11 @@ export type Order = {
     remark: string;
     isDisabled: boolean;
 
-    /** 此订单开出了多少金额的收付款证明 @以后需要拆分出去 */
+    /** 此订单开出了多少金额的收付款证明 */
     amountBookOfOrder: number;
     amountBookOfOrderRest: number;
+
+    /** 此订单开出了多少发票 */
+    amountBookOfOrderVAT: number;
+    amountBookOfOrderVATRest: number;
 } & MongodbBase;

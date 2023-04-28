@@ -10,4 +10,6 @@ export type ContactAnalysis = {
     amountOrder: number;
     amountBookOfOrder: number;
     amountBookOfOrderRest: number;
+    amountBookOfOrderVAT: number;
+    amountBookOfOrderVATRest: number;
 } & MongodbBase;

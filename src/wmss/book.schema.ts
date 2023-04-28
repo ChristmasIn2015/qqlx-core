@@ -1,4 +1,5 @@
 import type { MongodbBase, EnumMapOption } from "qqlx-cdk";
+import { ENUM_ORDER } from "./order.schema";
 
 /** 会计分录
  * @应收账款 1122 销售应收款
@@ -66,37 +67,19 @@ export type Book = {
      */
     amountBookOfOrder: number;
     amountBookOfOrderRest: number;
-
-    /**
-     * @资金 -
-     * @发票 这张发票包含了多少资金/金额合计
-     */
-    amountBookOfSelf: number;
-    amountBookOfSelfRest: number;
 } & MongodbBase;
 
 /** 有哪些订单被结清 */
 export type BookOfOrder = {
     /** @foreign */
     bookId: string;
+    bookType: ENUM_BOOK_TYPE;
+    bookDirection: ENUM_BOOK_DIRECTION;
 
     /** @foreign */
     orderId: string;
+    orderType: ENUM_ORDER;
     orderContactId: string;
-
-    amount: number;
-} & MongodbBase;
-
-/** 资金开了哪些发票
- * @资金 应收帐款（贷方）
- * @发票 应收帐款VAT（借方）
- */
-export type BookOfSelf = {
-    /** @foreign */
-    invoiceId: string;
-
-    /** @foreign */
-    bookId: string;
 
     amount: number;
 } & MongodbBase;
