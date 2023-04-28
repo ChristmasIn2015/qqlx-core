@@ -2,8 +2,10 @@ import { Page, PageRes, MongodbSort } from "qqlx-cdk";
 import type { Contact } from "../brand/contact.schema";
 import type { Order, ENUM_ORDER } from "./order.schema";
 import type { Sku } from "./sku.schema";
+import { Area } from "../brand/area.schema";
 export declare const PATH_SKU = "/qqlx/wmss/sku";
 export type SkuJoined = Sku & {
+    joinArea?: Area;
     joinOrder: Order;
     joinOrderContact: Contact;
 };

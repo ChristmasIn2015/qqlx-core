@@ -1,5 +1,6 @@
 import { MongodbSort, Page, PageRes } from "qqlx-cdk";
 import type { Cabinet, CabinetUnit } from "./cabinet.schema";
+import { AreaJoined } from "../brand/area.dto";
 
 export const PATH_CABINET = "/qqlx/wmss/cabinet";
 export type postCabinetDto = Cabinet;
@@ -18,7 +19,7 @@ export const PATH_CABINET_UNIT = "/qqlx/wmss/cabinet/unit";
 export type postCabinetUnitDto = { cabinet: Cabinet; excels: CabinetUnit[] };
 export type postCabinetUnitRes = null;
 
-export type CabinetUnitJoined = CabinetUnit & { joinCabinet: Cabinet };
+export type CabinetUnitJoined = CabinetUnit & { joinCabinet: Cabinet; joinArea?: AreaJoined };
 export type getCabinetUnitDto = {
     sortKey?: string;
     sortValue?: MongodbSort;

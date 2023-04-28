@@ -26,6 +26,8 @@ __exportStar(require("./src/brand/role.dto"), exports);
 __exportStar(require("./src/brand/role.schema"), exports);
 __exportStar(require("./src/brand/warehouse.dto"), exports);
 __exportStar(require("./src/brand/warehouse.schema"), exports);
+__exportStar(require("./src/brand/area.dto"), exports);
+__exportStar(require("./src/brand/area.schema"), exports);
 __exportStar(require("./src/devops/role.dto"), exports);
 __exportStar(require("./src/devops/role.schema"), exports);
 __exportStar(require("./src/log/log.dto"), exports);

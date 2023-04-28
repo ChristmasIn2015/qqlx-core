@@ -68,6 +68,8 @@ export type CabinetUnit = {
     name: string;
     norm: string;
     price: number;
+    /** @foreign 货位 */
+    areaId: string;
     countFinal: number;
     /** 实际剩余重量
      * @重量的单位是克 如1.255吨在数据库里应该是 1255000克

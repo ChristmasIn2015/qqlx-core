@@ -35,6 +35,8 @@ export type Sku = {
     corpId: string;
     /** @foreign 当前所在仓库 */
     warehouseId: string;
+    /** @foreign 货位号 */
+    areaId: string;
     /** @foreign */
     orderId: string;
     orderContactId: string;

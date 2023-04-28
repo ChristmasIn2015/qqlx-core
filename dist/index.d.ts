@@ -10,6 +10,8 @@ export * from "./src/brand/role.dto";
 export * from "./src/brand/role.schema";
 export * from "./src/brand/warehouse.dto";
 export * from "./src/brand/warehouse.schema";
+export * from "./src/brand/area.dto";
+export * from "./src/brand/area.schema";
 export * from "./src/devops/role.dto";
 export * from "./src/devops/role.schema";
 export * from "./src/log/log.dto";
