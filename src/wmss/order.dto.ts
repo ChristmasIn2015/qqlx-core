@@ -37,6 +37,10 @@ export type getOrderDto = {
     requireManagerId?: boolean;
     /** 是否可结清 */
     requireAccounterId?: boolean;
+
+    /** 以后可能用得上 */
+    joinSku?: boolean;
+    joinOther?: boolean;
 };
 export type getOrderRes = PageRes<OrderJoined>;
 
