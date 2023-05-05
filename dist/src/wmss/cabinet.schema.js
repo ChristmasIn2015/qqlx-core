@@ -16,8 +16,8 @@ MAP_ENUM_LAYOUT_CABINET.set(ENUM_LAYOUT_CABINET.SUMMARY, {
 });
 MAP_ENUM_LAYOUT_CABINET.set(ENUM_LAYOUT_CABINET.INDIVIDUAL, {
     value: ENUM_LAYOUT_CABINET.INDIVIDUAL,
-    text: "大件商品",
-    tip: "您可以具体看见，每一个入库后的“大件商品”的剩余库存（如冷轧卷等）",
+    text: "原材料",
+    tip: "您可以具体看见，每一个入库后的“原材料”的剩余库存（如冷轧卷等）",
 });
 /** 开单时的自动称重方法 */
 var ENUM_POUNDS_FORMULA;

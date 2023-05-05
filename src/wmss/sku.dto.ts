@@ -4,13 +4,17 @@ import type { Contact } from "../brand/contact.schema";
 import type { Order, ENUM_ORDER } from "./order.schema";
 import type { Sku } from "./sku.schema";
 import { Area } from "../brand/area.schema";
+import { Warehouse } from "../brand/warehouse.schema";
 
 export const PATH_SKU = "/qqlx/wmss/sku";
 
 export type SkuJoined = Sku & {
-    joinArea?: Area;
+    // joinArea?: Area;
+    joinWarehouse?: Warehouse;
     joinOrder: Order;
     joinOrderContact: Contact;
+    /** 销售中的重量 */
+    poundsSaleing?: number;
 };
 
 export type getSkuDto = {

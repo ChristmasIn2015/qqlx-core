@@ -68,7 +68,7 @@ export type CabinetUnit = {
     name: string;
     norm: string;
     price: number;
-    /** @foreign 货位 */
+    /** @foreign 货位（不再使用） */
     areaId: string;
     countFinal: number;
     /** 实际剩余重量

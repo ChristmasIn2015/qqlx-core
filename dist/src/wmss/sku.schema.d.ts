@@ -22,20 +22,21 @@ export type Sku = {
     price: number;
     isConfirmed: boolean;
     isPriceInPounds: boolean;
-    /** 页面中展示 ”单独发货“ 的标签 */
     layout: ENUM_LAYOUT_CABINET;
     formula: ENUM_POUNDS_FORMULA;
-    /** 用户自定义编号 */
-    keyCode: string;
-    /** 产地：宝钢、鞍钢 */
-    keyOrigin: string;
-    /** 材质 HABCD */
+    /** 材质 */
     keyFeat: string;
+    /** 产地 */
+    keyOrigin: string;
+    /** 商品捆包号 */
+    keyCode: string;
+    /** 所在仓库中的货物位置 */
+    keyHouse: string;
     /** @foreign */
     corpId: string;
     /** @foreign 当前所在仓库 */
     warehouseId: string;
-    /** @foreign 货位号 */
+    /** @foreign 货位号（不再使用） */
     areaId: string;
     /** @foreign */
     orderId: string;
