@@ -7,9 +7,9 @@ export type ContactAnalysis = {
     contactId: string;
 
     type: ENUM_ORDER;
+
     /** 订单数量 */
     count: number;
-
     amountOrder: number;
     amountBookOfOrder: number;
     amountBookOfOrderRest: number;

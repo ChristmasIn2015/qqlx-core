@@ -3,18 +3,19 @@ import type { Contact } from "../brand/contact.schema";
 import type { ENUM_ORDER } from "./order.schema";
 import { ContactAnalysis } from "./analysis.schema";
 export declare const PATH_ORDER_ANALYSIS = "/qqlx/wmss/order/analysis";
-export type getOrderAnalysisDto = {
+export type OrderAnalysis = {
+    type: ENUM_ORDER;
     startTime: number;
     endTime: number;
-}[];
-export type getOrderAnalysisRes = {
-    startTime: number;
-    endTime: number;
-    calcu: Record<ENUM_ORDER, {
-        amount: number;
+    analysis?: {
         count: number;
-    }>;
-}[];
+        amount: number;
+        amountBookOfOrder: number;
+        amountBookOfOrderVAT: number;
+    };
+};
+export type getOrderAnalysisDto = OrderAnalysis;
+export type getOrderAnalysisRes = OrderAnalysis;
 export declare const PATH_CONTACT_ANALYSIS = "/qqlx/wmss/contact/analysis";
 export type ContactAnalysisJoined = ContactAnalysis & {
     joinContact?: Contact;
