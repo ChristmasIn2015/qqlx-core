@@ -52,6 +52,9 @@ export type Order = {
     remark: string;
     isDisabled: boolean;
 
+    /** 是否含税 */
+    isNotTax: boolean;
+
     /** 此订单开出了多少金额的收付款证明 */
     amountBookOfOrder: number;
     amountBookOfOrderRest: number;
