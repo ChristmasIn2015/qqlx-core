@@ -21,8 +21,15 @@ declare const MAP_ENUM_LOG: Map<ENUM_LOG, EnumMapOption>;
 export { MAP_ENUM_LOG };
 export type Log = {
     type: ENUM_LOG;
+    /** REST路径 */
     path: string;
+    /** 追踪链 */
     chain: string;
+    /** IP */
+    ip: string;
+    /** 耗时 */
+    duration: string;
+    /** 内容 */
     json: string;
 } & MongodbBase;
 export type LogAnalysis = {

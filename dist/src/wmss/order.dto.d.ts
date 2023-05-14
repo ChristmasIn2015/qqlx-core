@@ -23,6 +23,7 @@ export type OrderJoined = Order & {
     joinParentOrder?: Order[];
     joinSku?: Sku[];
     joinBookOfOrder?: _Book[];
+    joinCluePrint?: string;
 };
 export type getOrderDto = {
     page: Page;
