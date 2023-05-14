@@ -1,4 +1,4 @@
-import type { Page, PageRes } from "qqlx-cdk";
+import type { MongodbSort, Page, PageRes } from "qqlx-cdk";
 import type { Log, LogAnalysis, ENUM_LOG } from "./log.schema";
 
 export const PATH_LOG = "/qqlx/log";
@@ -6,6 +6,9 @@ export type getLogDto = {
     search: Log;
     page: Page;
     keyword?: string;
+
+    sortKey: string;
+    sortValue: MongodbSort;
 };
 export type getLogRes = PageRes<Log>;
 

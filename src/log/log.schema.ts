@@ -43,7 +43,7 @@ export type Log = {
     ip: string;
 
     /** 耗时 */
-    duration: string;
+    duration: number;
 
     /** 内容 */
     json: string;
