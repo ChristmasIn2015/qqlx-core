@@ -23,6 +23,8 @@ export type OrderJoined = Order & {
 
     joinSku?: Sku[];
     joinBookOfOrder?: _Book[];
+
+    joinCluePrint?: string;
 };
 
 export type getOrderDto = {
