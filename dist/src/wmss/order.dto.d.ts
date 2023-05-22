@@ -40,6 +40,16 @@ export type getOrderDto = {
     joinOther?: boolean;
 };
 export type getOrderRes = PageRes<OrderJoined>;
+export type getOrderGroupDto = getOrderDto;
+export type getOrderGroupRes = {
+    amount: number;
+    /** 此订单开出了多少金额的收付款证明 */
+    amountBookOfOrder: number;
+    amountBookOfOrderRest: number;
+    /** 此订单开出了多少发票 */
+    amountBookOfOrderVAT: number;
+    amountBookOfOrderVATRest: number;
+};
 export type putOrderDto = {
     entity: Order;
     skuList?: Sku[];
