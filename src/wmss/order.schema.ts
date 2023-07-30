@@ -52,6 +52,9 @@ export type Order = {
     remark: string;
     isDisabled: boolean;
 
+    /** 合同日期 */
+    timeContract: number;
+
     /** 是否含税 */
     isNotTax: boolean;
 
