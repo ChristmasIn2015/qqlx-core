@@ -1,6 +1,6 @@
 {
     "name": "qqlx-core",
-    "version": "1.0.78",
+    "version": "1.0.79",
     "description": "",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
@@ -14,7 +14,8 @@
     "license": "ISC",
     "dependencies": {
         "mongodb": "^4.13.0",
-        "qqlx-cdk": "^0.0.14"
+        "qqlx-cdk": "^0.0.14",
+        "qqlx-core": "^1.0.78"
     },
     "devDependencies": {
         "typescript": "^5.0.2"

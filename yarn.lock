@@ -825,6 +825,14 @@ qqlx-cdk@^0.0.14:
   resolved "https://registry.npmjs.org/qqlx-cdk/-/qqlx-cdk-0.0.14.tgz#82586ce7d314376e998201e68ee48842ab7388a5"
   integrity sha512-dOYzTLGNpLgGDTfjwppgYN1XKp2/ZP+5OgsABEvZnJSNWg/clHPxYZrxYwiLcXIuRtv7EY4jZECyp4fzG5yT9w==
 
+qqlx-core@^1.0.78:
+  version "1.0.78"
+  resolved "https://registry.npmjs.org/qqlx-core/-/qqlx-core-1.0.78.tgz#cc163af29597d884108f968fc740003df9cbdcb4"
+  integrity sha512-Pxn8duG/N+mVVX7zAlpGcsja2z4gpy60mJkLSR85X+cRfNWk11Q2LH1C+D7GHnTAD8lPJKFL3WaoROpxeSCCrw==
+  dependencies:
+    mongodb "^4.13.0"
+    qqlx-cdk "^0.0.14"
+
 saslprep@^1.0.3:
   version "1.0.3"
   resolved "https://registry.npmjs.org/saslprep/-/saslprep-1.0.3.tgz#4c02f946b56cf54297e347ba1093e7acac4cf226"

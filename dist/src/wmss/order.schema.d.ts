@@ -38,6 +38,7 @@ export type Order = {
     isDisabled: boolean;
     /** 合同日期 */
     timeContract: number;
+    timeContractString?: string;
     /** 是否含税 */
     isNotTax: boolean;
     /** 此订单开出了多少金额的收付款证明 */

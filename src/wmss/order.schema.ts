@@ -54,6 +54,7 @@ export type Order = {
 
     /** 合同日期 */
     timeContract: number;
+    timeContractString?: string;
 
     /** 是否含税 */
     isNotTax: boolean;
