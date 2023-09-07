@@ -72,6 +72,7 @@ export type getOrderInfoRes = {
     joinChildOrder: Order[];
     joinParentOrder: Order[];
 
+    amount: number;
     skuList: SkuJoined[];
     bookOfOrderList: _book[];
 };
