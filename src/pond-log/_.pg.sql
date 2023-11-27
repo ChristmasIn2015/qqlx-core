@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS 'pond_log' (
+CREATE TABLE IF NOT EXISTS "pond_log" (
 
     'enum' SMALLINT,
     'title' VARCHAR(255) NOT NULL DEFAULT '',
