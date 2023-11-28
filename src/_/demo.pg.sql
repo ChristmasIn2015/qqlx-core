@@ -15,5 +15,5 @@ CREATE TABLE IF NOT EXISTS "your_table" (
     "isDisabled" BOOLEAN NOT NULL DEFAULT false,
     "_id" VARCHAR(50),
     "timeCreate" BIGINT NOT NULL DEFAULT 0,
-    "timeUpdate" BIGINT NOT NULL DEFAULT 0,
+    "timeUpdate" BIGINT NOT NULL DEFAULT 0
 );
