@@ -5,7 +5,11 @@
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
     "scripts": {
-        "build": "tsc && yarn add qqlx-cdk && npm publish"
+        "build": "yarn add qqlx-cdk && tsc && git add . && git commit -m updates",
+        "commit": "npm run build && git push",
+        "patch": "npm run commit && npm version patch && npm publish",
+        "minor": "npm run commit && npm version minor && npm publish",
+        "major": "npm run commit && npm version major && npm publish"
     },
     "keywords": [
         "qqlx"
@@ -14,8 +18,7 @@
     "license": "ISC",
     "dependencies": {
         "mongodb": "^4.13.0",
-        "qqlx-cdk": "^0.0.14",
-        "qqlx-core": "^1.0.78"
+        "qqlx-cdk": "^0.0.14"
     },
     "devDependencies": {
         "typescript": "^5.0.2"

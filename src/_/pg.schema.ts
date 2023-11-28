@@ -19,7 +19,7 @@ export type BIGINT_PG = number
 */
 export type VARCHAR_PG = string 
 
-/** Pg中最大长度是50的字符串 
+/** Pg中最大长度是50的字符串
  * @mongodb ObjectId 是一个由 24个字符 组成的字符串
 */
 export type VARCHAR50_PG = string 
