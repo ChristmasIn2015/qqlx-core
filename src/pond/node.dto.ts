@@ -16,5 +16,6 @@ export type PondNode = {
     text?: string
 }
 
+export const PATH_POND_NODE = "/pond/node"
 export type postPondNodeBeatDto = { schema: PondNode }
 export type postPondNodeRes = null
