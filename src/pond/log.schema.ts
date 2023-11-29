@@ -1,5 +1,7 @@
-import type { ENUM_POND_LOG } from "./enum"
-import type { PgBaseSchema, BIGINT_PG, VARCHAR_PG, VARCHAR255_PG } from "../_/pg.schema"
+import type { ENUM_POND_LOG } from "./log.dto"
+import type { PgBaseSchema, BIGINT_PG, VARCHAR_PG, VARCHAR255_PG } from "../_/pg"
+
+export const RELATIONS_POND_LOG_NAME = 'pond_log'
 
 export type PondLog = {
   type: ENUM_POND_LOG
