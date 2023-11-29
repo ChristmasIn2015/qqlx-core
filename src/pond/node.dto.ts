@@ -7,7 +7,6 @@ export type PondNode = {
 
     /** 内网地址 */
     lanIP: string
-    path: string
     port: number
 }
 
