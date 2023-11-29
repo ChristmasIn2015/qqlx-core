@@ -18,7 +18,7 @@ export * from "./src/devops/role.schema";
 
 export * from "./src/log/log.dto";
 export * from "./src/log/log.schema";
-export * from "./src/log/error.schema";
+export * from "./src/_/error";
 
 export * from "./src/market/project.dto";
 export * from "./src/market/project.schema";
@@ -63,9 +63,11 @@ export * from "./src/wmss/sku.schema";
 
 // 2023/11/28
 
-export * from "./src/_/mongo"
-export * from "./src/_/pg"
-export * from "./src/pond/node.dto"
+export * from "./src/_/db.mongo"
+export * from "./src/_/db.pg"
+export * from "./src/_/error"
+export * from "./src/_/translate"
+
 export * from "./src/pond/node.dto"
 export * from "./src/pond/log.dto"
 export * from "./src/pond/log.schema"
