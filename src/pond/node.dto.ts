@@ -6,8 +6,14 @@ export type PondNode = {
     name: string
 
     /** 内网地址 */
-    lanIP: string
+    lan_ip: string
     port: number
+
+    /** 文件数据 */
+    files?: ArrayBuffer[]
+
+    /** 字符数据 */
+    text?: string
 }
 
 export type postPondNodeBeatDto = { schema: PondNode }
