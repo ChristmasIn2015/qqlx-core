@@ -8,7 +8,7 @@ CREATE TABLE IF NOT EXISTS "pond_log" (
     "id" SERIAL PRIMARY KEY NOT NULL,
     "isDisabled" BOOLEAN NOT NULL DEFAULT false,
     "_id" VARCHAR(50),
-    "timeCreate" INTEGER NOT NULL DEFAULT -1,
-    "timeUpdate" INTEGER NOT NULL DEFAULT -1
+    "timeCreate" BIGINT NOT NULL DEFAULT -1,
+    "timeUpdate" BIGINT NOT NULL DEFAULT -1
 );
 

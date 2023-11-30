@@ -1,6 +1,3 @@
-
-
-
 export enum DbSortKey {
     /** 升序，从小到大 */
     ASC = 1,
@@ -11,9 +8,13 @@ export enum DbSortKey {
 export type Page = {
     page: number;
     pageSize: number;
-    startTime: number;
-    endTime: number;
     sortKey?: DbSortKey
+
+    /** 用于数据库查询时，记得转成 Bigint */
+    startTime: number;
+
+    /** 用于数据库查询时，记得转成 Bigint */
+    endTime: number;
 };
 
 export type PageRes<T> = {

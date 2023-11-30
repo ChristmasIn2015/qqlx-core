@@ -43,8 +43,8 @@ export type PgBaseSchema = {
   id: INTEGER_PG;
   isDisabled: boolean;
   _id: VARCHAR50_PG;
-  timeCreate: number;
-  timeUpdate: number;
+  timeCreate: BIGINT_PG;
+  timeUpdate: BIGINT_PG;
 }
 
 export const SHANGHAI_PG_SERVICE_NAME = "shanghai_postgresql_service"
