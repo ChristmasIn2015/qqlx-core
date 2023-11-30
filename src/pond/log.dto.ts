@@ -1,3 +1,5 @@
+import { NodeServiceName, NodeServicePath } from "../_/communication";
+import { Page, PageRes } from "../_/search";
 import { PondLog } from "./log.schema";
 
 export enum ENUM_POND_LOG {
@@ -21,7 +23,9 @@ export enum ENUM_POND_LOG {
     ALL,
 }
 
-export const POND_LOG_PATH = "/pond/log"
-export const POND_LOG_SERVICE_NAME = "pond_log"
-export type postPondLogDto = { schema: PondLog }
+export const POND_LOG_SERVICE_NAME: NodeServiceName = "pond_log"
+export const POND_LOG_PATH: NodeServicePath = "/pond/log"
+export type getPondLogDto = { page: Page, search: Partial<PondLog> }
+export type getPondLogRes = PageRes<PondLog>
+export type postPondLogDto = { dto: PondLog }
 export type postPondLogRes = null
