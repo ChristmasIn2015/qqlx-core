@@ -12,7 +12,7 @@ export type INTEGER_PG = number
 /** Pg占有八个字节的整数，范围约为 ±9223372036854775807，中文是九百二十二 亿亿！
  * @extra Js Number整数的存储/内容，占八个字节（64bit/53bit）范围是 ±±9007199254740991，中文是九千万亿 
  */
-export type BIGINT_PG = number
+export type BIGINT_PG = bigint
 
 /** Pg中没有长度限制的字符串 
  * @extra Js中字符串没有长度限制
