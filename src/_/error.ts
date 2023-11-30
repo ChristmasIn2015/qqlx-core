@@ -23,6 +23,8 @@ export enum ENUM_ERROR_CODE {
     NOT_FOUND_USER = 40401,
     /** 找不到经济主体 */
     NOT_FOUND_BRAND = 40402,
+    /** 找不到数据库记录 */
+    NOT_FOUND_ENTITY = 40403,
 
     /** 未知错误 */
     UNKNOWN = 500,
