@@ -11,5 +11,5 @@ export type PondLog = {
    */
   title: VARCHAR255_PG
   text: VARCHAR_PG
-  duration: BIGINT_PG
+  duration: number
 } & PgBaseSchema
