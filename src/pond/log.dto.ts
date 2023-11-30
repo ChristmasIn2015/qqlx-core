@@ -21,5 +21,7 @@ export enum ENUM_POND_LOG {
     ALL,
 }
 
+export const POND_LOG_PATH = "/pond/log"
+export const POND_LOG_SERVICE_NAME = "pond_log"
 export type postPondLogDto = { schema: PondLog }
 export type postPondLogRes = null
