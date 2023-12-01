@@ -10,10 +10,10 @@ export type Page = {
     pageSize: number;
     sortKey?: DbSortKey
 
-    /** 用于数据库查询时，记得转成 Bigint */
+    /** 如果从数据库查出来的时候，记得转成 Bigint */
     startTime: number;
 
-    /** 用于数据库查询时，记得转成 Bigint */
+    /** 如果从数据库查出来的时候，记得转成 Bigint */
     endTime: number;
 };
 
