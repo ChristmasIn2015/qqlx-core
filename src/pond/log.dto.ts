@@ -25,7 +25,7 @@ export enum ENUM_POND_LOG {
 
 export const POND_LOG_SERVICE_NAME: NodeServiceName = "pond_log"
 export const POND_LOG_PATH: NodeServicePath = "/pond/log"
-export type getPondLogDto = { page: Page, search: Partial<PondLog> }
+export type getPondLogDto<T> = { page: Page<T>, search: Partial<PondLog> }
 export type getPondLogRes = PageRes<PondLog>
 export type postPondLogDto = { dto: PondLog }
 export type postPondLogRes = null

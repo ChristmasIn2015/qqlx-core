@@ -1,19 +1,18 @@
 export enum DbSortKey {
-    /** 升序，从小到大 */
+    /** 从小到大升序 */
     ASC = 1,
-    /** 降序，从大到小 */
+    /** 从大到小降序 */
     DES = -1,
 }
 
-export type Page = {
+export type Page<T> = {
     page: number;
     pageSize: number;
-    sortKey?: DbSortKey
 
-    /** 如果从数据库查出来的时候，记得转成 Bigint */
+    sortKey?: keyof T
+    sortValue?: DbSortKey
+
     startTime: number;
-
-    /** 如果从数据库查出来的时候，记得转成 Bigint */
     endTime: number;
 };
 

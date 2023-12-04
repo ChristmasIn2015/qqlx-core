@@ -1,6 +1,6 @@
 
 /** 
- * @JavaScriptNumber 占八个字节（64bit/53bit）中文是九千万亿 
+ * @JavaScriptNumber 占八个字节，但是只有 53bit 中文是九千万亿 
  * @JavaScriptNumber 实际整数范围是 ± 9007199254740991 字符长度是 16
  * @smallint 
  * @smallint Pg占有二个字节的整数，范围约为 ± 32767，中文是三十二万多
@@ -8,7 +8,7 @@
 export type SMALLINT_PG = number
 
 /** 
- * @JavaScriptNumber 占八个字节（64bit/53bit）中文是九千万亿 
+ * @JavaScriptNumber 占八个字节，但是只有 53bit 中文是九千万亿 
  * @JavaScriptNumber 实际整数范围是 ± 9007199254740991 字符长度是 16
  * @integer 
  * @integer Pg占有四个字节的整数，中文是二十一亿多
@@ -17,7 +17,7 @@ export type SMALLINT_PG = number
 export type INTEGER_PG = number
 
 /** 
- * @JavaScriptNumber 占八个字节（64bit/53bit）中文是九千万亿 
+ * @JavaScriptNumber 占八个字节，但是只有 53bit 中文是九千万亿 
  * @JavaScriptNumber 实际整数范围是 ± 9007199254740991 字符长度是 16
  * @bigint 
  * @bigint Pg完全占有八个字节的整数，中文是九百二十二 亿亿！
