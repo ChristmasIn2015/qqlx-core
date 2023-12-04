@@ -1,3 +1,5 @@
+import { BIGINT_PG } from "./db.pg";
+
 export enum DbSortKey {
     /** 从小到大升序 */
     ASC = 1,
@@ -6,8 +8,8 @@ export enum DbSortKey {
 }
 
 export type TimeFilter = {
-    startTime: number;
-    endTime: number;
+    startTime: BIGINT_PG;
+    endTime: BIGINT_PG;
 }
 
 export type Page<T> = {
@@ -17,8 +19,8 @@ export type Page<T> = {
     sortKey?: keyof T
     sortValue?: DbSortKey
 
-    startTime: number;
-    endTime: number;
+    startTime: BIGINT_PG;
+    endTime: BIGINT_PG;
 };
 
 export type PageRes<T> = {

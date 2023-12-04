@@ -36,7 +36,7 @@ export type ValueOfIntegerPg<T> = {
  * @bigint 整数范围是 ± 9223372036854775807 字符长度是 19
  * @bigint 在 ts 环境中会被展示成字符串，需要通过 ts Bigint 容器装载计算
  */
-export type BIGINT_PG = bigint
+export type BIGINT_PG = string
 
 /** Pg中没有长度限制的字符串 
  * @extra Js中字符串没有长度限制
