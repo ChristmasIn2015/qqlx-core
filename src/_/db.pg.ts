@@ -7,6 +7,12 @@
  */
 export type SMALLINT_PG = number
 
+export type ValueOfSmallIntegerPg<T> = {
+  [K in keyof T]:
+  T[K] extends SMALLINT_PG
+  ? K : never;
+}[keyof T]
+
 /** 
  * @JavaScriptNumber 占八个字节，但是只有 53bit 中文是九千万亿 
  * @JavaScriptNumber 实际整数范围是 ± 9007199254740991 字符长度是 16
@@ -15,6 +21,12 @@ export type SMALLINT_PG = number
  * @integer 整数范围是 ± 2147483647 字符长度是 10
  */
 export type INTEGER_PG = number
+
+export type ValueOfIntegerPg<T> = {
+  [K in keyof T]:
+  T[K] extends INTEGER_PG
+  ? K : never;
+}[keyof T]
 
 /** 
  * @JavaScriptNumber 占八个字节，但是只有 53bit 中文是九千万亿 
