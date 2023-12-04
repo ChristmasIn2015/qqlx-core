@@ -5,6 +5,11 @@ export enum DbSortKey {
     DES = -1,
 }
 
+export type TimeFilter = {
+    startTime: number;
+    endTime: number;
+}
+
 export type Page<T> = {
     page: number;
     pageSize: number;
