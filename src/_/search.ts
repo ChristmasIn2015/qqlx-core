@@ -60,7 +60,7 @@ export type TimeFilter = {
 };
 
 export type ConditionTime<T> = {
-    type: ConditionType.Sort;
+    type: ConditionType.Time;
     key: { [K in keyof T]: T[K] extends BIGINT_PG ? K : never }[keyof T];
     value: TimeFilter;
 };
