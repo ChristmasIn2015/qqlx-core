@@ -1,6 +1,8 @@
 export type NumberTransOption = {
-  value: number;
-  zh?: string;
-  en?: string;
-  message?: string;
+    /** 枚举值 */
+    value: number;
+
+    zh?: string;
+    en?: string;
+    message?: string;
 };

@@ -1,6 +1,5 @@
-import { NodeServiceName, NodeServicePath } from "../_/communication";
 import { Page, PageRes } from "../_/search";
-import { PondLog } from "./log.schema";
+import { PondLog } from "./schema";
 
 export enum ENUM_POND_LOG {
     /** 如果出现，说明即将关闭程序 */
@@ -23,9 +22,9 @@ export enum ENUM_POND_LOG {
     ALL,
 }
 
-export const POND_LOG_SERVICE_NAME: NodeServiceName = "pond_log"
-export const POND_LOG_PATH: NodeServicePath = "/pond/log"
-export type getPondLogDto<T> = { page: Page<T>, search: Partial<PondLog> }
-export type getPondLogRes = PageRes<PondLog>
-export type postPondLogDto = { dto: PondLog }
-export type postPondLogRes = null
+export const POND_LOG_NAME = "pond:log";
+export const POND_LOG_PATH = "/pond/log";
+export type getPondLogDto<T> = { page: Page<T> };
+export type getPondLogRes = PageRes<PondLog>;
+export type postPondLogDto = { dto: PondLog };
+export type postPondLogRes = null;

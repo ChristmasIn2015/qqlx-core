@@ -17,8 +17,7 @@
     "author": "christmasin2015",
     "license": "ISC",
     "dependencies": {
-        "mongodb": "^4.13.0",
-        "qqlx-cdk": "^0.0.14"
+        "mongodb": "^4.13.0"
     },
     "devDependencies": {
         "typescript": "^5.0.2"
