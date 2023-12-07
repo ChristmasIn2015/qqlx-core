@@ -22,7 +22,7 @@ export type PondDropet = {
     text?: string;
 };
 
-export const POND_DROPET_NAME = "pond:dropet";
+export const POND_DROPET_DROPET = "pond:dropet";
 export const POND_DROPET_PATH = "/pond/dropet";
 export type getPondDropetDto = { name: DropetName };
 export type getPondDropetRes = { name: DropetName; dropet?: PondDropet };

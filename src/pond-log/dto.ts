@@ -22,7 +22,7 @@ export enum ENUM_POND_LOG {
     ALL,
 }
 
-export const POND_LOG_NAME = "pond:log";
+export const POND_LOG_DROPET = "pond:log";
 export const POND_LOG_PATH = "/pond/log";
 export type getPondLogDto<T> = { page: Page<T> };
 export type getPondLogRes = PageRes<PondLog>;
