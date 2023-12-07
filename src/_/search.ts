@@ -18,6 +18,8 @@ export type KeyAccumulatable<T> = { [K in keyof T]: T[K] extends INTEGER_PG | SM
 export type KeySortable<T> = { [K in keyof T]: T[K] extends INTEGER_PG | SMALLINT_PG | BIGINT_PG ? K : never }[keyof T]
 /** 对应值是大数字 */
 export type KeyBigInt<T> = { [K in keyof T]: T[K] extends BIGINT_PG ? K : never }[keyof T]
+/** 对应值是字符串 */
+export type KeyString<T> = { [K in keyof T]: T[K] extends string ? K : never }[keyof T]
 
 // ====================================================================================
 // ====================================================================================
@@ -27,7 +29,7 @@ export type KeyBigInt<T> = { [K in keyof T]: T[K] extends BIGINT_PG ? K : never 
 /** 字符完全匹配条件 */
 export type ConditionMatch<T> = {
     type: ConditionType.Match;
-    key: keyof T;
+    key: KeyString<T>;
     value: string;
 };
 // ====================================================================================
@@ -38,7 +40,7 @@ export type ConditionMatch<T> = {
 /** 字符部分匹配条件 */
 export type ConditionRegExp<T> = {
     type: ConditionType.RegExp;
-    key: keyof T;
+    key: KeyString<T>;
     value: string;
 };
 
