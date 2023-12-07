@@ -11,6 +11,7 @@ export enum ConditionType {
     Time,
 }
 
+
 /** 对应值必须可统计 */
 export type KeyAccumulatable<T> = { [K in keyof T]: T[K] extends INTEGER_PG | SMALLINT_PG ? K : never }[keyof T]
 /** 对应值必须可排序 */
@@ -101,13 +102,16 @@ export type CalcuRes<T> = {
 // ====================================================================================
 // ====================================================================================
 
+
+export type ConditionList<T> = (ConditionMatch<T> | ConditionRegExp<T> | ConditionSort<T> | ConditionTime<T>)[];
+
 /** 分页 */
 export type Page<T> = {
     page: number;
     pageSize: number;
 
-    calcus: Array<Calcu<T>>;
-    conditions: Array<ConditionMatch<T> | ConditionRegExp<T> | ConditionSort<T> | ConditionTime<T>>;
+    calcus: Calcu<T>[];
+    conditions: ConditionList<T>
 };
 
 /** 分页结果 */
@@ -115,5 +119,5 @@ export type PageRes<T> = {
     total: number;
     list: T[];
 
-    calcus: Array<CalcuRes<T>>;
+    calcus: CalcuRes<T>[];
 };
