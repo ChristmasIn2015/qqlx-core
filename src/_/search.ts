@@ -11,6 +11,13 @@ export enum ConditionType {
     Time,
 }
 
+/** 对应值必须可统计 */
+export type KeyAccumulatable<T> = { [K in keyof T]: T[K] extends INTEGER_PG | SMALLINT_PG ? K : never }[keyof T]
+/** 对应值必须可排序 */
+export type KeySortable<T> = { [K in keyof T]: T[K] extends INTEGER_PG | SMALLINT_PG | BIGINT_PG ? K : never }[keyof T]
+/** 对应值是大数字 */
+export type KeyBigInt<T> = { [K in keyof T]: T[K] extends BIGINT_PG ? K : never }[keyof T]
+
 // ====================================================================================
 // ====================================================================================
 // ====================================================================================
@@ -45,7 +52,7 @@ export enum Sortable {
 /** 需要是对象里的 key 并且值的类型要是数字 */
 export type ConditionSort<T> = {
     type: ConditionType.Sort;
-    key: { [K in keyof T]: T[K] extends INTEGER_PG | SMALLINT_PG | BIGINT_PG ? K : never }[keyof T];
+    key: KeySortable<T>;
     value: Sortable;
 };
 // ====================================================================================
@@ -61,7 +68,7 @@ export type TimeFilter = {
 
 export type ConditionTime<T> = {
     type: ConditionType.Time;
-    key: { [K in keyof T]: T[K] extends BIGINT_PG ? K : never }[keyof T];
+    key: KeyBigInt<T>;
     value: TimeFilter;
 };
 
@@ -77,13 +84,13 @@ export enum CalcuType {
 
 /** 统计请求 */
 export type Calcu<T> = {
-    key: { [K in keyof T]: T[K] extends INTEGER_PG | SMALLINT_PG ? K : never }[keyof T];
+    key: KeyAccumulatable<T>;
     type: CalcuType;
 };
 
 /** 统计结果 */
 export type CalcuRes<T> = {
-    key: { [K in keyof T]: T[K] extends INTEGER_PG | SMALLINT_PG ? K : never }[keyof T];
+    key: KeyAccumulatable<T>;
     type: CalcuType;
 
     value: INTEGER_PG | SMALLINT_PG;
