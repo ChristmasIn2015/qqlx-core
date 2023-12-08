@@ -26,17 +26,6 @@ export type KeyString<T> = { [K in keyof T]: T[K] extends string ? K : never }[k
 // ====================================================================================
 // ====================================================================================
 
-/** 字符完全匹配条件 */
-export type ConditionMatch<T> = {
-    type: ConditionType.Match;
-    key: KeyString<T>;
-    value: string;
-};
-// ====================================================================================
-// ====================================================================================
-// ====================================================================================
-// ====================================================================================
-
 /** 字符部分匹配条件 */
 export type ConditionRegExp<T> = {
     type: ConditionType.RegExp;
@@ -105,7 +94,7 @@ export type CalcuRes<T> = {
 // ====================================================================================
 
 
-export type ConditionList<T> = (ConditionMatch<T> | ConditionRegExp<T> | ConditionSort<T> | ConditionTime<T>)[];
+export type ConditionList<T> = (ConditionRegExp<T> | ConditionSort<T> | ConditionTime<T>)[];
 
 /** 分页 */
 export type Page<T> = {
