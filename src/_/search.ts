@@ -1,8 +1,6 @@
 import { BIGINT_PG, INTEGER_PG, SMALLINT_PG } from "./db.pg";
 
 export enum ConditionType {
-    /** 字段完全匹配 */
-    Match,
     /** 字段部分匹配 */
     RegExp,
     /** 排序 */
