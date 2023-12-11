@@ -70,6 +70,6 @@ export * from "./src/_/search";
 export * from "./src/_/translate";
 export * from "./src/_/utils";
 
-export * from "./src/pond-dropet/dto";
+export * from "./src/pond-droplet/dto";
 export * from "./src/pond-log/dto";
 export * from "./src/pond-log/schema";

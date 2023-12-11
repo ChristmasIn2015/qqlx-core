@@ -22,8 +22,8 @@ export enum ENUM_POND_LOG {
     ALL,
 }
 
-export const POND_LOG_DROPET = "pond:log";
-export const POND_LOG_PATH = "/pond/log";
+export const DROPLET_POND_LOG = "pond:log";
+export const PATH_POND_LOG = "/pond/log";
 export type getPondLogDto<T> = { page: Page<T> };
 export type getPondLogRes = PageRes<PondLog>;
 export type postPondLogDto = { dto: PondLog };
