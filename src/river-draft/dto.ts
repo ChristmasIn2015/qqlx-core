@@ -1,30 +1,23 @@
-import { Page, PageRes } from "../_/search";
-import { PondLog } from "./schema";
+import { INTEGER_PG } from "../_/db.pg";
+import { DraftNode } from "./schema";
 
-export enum ENUM_POND_LOG {
-    /** 如果出现，说明即将关闭程序 */
-    OFF,
-    /** 重大错误：有概率无法保证应用程序继续运行 */
-    FATAL,
-    /** 发生已知错误，但是程序一定会继续运行 */
-    ERROR,
-    /** 发生未知错误，但是程序一定会继续运行 */
-    WARN,
-
-    /** 应用程序调试，一般在某些步骤完成时打印 */
-    INFO,
-    /** 应用程序调试，一般用于打印某些变量的值 */
-    DEBUG,
-
-    /** 本系统中表示业务开始 */
-    TRACE,
-    /** 本系统中表示业务完成 */
-    ALL,
+export enum ENUM_DRAFT_NODE_RELATION {
+    /** 无关系 */
+    NONE,
+    /** 所有权 */
+    OWN,
+    /** 联合 */
+    COMBINE,
+    /** 读取 */
+    READONLY,
 }
 
-export const DROPLET_POND_LOG = "pond:log";
-export const PATH_POND_LOG = "/pond/log";
-export type getPondLogDto<T> = { page: Page<T> };
-export type getPondLogRes = PageRes<PondLog>;
-export type postPondLogDto = { dto: PondLog };
-export type postPondLogRes = null;
+export const PATH_RIVER_DRAFT_NODE = "/river/draft/node";
+export type getDraftNodeDto = { ids: INTEGER_PG[] };
+export type getDraftNodeRes = DraftNode[];
+export type postDraftNodeDto = { dto: DraftNode };
+export type postDraftNodeRes = null;
+export type putDraftNodeDto = { dto: DraftNode };
+export type putDraftNodeRes = null;
+export type disableDraftNodeDto = { id: INTEGER_PG };
+export type disableDraftNodeRes = null;

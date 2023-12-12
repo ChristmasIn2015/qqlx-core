@@ -1,16 +1,25 @@
-import { ENUM_BRAND_SCOPE } from "../stream-brand-scope/dto";
 import type { PgBaseSchema, INTEGER_PG, VARCHAR50_PG, VARCHAR_PG } from "../_/db.pg";
 
-export const RELATIONS_RIVER_DRAFT_NODE_NAME = "river_draft_node";
+import { ENUM_ROLE } from "../_/role";
+import { ENUM_DRAFT_NODE_RELATION } from "./dto"
 
-export type RDraftNode = {
-    /** 邀请您为XX项目，绘制工程蓝图 */
-    scope: ENUM_BRAND_SCOPE;
-
-    /** 父节点 */
-    pid: INTEGER_PG;
-    richtext: VARCHAR_PG;
-
+export type DraftNode = {
     title: VARCHAR50_PG;
-    remark: VARCHAR50_PG;
+    richtext: VARCHAR_PG;
 } & PgBaseSchema;
+export const RELATIONS_RIVER_DRAFT_NODE = "river_draft_node";
+
+export type DraftNodeRelation = {
+    nodeId: INTEGER_PG;
+    pid: INTEGER_PG;
+    relation: ENUM_DRAFT_NODE_RELATION;
+} & PgBaseSchema;
+export const RELATIONS_RIVER_DRAFT_NODE_RELATION = "river_draft_node_relation";
+
+/** 添加修改根节点及其内容的时候，判断是否具有权限 */
+export type DraftNodeRole = {
+    userId: INTEGER_PG;
+    rootId: INTEGER_PG;
+    role: ENUM_ROLE;
+} & PgBaseSchema;
+export const RELATIONS_RIVER_DRAFT_NODE_ROLE = "river_draft_node_role";

@@ -1,0 +1,5 @@
+export enum ENUM_LEGO {
+    SMALLINT = 1000,
+    VARCHAR255_PG = 2000,
+    BOOLEAN = 3000,
+}
