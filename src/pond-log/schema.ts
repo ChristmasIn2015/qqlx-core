@@ -1,8 +1,6 @@
 import type { ENUM_POND_LOG } from "./dto";
 import type { PgBaseSchema, BIGINT_PG, VARCHAR_PG, VARCHAR255_PG, SMALLINT_PG } from "../_/db.pg";
 
-export const RELATIONS_POND_LOG = "pond_log";
-
 export type PondLog = {
     type: ENUM_POND_LOG;
 
@@ -13,3 +11,4 @@ export type PondLog = {
     text: VARCHAR_PG;
     duration: SMALLINT_PG;
 } & PgBaseSchema;
+export const RELATIONS_POND_LOG = "pond_log";
