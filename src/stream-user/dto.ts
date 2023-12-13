@@ -21,3 +21,5 @@ export type patchUserWeChatDto = UserWeChat & { clientPhoneCode?: string };
 export type patchUserWeChatRes = null;
 
 export const PATH_USER_TELECOM = "/stream/user/telecom";
+export type postUserTelecomDto = { phone: VARCHAR50_PG };
+export type postUserTelecomRes = UserInfo;

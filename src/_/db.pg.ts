@@ -41,7 +41,6 @@ export type VARCHAR255_PG = string;
 export type PgBaseSchema = {
     id: INTEGER_PG;
     isDisabled: boolean;
-    _id: VARCHAR50_PG;
     timeCreate: BIGINT_PG;
     timeUpdate: BIGINT_PG;
 };
