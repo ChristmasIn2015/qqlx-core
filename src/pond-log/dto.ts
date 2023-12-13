@@ -27,5 +27,5 @@ export const PATH_POND_LOG = "/pond/log";
 
 export type getPondLogDto<T> = { page: Page<T> };
 export type getPondLogRes = PageRes<PondLog>;
-export type postPondLogDto = { dto: PondLog };
+export type postPondLogDto = { schema: PondLog };
 export type postPondLogRes = null;

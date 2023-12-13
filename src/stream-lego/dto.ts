@@ -11,7 +11,7 @@ export enum ENUM_LEGO_VALUE {
 export const DROPLET_STREAM_LEGO_NODE = "stream:lego:node";
 export const PATH_STREAM_LEGO_NODE = "/stream/lego/node";
 
-export type getStreamLogDto = { manualId: VARCHAR50_PG };
+export type getStreamLogDto = { scope: VARCHAR50_PG };
 export type getStreamLogRes = StreamLegoNode[];
 
 /** 新增/更新节点，如果不存在则会新增后返回 */

@@ -4,7 +4,7 @@ import { ENUM_LEGO_VALUE } from "./dto"
 
 export type StreamLegoNode = {
     /** 表名:表中的记录id */
-    manualId: VARCHAR50_PG;
+    scope: VARCHAR50_PG;
 
     type: ENUM_LEGO_VALUE;
     key: VARCHAR50_PG;
