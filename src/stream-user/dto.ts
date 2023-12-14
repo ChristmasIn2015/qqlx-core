@@ -10,16 +10,18 @@ export type UserInfo = {
     joinTelecom?: UserTelecom;
 };
 
+export const PATH_USER = "/stream/user";
+export type getUserDto = null;
+export type getUserRes = UserInfo;
+
 export const PATH_USER_WECHAT = "/stream/user/wechat";
 export type postUserWeChatDto = { wechatResponseCode: string; isWxmp?: boolean };
 export type postUserWeChatRes = UserInfo;
-
-export type getUserWeChatDto = null;
-export type getUserWeChatRes = UserInfo;
-
 export type patchUserWeChatDto = UserWeChat & { clientPhoneCode?: string };
 export type patchUserWeChatRes = null;
 
 export const PATH_USER_TELECOM = "/stream/user/telecom";
-export type postUserTelecomDto = { phone: VARCHAR50_PG };
+export type postUserTelecomDto = { validCode: string, phone: VARCHAR50_PG };
 export type postUserTelecomRes = UserInfo;
+export type patchUserTelecomDto = { validCode: string, phone: VARCHAR50_PG };
+export type patchUserTelecomRes = null;
