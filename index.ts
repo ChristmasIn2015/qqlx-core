@@ -70,11 +70,11 @@ export * from "./src/_/utils";
 
 export * from "./src/droplet-location/dto";
 export * from "./src/pond-log/dto";
-export * from "./src/pond-log/schema";
-
 export * from "./src/pond-lego/dto";
+export * from "./src/pond-user/dto";
+export * from "./src/pond-user-droit/dto";
+
+export * from "./src/pond-log/schema";
 export * from "./src/pond-lego/schema";
-export * from "./src/stream-user/dto";
-export * from "./src/stream-user/schema";
-export * from "./src/stream-user-droit/dto";
-export * from "./src/stream-user-droit/schema";
+export * from "./src/pond-user/schema";
+export * from "./src/pond-user-droit/schema";
