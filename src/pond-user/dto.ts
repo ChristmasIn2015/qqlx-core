@@ -12,7 +12,7 @@ export type UserInfo = {
 
 export const DROPLET_POND_USER = "pond:user";
 export const PATH_USER = "/pond/user";
-export type getUserDto = null;
+export type getUserDto = { Authorization?: string };
 export type getUserRes = UserInfo;
 
 export const PATH_USER_WECHAT = "/pond/user/wechat";
