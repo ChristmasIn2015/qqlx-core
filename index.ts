@@ -68,12 +68,12 @@ export * from "./src/_/search";
 export * from "./src/_/translate";
 export * from "./src/_/utils";
 
-export * from "./src/pond-droplet/dto";
+export * from "./src/droplet-location/dto";
 export * from "./src/pond-log/dto";
 export * from "./src/pond-log/schema";
 
-export * from "./src/stream-lego/dto";
-export * from "./src/stream-lego/schema";
+export * from "./src/pond-lego/dto";
+export * from "./src/pond-lego/schema";
 export * from "./src/stream-user/dto";
 export * from "./src/stream-user/schema";
 export * from "./src/stream-user-droit/dto";
