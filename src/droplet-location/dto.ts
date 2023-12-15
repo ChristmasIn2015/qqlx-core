@@ -12,5 +12,5 @@ export const DROPLET_DROPLET_LOCATION = "droplet:location";
 export const PATH_DROPLET_LOCATION = "/droplet/location";
 export type getDropletLocationDto = { name: string };
 export type getDropletLocationRes = { droplet?: DropletLocation };
-export type patchDropletLocationDto = { droplet: DropletLocation };
+export type patchDropletLocationDto = { key: string; droplet: DropletLocation };
 export type patchDropletLocationRes = null;
