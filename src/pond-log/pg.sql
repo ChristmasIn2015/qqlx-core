@@ -1,6 +1,6 @@
 CREATE TABLE
     IF NOT EXISTS "pond_log" (
-        "type" SMALLINT NOT NULL DEFAULT 3,
+        "type" SMALLINT NOT NULL DEFAULT 1004,
         "title" VARCHAR(50) NOT NULL DEFAULT '',
         "text" VARCHAR(255) NOT NULL DEFAULT '',
         "duration" SMALLINT NOT NULL DEFAULT -1,
