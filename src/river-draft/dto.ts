@@ -2,6 +2,8 @@ import { INTEGER_PG } from "../_/db.pg";
 import { DraftNode, DraftNodeRelation } from "./schema";
 
 export enum ENUM_DRAFT_NODE_RELATION {
+    /** 意外关系 */
+    NONE,
     /** 所有权+父子节点 */
     OWN,
     /** 联合+兄弟节点 */
