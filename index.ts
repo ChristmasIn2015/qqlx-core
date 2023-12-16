@@ -73,8 +73,10 @@ export * from "./src/pond-log/dto";
 export * from "./src/pond-lego/dto";
 export * from "./src/pond-user/dto";
 export * from "./src/pond-user-droit/dto";
+export * from "./src/river-draft/dto";
 
 export * from "./src/pond-log/schema";
 export * from "./src/pond-lego/schema";
 export * from "./src/pond-user/schema";
 export * from "./src/pond-user-droit/schema";
+export * from "./src/river-draft/schema";
