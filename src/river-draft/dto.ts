@@ -10,14 +10,15 @@ export enum ENUM_DRAFT_NODE_RELATION {
     READONLY,
 }
 
+export type DraftNodeRelationJoined = {
+    pNode?: DraftNode;
+    cNode: DraftNode;
+} & DraftNodeRelation;
+
 export const PATH_RIVER_DRAFT_NODE = "/river/draft/node";
 export type getDraftNodeDto = { ids: INTEGER_PG[] };
-export type getDraftNodeRes = DraftNode[];
-
-export type postDraftNodeDto = {
-    schema: DraftNode,
-    relation: DraftNodeRelation
-};
+export type getDraftNodeRes = DraftNodeRelationJoined[];
+export type postDraftNodeDto = { schema: DraftNode; relation: DraftNodeRelation };
 export type postDraftNodeRes = null;
 export type putDraftNodeDto = { entity: DraftNode };
 export type putDraftNodeRes = null;
