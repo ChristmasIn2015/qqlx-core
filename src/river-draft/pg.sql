@@ -11,6 +11,7 @@ CREATE TABLE IF NOT EXISTS "river_draft_node" (
 CREATE TABLE IF NOT EXISTS "river_draft_node_relation" (
     "pid" INTEGER NOT NULL DEFAULT -1,
     "cid" INTEGER NOT NULL DEFAULT -1,
+    "relation" SMALLINT NOT NULL DEFAULT 0,
     
     "id" SERIAL PRIMARY KEY NOT NULL,
     "isDisabled" BOOLEAN NOT NULL DEFAULT false,

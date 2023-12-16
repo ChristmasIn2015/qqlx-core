@@ -5,7 +5,7 @@ import type { INTEGER_PG, PgBaseSchema, VARCHAR50_PG } from "../_/db.pg";
 
 export enum ENUM_USER_DROIT {
     /** 所有权 */
-    OWNER,
+    OWNER = 1001,
     /** 读取 */
     READONLY,
     /** 写入 */

@@ -5,7 +5,7 @@ export enum ENUM_DRAFT_NODE_RELATION {
     /** 意外关系 */
     NONE,
     /** 所有权+父子节点 */
-    OWN,
+    OWN = 1001,
     /** 联合+兄弟节点 */
     COMBINE,
     /** 读取+远程查看 */

@@ -3,7 +3,7 @@ import { PondLog } from "./schema";
 
 export enum ENUM_POND_LOG {
     /** 如果出现，说明即将关闭程序 */
-    OFF,
+    OFF = 1001,
     /** 重大错误：有概率无法保证应用程序继续运行 */
     FATAL,
     /** 发生已知错误，但是程序一定会继续运行 */
