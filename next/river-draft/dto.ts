@@ -4,12 +4,10 @@ import { DraftNode, DraftNodeRelation } from "./schema";
 export enum ENUM_DRAFT_NODE_RELATION {
     /** 意外关系 */
     NONE,
-    /** 所有权+父子节点 */
-    OWN = 1001,
-    /** 联合+兄弟节点 */
-    COMBINE,
-    /** 读取+远程查看 */
-    READONLY,
+    /** 父子节点 */
+    OWNERSHIP = 1001,
+    /** 超越父子关系 */
+    OVERLOAD,
 }
 
 export const PATH_RIVER_DRAFT_NODE = "/river/draft/node";
