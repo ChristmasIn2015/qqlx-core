@@ -1,4 +1,4 @@
-import { VARCHAR50_PG } from "../_/db.pg";
+import { VARCHAR50_PG } from "../../next/_/db.pg";
 import { PondLegoNode } from "./schema";
 
 export enum ENUM_LEGO_VALUE {

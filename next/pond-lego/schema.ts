@@ -1,4 +1,4 @@
-import type { PgBaseSchema, INTEGER_PG, VARCHAR255_PG, VARCHAR50_PG } from "../_/db.pg";
+import type { PgBaseSchema, INTEGER_PG, VARCHAR255_PG, VARCHAR50_PG } from "../../next/_/db.pg";
 
 import { ENUM_LEGO_VALUE } from "./dto";
 

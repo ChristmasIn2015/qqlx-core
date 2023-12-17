@@ -1,5 +1,5 @@
 import type { ENUM_POND_LOG } from "./dto";
-import type { PgBaseSchema, BIGINT_PG, VARCHAR_PG, VARCHAR255_PG, SMALLINT_PG } from "../_/db.pg";
+import type { PgBaseSchema, BIGINT_PG, VARCHAR_PG, VARCHAR255_PG, SMALLINT_PG } from "../../next/_/db.pg";
 
 export type PondLog = {
     type: ENUM_POND_LOG;

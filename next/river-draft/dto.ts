@@ -1,4 +1,4 @@
-import { INTEGER_PG } from "../_/db.pg";
+import { INTEGER_PG } from "../../next/_/db.pg";
 import { DraftNode, DraftNodeRelation } from "./schema";
 
 export enum ENUM_DRAFT_NODE_RELATION {
@@ -12,14 +12,9 @@ export enum ENUM_DRAFT_NODE_RELATION {
     READONLY,
 }
 
-export type DraftNodeRelationJoined = {
-    pNode?: DraftNode;
-    cNode: DraftNode;
-} & DraftNodeRelation;
-
 export const PATH_RIVER_DRAFT_NODE = "/river/draft/node";
 export type getDraftNodeDto = { ids: INTEGER_PG[] };
-export type getDraftNodeRes = DraftNodeRelationJoined[];
+export type getDraftNodeRes = DraftNodeRelation[];
 export type postDraftNodeDto = { schema: DraftNode; relation: DraftNodeRelation };
 export type postDraftNodeRes = null;
 export type putDraftNodeDto = { entity: DraftNode };

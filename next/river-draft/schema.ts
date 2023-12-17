@@ -1,6 +1,6 @@
-import type { PgBaseSchema, INTEGER_PG, VARCHAR50_PG, VARCHAR_PG } from "../_/db.pg";
+import type { PgBaseSchema, INTEGER_PG, VARCHAR50_PG, VARCHAR_PG } from "../../next/_/db.pg";
 
-import { ENUM_DRAFT_NODE_RELATION } from "./dto"
+import { ENUM_DRAFT_NODE_RELATION } from "./dto";
 
 /** 节点本身，包含一个标题，以及富文本 */
 export type DraftNode = {
@@ -17,5 +17,8 @@ export type DraftNodeRelation = {
     pid: INTEGER_PG;
     cid: INTEGER_PG;
     relation: ENUM_DRAFT_NODE_RELATION;
+
+    pNode?: DraftNode;
+    cNode?: DraftNode;
 } & PgBaseSchema;
 export const RELATIONS_RIVER_DRAFT_NODE_RELATION = "river_draft_node_relation";

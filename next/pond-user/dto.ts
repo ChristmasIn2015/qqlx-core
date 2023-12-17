@@ -1,11 +1,10 @@
-import type { PgBaseSchema, VARCHAR50_PG } from "../_/db.pg";
+import type { PgBaseSchema, VARCHAR50_PG } from "../../next/_/db.pg";
 import type { UserWeChat, UserTelecom } from "./schema";
 
 /** 非泄密的用户信息 */
 export type UserInfo = {
     uid: string;
 
-    jwt?: string;
     joinWeChat?: UserWeChat;
     joinTelecom?: UserTelecom;
 };
@@ -17,7 +16,7 @@ export type getUserRes = UserInfo;
 
 export const PATH_USER_WECHAT = "/pond/user/wechat";
 export type postUserWeChatDto = { wechatResponseCode: string; isWxmp?: boolean };
-export type postUserWeChatRes = UserInfo;
+export type postUserWeChatRes = UserInfo & { jwt?: string };
 export type patchUserWeChatDto = UserWeChat & { clientPhoneCode?: string };
 export type patchUserWeChatRes = null;
 

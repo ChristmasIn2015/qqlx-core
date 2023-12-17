@@ -1,6 +1,6 @@
-import type { PgBaseSchema, VARCHAR50_PG } from "../_/db.pg";
+import type { PgBaseSchema, VARCHAR50_PG } from "../../next/_/db.pg";
 
-export type User = { uuid: VARCHAR50_PG; } & PgBaseSchema;
+export type User = { uuid: VARCHAR50_PG } & PgBaseSchema;
 
 /** 微信中的身份 */
 export type UserWeChat = {
