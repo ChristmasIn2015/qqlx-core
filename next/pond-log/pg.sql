@@ -1,5 +1,5 @@
 CREATE TABLE
-    IF NOT EXISTS "stream_log" (
+    IF NOT EXISTS "pond_log" (
         "type" SMALLINT NOT NULL DEFAULT 1004,
         "title" VARCHAR(50) NOT NULL DEFAULT '',
         "text" VARCHAR(255) NOT NULL DEFAULT '',
