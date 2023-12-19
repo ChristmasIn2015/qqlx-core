@@ -1,4 +1,4 @@
-import { Page, PageRes } from "../../next/_/search";
+import { Page, PageRes } from "../_/search";
 import { PondLog } from "./schema";
 
 export enum ENUM_POND_LOG {
