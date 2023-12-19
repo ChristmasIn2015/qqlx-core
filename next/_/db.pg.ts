@@ -14,6 +14,7 @@ export type SMALLINT_PG = number;
  * @integer 整数范围是 ± 2147483647 字符长度是 10
  */
 export type INTEGER_PG = number;
+export type FOREIGN_ID = number | null;
 
 /**
  * @JavaScriptNumber 占八个字节，但是只有 53bit 中文是九千万亿
