@@ -11,7 +11,7 @@ CREATE TABLE
 CREATE TABLE
     IF NOT EXISTS "river_draft_node_relation" (
         "pid" INTEGER NULL REFERENCES river_draft_node(id),
-        "cid" INTEGER NULL REFERENCES river_draft_node(id),
+        "cid" INTEGER NOT NULL REFERENCES river_draft_node(id),
         "relation" SMALLINT NOT NULL DEFAULT 0,
         "id" SERIAL PRIMARY KEY NOT NULL,
         "isDisabled" BOOLEAN NOT NULL DEFAULT false,

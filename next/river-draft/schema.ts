@@ -1,4 +1,4 @@
-import type { PgBaseSchema, INTEGER_PG, VARCHAR50_PG, VARCHAR_PG } from "../../next/_/db.pg";
+import type { PgBaseSchema, INTEGER_PG, FOREIGN_ID, VARCHAR50_PG, VARCHAR_PG } from "../../next/_/db.pg";
 
 import { ENUM_DRAFT_NODE_RELATION } from "./dto";
 
@@ -14,7 +14,7 @@ export const RELATIONS_RIVER_DRAFT_NODE = "river_draft_node";
  * @cid 当前节点
  */
 export type DraftNodeRelation = {
-    pid: INTEGER_PG;
+    pid: FOREIGN_ID;
     cid: INTEGER_PG;
     relation: ENUM_DRAFT_NODE_RELATION;
 
