@@ -8,7 +8,6 @@ export enum ConditionType {
     RegExpStr,
 
     MatchStrOrs = 2001,
-    MatchBoolOrs,
     MatchEnumOrs,
     RegExpStrOrs,
 
