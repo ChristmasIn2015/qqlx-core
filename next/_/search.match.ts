@@ -9,7 +9,6 @@ export enum ConditionType {
 
     MatchStrOrs = 2001,
     MatchEnumOrs,
-    RegExpStrOrs,
 
     Time = 3001,
     Sort = 4001,
@@ -56,11 +55,6 @@ export type ConditionRegExpStr<T> = {
     key: KeyString<T>;
     value: string;
 };
-export type ConditionRegExpStrOrs<T> = {
-    type: ConditionType.RegExpStrOrs;
-    key: KeyString<T>;
-    value: string[];
-};
 
 // ====================================================================================
 
@@ -98,7 +92,6 @@ export type ConditionList<T> = (
     | ConditionMatchEnum<T>
     | ConditionMatchEnumOrs<T>
     | ConditionRegExpStr<T>
-    | ConditionRegExpStrOrs<T>
     | ConditionSort<T>
     | ConditionTime<T>
 )[];
