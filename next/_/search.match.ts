@@ -5,10 +5,12 @@ export enum ConditionType {
     MatchStr = 1001,
     MatchBool,
     MatchEnum,
+    MatchInteger,
     RegExpStr,
 
     MatchStrOrs = 2001,
     MatchEnumOrs,
+    MatchIntegerOrs,
 
     Time = 3001,
     Sort = 4001,
@@ -46,6 +48,19 @@ export type ConditionMatchEnumOrs<T> = {
     type: ConditionType.MatchEnumOrs;
     key: KeyAccumulatable<T>;
     value: (INTEGER_PG | SMALLINT_PG)[];
+};
+
+// ==================================================================================== 3
+
+export type ConditionMatchInteger<T> = {
+    type: ConditionType.MatchInteger;
+    key: KeyAccumulatable<T>;
+    value: INTEGER_PG;
+};
+export type ConditionMatchIntegerOrs<T> = {
+    type: ConditionType.MatchInteger;
+    key: KeyAccumulatable<T>;
+    value: (INTEGER_PG)[];
 };
 
 // ==================================================================================== 4
@@ -91,6 +106,8 @@ export type ConditionList<T> = (
     | ConditionMatchBool<T>
     | ConditionMatchEnum<T>
     | ConditionMatchEnumOrs<T>
+    | ConditionMatchInteger<T>
+    | ConditionMatchIntegerOrs<T>
     | ConditionRegExpStr<T>
     | ConditionSort<T>
     | ConditionTime<T>
