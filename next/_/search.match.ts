@@ -58,7 +58,7 @@ export type ConditionMatchInteger<T> = {
     value: INTEGER_PG;
 };
 export type ConditionMatchIntegerOrs<T> = {
-    type: ConditionType.MatchInteger;
+    type: ConditionType.MatchIntegerOrs;
     key: KeyAccumulatable<T>;
     value: (INTEGER_PG)[];
 };
