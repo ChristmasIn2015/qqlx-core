@@ -50,10 +50,10 @@ export type ConditionMatchEnumOrs<T> = {
 
 // ==================================================================================== 4
 
-export type ConditionRegExpStr<T> = {
+export type ConditionRegExp<T> = {
     type: ConditionType.RegExpStr;
     key: KeyString<T>;
-    value: string;
+    value: RegExp;
 };
 
 // ====================================================================================
@@ -91,7 +91,7 @@ export type ConditionList<T> = (
     | ConditionMatchBool<T>
     | ConditionMatchEnum<T>
     | ConditionMatchEnumOrs<T>
-    | ConditionRegExpStr<T>
+    | ConditionRegExp<T>
     | ConditionSort<T>
     | ConditionTime<T>
 )[];
