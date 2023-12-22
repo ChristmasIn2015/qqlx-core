@@ -1,7 +1,7 @@
 import { Page, PageRes } from "../_/search";
-import { PondLog } from "./schema";
+import { StreamLog } from "./schema";
 
-export enum ENUM_POND_LOG {
+export enum ENUM_STREAM_LOG {
     /** 如果出现，说明即将关闭程序 */
     OFF = 1001,
     /** 重大错误：有概率无法保证应用程序继续运行 */
@@ -22,10 +22,10 @@ export enum ENUM_POND_LOG {
     ALL,
 }
 
-export const DROPLET_POND_LOG = "pond:log";
-export const PATH_POND_LOG = "/pond/log";
+export const DROPLET_STREAM_LOG = "stream:log";
+export const PATH_STREAM_LOG = "/stream/log";
 
-export type getPondLogDto<T> = { page: Page<T> };
-export type getPondLogRes = PageRes<PondLog>;
-export type postPondLogDto = { schema: PondLog };
-export type postPondLogRes = null;
+export type getStreamLogDto<T> = { page: Page<T> };
+export type getStreamLogRes = PageRes<StreamLog>;
+export type postStreamLogDto = { schema: StreamLog };
+export type postStreamLogRes = null;

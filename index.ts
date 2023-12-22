@@ -16,8 +16,8 @@ export * from "./next/stream-user/dto";
 
 export * from "./next/pond-lego/schema";
 export * from "./next/pond-lego/dto";
-export * from "./next/pond-log/schema";
-export * from "./next/pond-log/dto";
+export * from "./next/stream-log/schema";
+export * from "./next/stream-log/dto";
 
 export * from "./next/river-draft/schema";
 export * from "./next/river-draft/dto";
