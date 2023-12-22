@@ -12,10 +12,13 @@ export enum ENUM_DRAFT_NODE_RELATION {
 
 export const PATH_RIVER_DRAFT_NODE = "/river/draft/node";
 /** 添加新节点
- * @relation 没有 relation 就说明在添加根节点
- * @relation 有 relation 说明在添加和某个父节点在添加关系
+ * @pid 没有就说明在添加根节点
  */
-export type postDraftNodeDto = { schema: DraftNode; relation?: DraftNodeRelation };
+export type postDraftNodeDto = {
+    schema: DraftNode;
+    pid?: INTEGER_PG,
+    relation?: ENUM_DRAFT_NODE_RELATION
+};
 export type postDraftNodeRes = null;
 /** 返回所有节点，在前端组装视图 */
 export type getDraftNodeDto = null;
@@ -38,5 +41,5 @@ export type postDraftNodeRelationRes = null;
 export type putDraftNodeRelationDto = { entity: DraftNodeRelation };
 export type putDraftNodeRelationRes = null;
 /** 删除除了父子关系以外的新关系 */
-export type deleteDraftNodeRelationDto = { id: INTEGER_PG };
+export type deleteDraftNodeRelationDto = { relaid: INTEGER_PG };
 export type deleteDraftNodeRelationRes = null;

@@ -9,8 +9,8 @@ export * from "./next/_/utils";
 
 export * from "./next/droplet-host/dto";
 
-export * from "./next/stream-user-droit/schema";
-export * from "./next/stream-user-droit/dto";
+export * from "./next/pond-identity/schema";
+export * from "./next/pond-identity/dto";
 export * from "./next/stream-user/schema";
 export * from "./next/stream-user/dto";
 
