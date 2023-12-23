@@ -1,5 +1,5 @@
 import type { PondIdentityGroup, PondIdentity, PondIdentityGroupUser } from "./schema";
-import type { INTEGER_PG, PgBaseSchema, VARCHAR255_PG, VARCHAR50_PG } from "../_/db.pg";
+import type { INTEGER_PG, PgBaseSchema, VARCHAR255_PG, VARCHAR50_PG } from "../../_/db.pg";
 
 export const PATH_POND_IDENTITY_GROUP = "/pond/identity/group";
 /** 每个业务系统必须保证，权限范围中的资源所有权，必须和提交者一致
@@ -25,7 +25,7 @@ export type deletePondIdentityRes = null;
 export const PATH_POND_IDENTITY_GROUP_USER = "/pond/identity/group/user";
 /** 资源范围中的所有者才能添加/删除具体的外部访客
  * @important 一般会把这个实体交给各个业务系统，业务系统再通过身份组微服务去判断发起者是否有权限进一步在业务系统中继续操作
-*/
+ */
 export type postPondIdentityGroupUserDto = { schema: PondIdentityGroupUser };
 export type postPondIdentityGroupUserRes = null;
 export type deletePondIdentityGroupUserDto = { id: INTEGER_PG };

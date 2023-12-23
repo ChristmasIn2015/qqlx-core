@@ -9,7 +9,7 @@ export type DropletHost = {
 };
 
 export const PATH_DROPLET_HOST = "/droplet/host";
-export const DROPLET_DROPLET_HOST = PATH_DROPLET_HOST.replace(/\//, "").replace(/\//, ":");
+export const DROPLET_DROPLET_HOST = PATH_DROPLET_HOST.replace(/\//, "").replace(/\//g, ":");
 export type getDropletHostDto = { key: string };
 export type getDropletHostRes = DropletHost;
 export type patchDropletHostDto = { key: string; schema: DropletHost };

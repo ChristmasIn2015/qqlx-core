@@ -1,4 +1,4 @@
-import { INTEGER_PG } from "../../next/_/db.pg";
+import { INTEGER_PG } from "../../_/db.pg";
 import { DraftNode, DraftNodeRelation } from "./schema";
 
 export enum ENUM_DRAFT_NODE_RELATION {
@@ -16,8 +16,8 @@ export const PATH_RIVER_DRAFT_NODE = "/river/draft/node";
  */
 export type postDraftNodeDto = {
     schema: DraftNode;
-    pid?: INTEGER_PG,
-    relation?: ENUM_DRAFT_NODE_RELATION
+    pid?: INTEGER_PG;
+    relation?: ENUM_DRAFT_NODE_RELATION;
 };
 export type postDraftNodeRes = null;
 /** 返回所有节点，在前端组装视图 */

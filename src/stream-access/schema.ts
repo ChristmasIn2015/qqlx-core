@@ -1,4 +1,4 @@
-import type { PgBaseSchema, INTEGER_PG, VARCHAR50_PG, VARCHAR_PG, VARCHAR255_PG } from "../_/db.pg";
+import type { PgBaseSchema, INTEGER_PG, VARCHAR50_PG, VARCHAR_PG, VARCHAR255_PG } from "../../_/db.pg";
 import type { UserInfo } from "../stream-user/dto";
 
 export enum ENUM_POND_IDENTITY {

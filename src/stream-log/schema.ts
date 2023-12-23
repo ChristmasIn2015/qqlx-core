@@ -1,5 +1,4 @@
-import { Page, PageRes } from "../_/search";
-import { StreamLog } from "./schema";
+import type { PgBaseSchema, BIGINT_PG, VARCHAR_PG, VARCHAR255_PG, SMALLINT_PG } from "../../_/db.pg";
 
 export enum ENUM_STREAM_LOG {
     /** 如果出现，说明即将关闭程序 */
@@ -22,10 +21,14 @@ export enum ENUM_STREAM_LOG {
     ALL,
 }
 
-export const DROPLET_STREAM_LOG = "stream:log";
-export const PATH_STREAM_LOG = "/stream/log";
+export type StreamLog = {
+    type: ENUM_STREAM_LOG;
 
-export type getStreamLogDto<T> = { page: Page<T> };
-export type getStreamLogRes = PageRes<StreamLog>;
-export type postStreamLogDto = { schema: StreamLog };
-export type postStreamLogRes = null;
+    /** 用分号分隔的，多个具有含义的字符串，一般记录来源等没有排序要求的内容
+     * @demo IP;追踪链路;REST路径
+     */
+    title: VARCHAR255_PG;
+    text: VARCHAR_PG;
+    duration: SMALLINT_PG;
+} & PgBaseSchema;
+export const RELATIONS_STREAM_LOG = "stream_log";
