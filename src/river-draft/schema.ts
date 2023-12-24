@@ -3,12 +3,13 @@ import type { PgBaseSchema, INTEGER_PG, VARCHAR50_PG, VARCHAR_PG, SMALLINT_PG } 
 import { ENUM_DRAFT_NODE_RELATION } from "./dto";
 
 /** 节点本身，包含一个标题，以及富文本
- * @isRoot 是否是根节点
+ * @rid 和 id 对比是否是根节点
  */
 export type DraftNode = {
     title: VARCHAR50_PG;
     richtext: VARCHAR_PG;
-    isRoot: boolean;
+
+    rid: INTEGER_PG;
 } & PgBaseSchema;
 export const RELATIONS_RIVER_DRAFT_NODE = "river_draft_node";
 
