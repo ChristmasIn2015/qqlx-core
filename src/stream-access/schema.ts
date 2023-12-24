@@ -20,7 +20,7 @@ export type StreamAccessGroup = {
     desc: VARCHAR255_PG;
     scope: VARCHAR255_PG;
 
-    joinIdentities?: StreamAccess[];
+    joinAccessList?: StreamAccess[];
     joinUserInfo?: UserInfo[];
 } & PgBaseSchema;
 export const RELATIONS_STREAM_ACCESS_GROUP = "stream_access_group";
