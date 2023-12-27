@@ -4,8 +4,10 @@ import type { UserInfo } from "../stream-user/dto";
 export enum ENUM_STREAM_ACCESS {
     /** 读取 */
     READONLY = 1001,
-    /** 写入/修改 */
-    WRITE,
+    /** 写入 */
+    CREATE,
+    /** 修改 */
+    EDIT,
     /** 删除 */
     DELETE,
 }
