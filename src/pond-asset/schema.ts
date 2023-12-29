@@ -1,41 +1,25 @@
-import type { PgBaseSchema, INTEGER_PG, VARCHAR50_PG, VARCHAR_PG, SMALLINT_PG, VARCHAR255_PG } from "../../_/db.pg";
+import type { PgBaseSchema, INTEGER_PG, VARCHAR50_PG, SMALLINT_PG, VARCHAR255_PG } from "../../_/db.pg";
+import type { _Owner } from "../stream-user/schema"
 
-/** 资产 */
-export type CommonAsset = {
-    uid: VARCHAR50_PG;
-    uuid: VARCHAR50_PG;
+export enum ENUM_ASSET {
+    CORP = 1001,
+    ESTATE,
+    FUND_ACCOUNT,
+
+    /** 便签，用于标记产地、材质等... */
+    MARK,
+}
+
+/** 法人的资产
+ * @name 全称
+ * @address 地址
+ * @contact 联系方式
+*/
+export type Asset = PgBaseSchema & _Owner & {
+    type: ENUM_ASSET;
     name: VARCHAR50_PG;
     desc: VARCHAR255_PG;
     address: VARCHAR255_PG;
     contact: VARCHAR255_PG;
     remark: VARCHAR255_PG;
-} & PgBaseSchema;
-
-/** 经济主体
- * @name 全称
- * @address 办公地址
- * @contact 办公联系
-*/
-export type Corp = {} & CommonAsset & PgBaseSchema;
-
-/** 房产
- * @name 仓库名称
- * @address 仓库地址
- * @contact 仓库联系
-*/
-export type Estate = {} & CommonAsset & PgBaseSchema;
-
-/** 资金账户
- * @name 开户行全称
- * @address 开户行地址
- * @contact 开户行账号
-*/
-export type FundAccount = {} & CommonAsset & PgBaseSchema;
-
-/** 便签
-*/
-export type Mark = {} & CommonAsset & PgBaseSchema;
-
-/** 公式
-*/
-export type Formula = {} & CommonAsset & PgBaseSchema;
+};

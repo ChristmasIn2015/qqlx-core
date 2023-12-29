@@ -3,7 +3,7 @@ import type { UserWeChat, UserTelecom } from "./schema";
 
 /** 非泄密的用户信息 */
 export type UserInfo = {
-    uid: string;
+    uuid32: string;
 
     joinWeChat?: UserWeChat;
     joinTelecom?: UserTelecom;

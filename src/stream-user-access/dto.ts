@@ -1,4 +1,4 @@
-import type { StreamAccessGroup, StreamAccess, StreamAccessGroupUser } from "./schema";
+import type { StreamAccessGroup, StreamAccessGroupUser } from "./schema";
 import type { INTEGER_PG, PgBaseSchema, VARCHAR255_PG, VARCHAR50_PG } from "../../_/db.pg";
 
 export const PATH_STREAM_ACCESS_GROUP = "/pond/access/group";
@@ -13,14 +13,6 @@ export type putStreamAccessGroupDto = { entity: StreamAccessGroup };
 export type putStreamAccessGroupRes = null;
 export type deleteStreamAccessGroupDto = { id: INTEGER_PG };
 export type deleteStreamAccessGroupRes = null;
-
-export const PATH_STREAM_ACCESS = "/pond/access";
-export const DROPLET_STREAM_ACCESS = PATH_STREAM_ACCESS.replace(/\//, "").replace(/\//, ":");
-/** 资源范围中的所有者才能添加/删除具体的权限明细 */
-export type postStreamAccessDto = { schema: StreamAccess };
-export type postStreamAccessRes = null;
-export type deleteStreamAccessDto = { id: INTEGER_PG };
-export type deleteStreamAccessRes = null;
 
 export const PATH_STREAM_ACCESS_GROUP_USER = "/pond/access/group/user";
 /** 资源范围中的所有者才能添加/删除具体的外部访客

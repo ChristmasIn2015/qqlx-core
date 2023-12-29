@@ -1,26 +1,5 @@
 import type { MongodbBase, EnumMapOption } from "qqlx-cdk";
 
-/** 订单分类 */
-export enum ENUM_ORDER {
-    /** 无 */
-    NONE = 0,
-    /** 采购单，Sku由于和库存没关系，不需要进行确认 */
-    PURCHASE = 2000,
-    /** 销售单，Sku由于和库存没关系，不需要进行确认 */
-    SALES = 3000,
-    /** 入库单，Sku确认后，需要创建对应 @cabinetUnit */
-    GETIN = 4001,
-    /** 加工单，Sku确认后，需要创建对应 @cabinetUnit */
-    PROCESS = 4002,
-    /** 发货单，Sku确认后，需要创建对应 @cabinetUnit 并且重新计算 @deductionSku 对应的Sku库存 */
-    GETOUT = 4003,
-    /** 领料单，Sku确认后，需要创建对应 @cabinetUnit 并且重新计算 @deductionSku 对应的Sku库存 */
-    MATERIAL = 4004,
-    /** 运输单*商家配送 */
-    TRANSFORM_MERCHANT = 5001,
-    /** 运输单*上门自提 */
-    TRANSFORM_CUSTOMER = 5002,
-}
 
 const MAP_ENUM_ORDER = new Map<ENUM_ORDER, EnumMapOption>();
 MAP_ENUM_ORDER.set(ENUM_ORDER.NONE, { value: ENUM_ORDER.NONE, text: "无" });
