@@ -1,12 +1,15 @@
 import type { PgBaseSchema, INTEGER_PG, VARCHAR50_PG, VARCHAR_PG, SMALLINT_PG, VARCHAR255_PG } from "./db.pg";
 
-/** 通用商品（仅用于继承） */
+/** 通用商品（仅用于继承）
+ * @tax 税率
+ */
 export type _Sku = {
     name: VARCHAR50_PG;
     norm: VARCHAR255_PG;
     remark: VARCHAR255_PG;
     price: INTEGER_PG;
     unit: INTEGER_PG;
+    tax: SMALLINT_PG
 };
 
 /** 通用库存（仅用于继承） */

@@ -7,7 +7,7 @@ export enum ENUM_ASSET {
     FUND_ACCOUNT,
 
     /** 便签，用于标记产地、材质等... */
-    MARK,
+    MARK = 2001,
 }
 
 /** 法人的资产
