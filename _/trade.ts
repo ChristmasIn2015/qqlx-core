@@ -1,7 +1,28 @@
 import type { PgBaseSchema, INTEGER_PG, VARCHAR50_PG, VARCHAR_PG, SMALLINT_PG, VARCHAR255_PG } from "./db.pg";
 
+/** 通用订单（仅用于继承）
+ * @tradeId 交易事项
+ * @payId 支付事项
+ * @sideName 我方单位
+ * @opSideName 对手单位
+ * @amountTax 合计税额
+*/
+export type _Order = {
+    tradeId: INTEGER_PG;
+
+    sideName: VARCHAR50_PG;
+    opSideName: VARCHAR50_PG;
+    amount: INTEGER_PG;
+    amountTax: INTEGER_PG;
+
+    code: VARCHAR50_PG;
+    remark: VARCHAR255_PG;
+    timeContract: string;
+};
+
 /** 通用商品（仅用于继承）
- * @tax 税率
+ * @price 单价
+ * @tax 税率，如13%
  */
 export type _Sku = {
     name: VARCHAR50_PG;
@@ -25,13 +46,4 @@ export type _SkuInventory = {
     ivCount: INTEGER_PG;
     /** 库存重量（入库+加工-出库） */
     ivTon: INTEGER_PG;
-};
-
-/** 通用订单（仅用于继承）
- * @amount 单位是分
- */
-export type _Order = {
-    gid: INTEGER_PG;
-    amount: number;
-    remark: VARCHAR255_PG;
 };

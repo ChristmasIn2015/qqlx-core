@@ -2,8 +2,14 @@ import type { PgBaseSchema, INTEGER_PG, VARCHAR50_PG, SMALLINT_PG, VARCHAR255_PG
 import type { _Owner } from "../stream-user/schema"
 
 export enum ENUM_ASSET {
+
+    /** 经济主体（中国大陆） */
     CORP = 1001,
+
+    /** 房产（中国大陆） */
     ESTATE,
+
+    /** 银行账户（中国大陆） */
     FUND_ACCOUNT,
 
     /** 便签，用于标记产地、材质等... */

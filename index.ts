@@ -1,4 +1,3 @@
-export * from "./_/db.mongo";
 export * from "./_/db.pg";
 export * from "./_/error";
 export * from "./_/search.arithmetic";
