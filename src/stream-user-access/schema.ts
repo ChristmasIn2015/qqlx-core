@@ -8,7 +8,7 @@ import type { _Owner } from "../stream-user/schema";
  * @droit 前四位是预留位置，后四位代表着:添加删除修改查询
  * @droit 如 9 代表着 0000,1001 代表着此用户仅有添加和查询权限
  */
-export type StreamAccessGroup = PgBaseSchema & _Owner & {
+export type StreamUserAccessGroup = PgBaseSchema & _Owner & {
     name: VARCHAR50_PG;
     desc: VARCHAR255_PG;
     scope: VARCHAR255_PG;
@@ -19,7 +19,7 @@ export type StreamAccessGroup = PgBaseSchema & _Owner & {
 export const RELATIONS_STREAM_ACCESS_GROUP = "stream_access_group";
 
 /** 哪些外部访客在群组中 */
-export type StreamAccessGroupUser = PgBaseSchema & _Owner & {
+export type StreamUserAccess = PgBaseSchema & _Owner & {
     gid: INTEGER_PG;
 
     joinUserInfo?: UserInfo;
