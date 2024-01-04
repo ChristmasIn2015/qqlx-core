@@ -21,14 +21,14 @@ export enum ENUM_STREAM_LOG {
     ALL,
 }
 
-export type StreamLog = {
+export type StreamLog = PgBaseSchema & {
     type: ENUM_STREAM_LOG;
 
     /** 用分号分隔的，多个具有含义的字符串，一般记录来源等没有排序要求的内容
-     * @demo IP;追踪链路;REST路径
+     * @demo IP;REST路径;追踪链路;
      */
     title: VARCHAR255_PG;
     text: VARCHAR_PG;
     duration: SMALLINT_PG;
-} & PgBaseSchema;
+};
 export const RELATIONS_STREAM_LOG = "stream_log";

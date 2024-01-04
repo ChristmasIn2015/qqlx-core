@@ -22,11 +22,3 @@ export * from "./src/droplet-host/dto";
 /** 日志（sql） */
 export * from "./src/stream-log/schema";
 export * from "./src/stream-log/dto";
-
-export * from "./src/todo=stream-user-access/schema";
-export * from "./src/todo=stream-user-access/dto";
-export * from "./src/todo=stream-user/schema";
-export * from "./src/todo=stream-user/dto";
-
-export * from "./src/todo=river-draft/schema";
-export * from "./src/todo=river-draft/dto";
