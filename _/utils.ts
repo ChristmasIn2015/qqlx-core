@@ -1,10 +1,5 @@
-// import { Corp } from "../brand/corp.schema";
-// import { UserInfo } from "../user/user.dto";
-
 import { VARCHAR255_PG, VARCHAR50_PG } from "./db.pg";
 
-/** JSON字符串 */
-export type JSONStr = string;
 
 export type Response<T> = {
     code: number;

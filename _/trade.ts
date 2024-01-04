@@ -8,8 +8,6 @@ import type { PgBaseSchema, INTEGER_PG, VARCHAR50_PG, VARCHAR_PG, SMALLINT_PG, V
  * @amountTax 合计税额
 */
 export type _Order = {
-    tradeId: INTEGER_PG;
-
     sideName: VARCHAR50_PG;
     opSideName: VARCHAR50_PG;
     amount: INTEGER_PG;
