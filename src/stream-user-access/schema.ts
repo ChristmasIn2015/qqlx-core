@@ -16,7 +16,7 @@ export type StreamUserAccessGroup = PgBaseSchema & _Owner & {
 
     joinUserInfo?: UserInfo;
 };
-export const RELATIONS_STREAM_ACCESS_GROUP = "stream_access_group";
+export const RELATIONS_STREAM_USER_ACCESS_GROUP = "stream_user_access_group";
 
 /** 哪些外部访客在群组中 */
 export type StreamUserAccess = PgBaseSchema & _Owner & {
@@ -24,4 +24,4 @@ export type StreamUserAccess = PgBaseSchema & _Owner & {
 
     joinUserInfo?: UserInfo;
 };
-export const RELATIONS_STREAM_ACCESS_GROUP_USER = "stream_access_group_user";
+export const RELATIONS_STREAM_USER_ACCESS = "stream_user_access";
