@@ -10,7 +10,7 @@ export type UserInfo = {
 };
 
 export const PATH_STREAM_USER = "/stream/user";
-export const DROPLET_STREAM_USER = PATH_STREAM_USER.replace(/\//, "").replace(/\//g, ":");
+export const DROPLET_STREAM_USER = "stream:user";
 export type getStreamUserDto = { Authorization?: string };
 export type getStreamUserRes = UserInfo;
 

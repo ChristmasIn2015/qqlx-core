@@ -16,9 +16,11 @@ export * from "./_/translate";
 /** 通用 */
 export * from "./_/utils";
 
-/** 通用 */
-export * from "./src/droplet-host/dto";
 
-/** 日志（sql） */
-export * from "./src/stream-log/schema";
+export * from "./src/droplet-host/dto"; /** 配置中心 */
+export * from "./src/stream-log/schema"; /** 日志（sql） */
 export * from "./src/stream-log/dto";
+export * from "./src/stream-user/schema"; /** 用户（sql） */
+export * from "./src/stream-user/dto";
+export * from "./src/stream-user-access/schema"; /** 用户权限（sql） */
+export * from "./src/stream-user-access/dto";

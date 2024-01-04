@@ -1,6 +1,6 @@
 import type { PgBaseSchema, INTEGER_PG, VARCHAR50_PG, VARCHAR_PG, VARCHAR255_PG, SMALLINT_PG } from "../../_/db.pg";
-import type { UserInfo } from "../todo=stream-user/dto";
-import type { _Owner } from "../todo=stream-user/schema";
+import type { UserInfo } from "../stream-user/dto";
+import type { _Owner } from "../stream-user/schema";
 
 /** 某个业务中，可能有许多的身份组
  * @scope 指出资源范围，如 brand:corp:10001:sale
@@ -14,12 +14,14 @@ export type StreamAccessGroup = PgBaseSchema & _Owner & {
     scope: VARCHAR255_PG;
     droit: SMALLINT_PG;
 
-    joinUserInfo?: UserInfo[];
+    joinUserInfo?: UserInfo;
 };
 export const RELATIONS_STREAM_ACCESS_GROUP = "stream_access_group";
 
 /** 哪些外部访客在群组中 */
 export type StreamAccessGroupUser = PgBaseSchema & _Owner & {
     gid: INTEGER_PG;
+
+    joinUserInfo?: UserInfo;
 };
 export const RELATIONS_STREAM_ACCESS_GROUP_USER = "stream_access_group_user";
