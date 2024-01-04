@@ -21,7 +21,7 @@ export enum ENUM_ASSET {
  * @address 地址
  * @contact 联系方式
 */
-export type Asset = PgBaseSchema & _Owner & {
+export type PondAsset = PgBaseSchema & _Owner & {
     type: ENUM_ASSET;
     name: VARCHAR50_PG;
     desc: VARCHAR255_PG;

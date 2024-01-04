@@ -4,7 +4,6 @@ import type { _Owner } from "../stream-user/schema";
 /** 素材分组
 */
 export type MediaGroup = PgBaseSchema & _Owner & {
-    uid: VARCHAR50_PG;
     name: VARCHAR50_PG;
     remark: VARCHAR255_PG;
 }
