@@ -24,3 +24,5 @@ export * from "./src/stream-user/schema"; /** 用户（sql） */
 export * from "./src/stream-user/dto";
 export * from "./src/stream-user-access/schema"; /** 用户权限（sql） */
 export * from "./src/stream-user-access/dto";
+export * from "./src/river-draft/schema"; /** 草图（sql） */
+export * from "./src/river-draft/dto";
