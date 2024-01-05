@@ -6,7 +6,7 @@ CREATE TABLE
         "timeUpdate" BIGINT NOT NULL DEFAULT 0,
         "uuid32" VARCHAR(50) NOT NULL DEFAULT '',
         "title" VARCHAR(50) NOT NULL DEFAULT '',
-        "richtext" VARCHAR NOT NULL DEFAULT '',
+        "richtext" VARCHAR NOT NULL DEFAULT ''
     );
 
 CREATE TABLE
@@ -20,5 +20,5 @@ CREATE TABLE
         "cid" INTEGER NOT NULL REFERENCES river_draft_node(id),
         "isRoot" BOOLEAN NOT NULL DEFAULT false,
         "relation" SMALLINT NOT NULL DEFAULT 1000,
-        "order" SMALLINT NOT NULL DEFAULT -1,
+        "order" SMALLINT NOT NULL DEFAULT -1
     );

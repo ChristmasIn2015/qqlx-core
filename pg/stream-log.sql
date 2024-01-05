@@ -7,5 +7,5 @@ CREATE TABLE
         "type" SMALLINT NOT NULL DEFAULT 1004,
         "title" VARCHAR(255) NOT NULL DEFAULT '',
         "text" VARCHAR NOT NULL DEFAULT '',
-        "duration" SMALLINT NOT NULL DEFAULT -1,
+        "duration" SMALLINT NOT NULL DEFAULT -1
     );

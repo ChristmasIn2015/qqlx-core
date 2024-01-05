@@ -8,7 +8,7 @@ CREATE TABLE
         "name" VARCHAR(50) NOT NULL DEFAULT '',
         "desc" VARCHAR(255) NOT NULL DEFAULT '',
         "scope" VARCHAR(255) NOT NULL DEFAULT '',
-        "droit" SMALLINT NOT NULL DEFAULT 0,
+        "droit" SMALLINT NOT NULL DEFAULT 0
     );
 
 CREATE TABLE
@@ -18,5 +18,5 @@ CREATE TABLE
         "timeCreate" BIGINT NOT NULL DEFAULT 0,
         "timeUpdate" BIGINT NOT NULL DEFAULT 0,
         "uuid32" VARCHAR(50) NOT NULL DEFAULT '',
-        "gid" INTEGER NOT NULL REFERENCES stream_access_group(id),
+        "gid" INTEGER NOT NULL REFERENCES stream_access_group(id)
     );

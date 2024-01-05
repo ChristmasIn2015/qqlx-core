@@ -4,7 +4,7 @@ CREATE TABLE
         "isDisabled" BOOLEAN NOT NULL DEFAULT false,
         "timeCreate" BIGINT NOT NULL DEFAULT 0,
         "timeUpdate" BIGINT NOT NULL DEFAULT 0,
-        "uuid32" VARCHAR(50) NOT NULL DEFAULT '',
+        "uuid32" VARCHAR(50) NOT NULL DEFAULT ''
     );
 
 CREATE TABLE
@@ -16,7 +16,7 @@ CREATE TABLE
         "uuid32" VARCHAR(50) NOT NULL DEFAULT '',
         "unionId" VARCHAR(50) NOT NULL DEFAULT '',
         "nickname" VARCHAR(50) NOT NULL DEFAULT '',
-        "avator" VARCHAR(255) NOT NULL DEFAULT '',
+        "avator" VARCHAR(255) NOT NULL DEFAULT ''
     );
 
 CREATE TABLE
@@ -26,5 +26,5 @@ CREATE TABLE
         "timeCreate" BIGINT NOT NULL DEFAULT 0,
         "timeUpdate" BIGINT NOT NULL DEFAULT 0,
         "uuid32" VARCHAR(50) NOT NULL DEFAULT '',
-        "phone" VARCHAR(50) NOT NULL DEFAULT '',
+        "phone" VARCHAR(50) NOT NULL DEFAULT ''
     );
