@@ -15,7 +15,7 @@ export * from "./_/translate";
 
 /** 通用 */
 export * from "./_/utils";
-
+export * from "./src-development/pg-tuple.schema"; /** 测试 */
 
 export * from "./src/droplet-host/dto"; /** 配置中心 */
 export * from "./src/stream-log/schema"; /** 日志（sql） */

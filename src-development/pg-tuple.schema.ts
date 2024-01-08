@@ -1,4 +1,4 @@
-import type { PgBaseSchema, INTEGER_PG, VARCHAR50_PG, VARCHAR_PG, BIGINT_PG, VARCHAR255_PG, SMALLINT_PG } from "../../_/db.pg";
+import type { PgBaseSchema, INTEGER_PG, VARCHAR50_PG, VARCHAR_PG, BIGINT_PG, VARCHAR255_PG, SMALLINT_PG } from "../_/db.pg";
 
 export enum ENUM_PG_TEST_TUPLE {
     DEFAULT = 1000,
