@@ -1,6 +1,6 @@
 {
     "name": "qqlx-core",
-    "version": "2.1.10",
+    "version": "2.1.11",
     "description": "",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
