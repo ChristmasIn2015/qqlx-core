@@ -30,7 +30,7 @@ CREATE TABLE
     );
 
 CREATE TABLE
-    IF NOT EXISTS "stream_user_telecom" (
+    IF NOT EXISTS "stream_user_email" (
         "id" SERIAL PRIMARY KEY NOT NULL,
         "isDisabled" BOOLEAN NOT NULL DEFAULT false,
         "timeCreate" BIGINT NOT NULL DEFAULT 0,
