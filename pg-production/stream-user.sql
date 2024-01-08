@@ -28,3 +28,13 @@ CREATE TABLE
         "uuid32" VARCHAR(50) NOT NULL DEFAULT '',
         "phone" VARCHAR(50) NOT NULL DEFAULT ''
     );
+
+CREATE TABLE
+    IF NOT EXISTS "stream_user_telecom" (
+        "id" SERIAL PRIMARY KEY NOT NULL,
+        "isDisabled" BOOLEAN NOT NULL DEFAULT false,
+        "timeCreate" BIGINT NOT NULL DEFAULT 0,
+        "timeUpdate" BIGINT NOT NULL DEFAULT 0,
+        "uuid32" VARCHAR(50) NOT NULL DEFAULT '',
+        "email" VARCHAR(50) NOT NULL DEFAULT ''
+    );

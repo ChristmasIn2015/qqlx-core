@@ -1,5 +1,4 @@
 import type { PgBaseSchema, INTEGER_PG, VARCHAR50_PG, VARCHAR_PG, VARCHAR255_PG, SMALLINT_PG } from "../../_/db.pg";
-import type { UserInfo } from "../stream-user/dto";
 import type { _Owner } from "../stream-user/schema";
 
 /** 某个业务中，可能有许多的身份组
@@ -13,15 +12,13 @@ export type StreamUserAccessGroup = PgBaseSchema & _Owner & {
     desc: VARCHAR255_PG;
     scope: VARCHAR255_PG;
     droit: SMALLINT_PG;
-
-    joinUserInfo?: UserInfo;
 };
 export const RELATIONS_STREAM_USER_ACCESS_GROUP = "stream_user_access_group";
+
 
 /** 哪些外部访客在群组中 */
 export type StreamUserAccess = PgBaseSchema & _Owner & {
     gid: INTEGER_PG;
-
-    joinUserInfo?: UserInfo;
 };
 export const RELATIONS_STREAM_USER_ACCESS = "stream_user_access";
+

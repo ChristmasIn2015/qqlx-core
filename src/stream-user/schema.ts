@@ -6,10 +6,7 @@ export type _Owner = {
 }
 
 /** 唯一用户 */
-export type StreamUser = PgBaseSchema & _Owner & {
-    joinUserWeChat?: UserWeChat;
-    joinUserTelecom?: UserTelecom;
-};
+export type StreamUser = PgBaseSchema & _Owner;
 export const RELATIONS_STREAM_USER = "stream_user";
 
 /** 微信中的身份
@@ -27,3 +24,9 @@ export type UserTelecom = PgBaseSchema & _Owner & {
     phone: VARCHAR50_PG;
 }
 export const RELATIONS_STREAM_USER_TELECOM = "stream_user_telecom";
+
+/** 邮箱中的身份 */
+export type UserEmail = PgBaseSchema & _Owner & {
+    email: VARCHAR50_PG;
+}
+export const RELATIONS_STREAM_USER_EMAIL = "stream_user_email";
