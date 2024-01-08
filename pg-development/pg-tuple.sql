@@ -1,5 +1,5 @@
 CREATE TABLE
-    IF NOT EXISTS "pg_dao_schema" (
+    IF NOT EXISTS "pg_test_tuple" (
         "id" SERIAL PRIMARY KEY NOT NULL,
         "isDisabled" BOOLEAN NOT NULL DEFAULT false,
         "timeCreate" BIGINT NOT NULL DEFAULT 0,

@@ -13,7 +13,6 @@ export type DraftNode = PgBaseSchema & _Owner & {
 export const RELATIONS_RIVER_DRAFT_NODE = "river_draft_node";
 
 /** 节点之间的关系
- * @rid 根节点，例如可以根据根节点查询下一层所有子节点
  * @pid 父节点，例如可以根据根节点查询下一层所有子节点
  * @cid 当前节点
  */
