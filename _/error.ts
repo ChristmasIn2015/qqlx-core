@@ -13,6 +13,8 @@ export enum ENUM_ERROR_CODE {
     AUTHORIZED_NONE = 40101,
     /** 当前身份认证已过期 */
     AUTHORIZED_BELOW = 40102,
+    /** 已在其他地方登录 */
+    AUTHORIZED_REPEAT = 40103,
 
     /** 权限不足 */
     AUTHORIZATION_BELOW = 40301,
