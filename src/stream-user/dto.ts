@@ -23,7 +23,7 @@ export type putStreamUserWeChatRes = null;
 
 export const PATH_STREAM_USER_TELECOM = "/stream/user/telecom";
 export type postStreamUserTelecomDto = { code: string; phone: VARCHAR50_PG };
-export type postStreamUserTelecomRes = UserInfo;
+export type postStreamUserTelecomRes = UserInfo & { jwt?: string };
 export type putStreamUserTelecomDto = { code: string; phone: VARCHAR50_PG };
 export type putStreamUserTelecomRes = null;
 
@@ -34,7 +34,7 @@ export type getStreamUserTelecomCodeRes = null
 
 export const PATH_STREAM_USER_EMAIL = "/stream/user/email";
 export type postStreamUserEmailDto = { code: string; email: VARCHAR50_PG };
-export type postStreamUserEmailRes = UserInfo;
+export type postStreamUserEmailRes = UserInfo & { jwt?: string };
 export type putStreamUserEmailDto = { code: string; email: VARCHAR50_PG };
 export type putStreamUserEmailRes = null;
 
