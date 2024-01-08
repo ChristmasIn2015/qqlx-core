@@ -13,7 +13,7 @@ export type UserInfo = {
 export const PATH_STREAM_USER = "/stream/user";
 export const DROPLET_STREAM_USER = "stream:user";
 export type getStreamUserDto = null // 获取当前用户信息
-export type getStreamUserRes = { authorization: string };
+export type getStreamUserRes = UserInfo;
 export type putStreamUserDto = { timeExpire: number }; // 指定登录失效时间
 export type putStreamUserRes = { authorization: string };
 
