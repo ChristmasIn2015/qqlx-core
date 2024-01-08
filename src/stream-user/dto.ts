@@ -26,6 +26,8 @@ export type postStreamUserTelecomDto = { code: string; phone: VARCHAR50_PG };
 export type postStreamUserTelecomRes = UserInfo;
 export type putStreamUserTelecomDto = { code: string; phone: VARCHAR50_PG };
 export type putStreamUserTelecomRes = null;
+
+export const PATH_STREAM_USER_TELECOM_CODE = "/stream/user/telecom/code";
 // 短信验证码
 export type getStreamUserTelecomCodeDto = { phone: VARCHAR50_PG }
 
@@ -34,5 +36,7 @@ export type postStreamUserEmailDto = { code: string; email: VARCHAR50_PG };
 export type postStreamUserEmailRes = UserInfo;
 export type putStreamUserEmailDto = { code: string; email: VARCHAR50_PG };
 export type putStreamUserEmailRes = null;
+
+export const PATH_STREAM_USER_EMAIL_CODE = "/stream/user/email/code";
 // 邮箱验证码
 export type getStreamUserEmailCodeDto = { email: VARCHAR50_PG }
