@@ -9,5 +9,5 @@ CREATE TABLE
         "text" VARCHAR NOT NULL DEFAULT '',
         "cpu" SMALLINT NOT NULL DEFAULT -1,
         "memery" SMALLINT NOT NULL DEFAULT -1,
-        "duration" SMALLINT NOT NULL DEFAULT -1,
+        "duration" SMALLINT NOT NULL DEFAULT -1
     );
