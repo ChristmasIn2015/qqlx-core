@@ -10,5 +10,5 @@ CREATE TABLE
         "str" VARCHAR NOT NULL DEFAULT '',
         "num_4" INTEGER NOT NULL DEFAULT 0,
         "num_8" BIGINT NOT NULL DEFAULT 0,
-        "boolean_default" BOOLEAN NOT NULL DEFAULT false,
+        "boolean_default" BOOLEAN NOT NULL DEFAULT false
     );
