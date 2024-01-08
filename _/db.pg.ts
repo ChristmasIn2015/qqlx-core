@@ -37,4 +37,18 @@ export type PgBaseSchema = {
     timeUpdate: BIGINT_PG;
 };
 
-export const SHANGHAI_POSTGRESQL_DROPLET = "SHANGHAI_POSTGRESQL_DROPLET";
+export const DROPLET_SHANGHAI_POSTGRESQL = "DROPLET_SHANGHAI_POSTGRESQL";
+
+export enum ENUM_PG_DAO {
+    DEFAULT = 1000,
+    PRIMARY
+}
+export type PgDaoSchema = PgBaseSchema & {
+    enum_small_int: ENUM_PG_DAO;
+    str_50: VARCHAR50_PG;
+    str_255: VARCHAR255_PG;
+    str: VARCHAR_PG;
+    num_4: INTEGER_PG;
+    num_8: BIGINT_PG;
+    boolean_default: Boolean;
+}
