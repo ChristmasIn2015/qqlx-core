@@ -14,16 +14,19 @@ export const PATH_STREAM_USER = "/stream/user";
 export const DROPLET_STREAM_USER = "stream:user";
 export type getStreamUserDto = { Authorization?: string };
 export type getStreamUserRes = UserInfo;
+/** 指定几点钟登录失效（默认5天） */
+export type putStreamUserDto = { timeExpire: number };
+export type putStreamUserRes = UserInfo;
 
 export const PATH_STREAM_USER_WECHAT = "/stream/user/wechat";
 export type postStreamUserWeChatDto = { codeByWeChatRemote: string; isWxmp?: boolean };
-export type postStreamUserWeChatRes = UserInfo & { jwt?: string };
+export type postStreamUserWeChatRes = { authorization?: string };
 export type putStreamUserWeChatDto = UserWeChat & { codeByWeChatClient?: string };
 export type putStreamUserWeChatRes = null;
 
 export const PATH_STREAM_USER_TELECOM = "/stream/user/telecom";
 export type postStreamUserTelecomDto = { code: string; phone: VARCHAR50_PG };
-export type postStreamUserTelecomRes = UserInfo & { jwt?: string };
+export type postStreamUserTelecomRes = { authorization?: string };
 export type putStreamUserTelecomDto = { code: string; phone: VARCHAR50_PG };
 export type putStreamUserTelecomRes = null;
 
@@ -34,7 +37,7 @@ export type getStreamUserTelecomCodeRes = null
 
 export const PATH_STREAM_USER_EMAIL = "/stream/user/email";
 export type postStreamUserEmailDto = { code: string; email: VARCHAR50_PG };
-export type postStreamUserEmailRes = UserInfo & { jwt?: string };
+export type postStreamUserEmailRes = { authorization?: string };
 export type putStreamUserEmailDto = { code: string; email: VARCHAR50_PG };
 export type putStreamUserEmailRes = null;
 
