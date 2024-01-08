@@ -29,6 +29,14 @@ export type StreamLog = PgBaseSchema & {
      */
     title: VARCHAR255_PG;
     text: VARCHAR_PG;
+
+    /** CPU使用率（每分钟） */
+    cpu: SMALLINT_PG;
+
+    /** 占用内存（MB） */
+    memery: SMALLINT_PG;
+
+    /** 占用时长（ms） */
     duration: SMALLINT_PG;
 };
 export const RELATIONS_STREAM_LOG = "stream_log";
