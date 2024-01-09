@@ -20,17 +20,23 @@ export type UserWeChat = PgBaseSchema & _Owner & {
     unionId: VARCHAR50_PG;
     nickname: VARCHAR50_PG;
     avator: VARCHAR255_PG;
+
+    joinStreamUser?: StreamUser
 };
 export const RELATIONS_STREAM_USER_WECHAT = "stream_user_wechat";
 
 /** 通信运营商中的身份 */
 export type UserTelecom = PgBaseSchema & _Owner & {
     phone: VARCHAR50_PG;
+
+    joinStreamUser?: StreamUser
 }
 export const RELATIONS_STREAM_USER_TELECOM = "stream_user_telecom";
 
 /** 邮箱中的身份 */
 export type UserEmail = PgBaseSchema & _Owner & {
     email: VARCHAR50_PG;
+
+    joinStreamUser?: StreamUser
 }
 export const RELATIONS_STREAM_USER_EMAIL = "stream_user_email";

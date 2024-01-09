@@ -13,7 +13,7 @@ CREATE TABLE
         "isDisabled" BOOLEAN NOT NULL DEFAULT false,
         "timeCreate" BIGINT NOT NULL DEFAULT 0,
         "timeUpdate" BIGINT NOT NULL DEFAULT 0,
-        "uuid32" VARCHAR(50) NOT NULL REFERENCES stream_user("uuid32"),
+        "uuid32" VARCHAR(50) NOT NULL REFERENCES "stream_user"("uuid32"),
         "unionId" VARCHAR(50) NOT NULL DEFAULT '',
         "nickname" VARCHAR(50) NOT NULL DEFAULT '',
         "avator" VARCHAR(255) NOT NULL DEFAULT ''
