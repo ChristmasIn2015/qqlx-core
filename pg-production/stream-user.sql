@@ -4,7 +4,7 @@ CREATE TABLE
         "isDisabled" BOOLEAN NOT NULL DEFAULT false,
         "timeCreate" BIGINT NOT NULL DEFAULT 0,
         "timeUpdate" BIGINT NOT NULL DEFAULT 0,
-        "uuid32" VARCHAR(50) NOT NULL DEFAULT ''
+        "uuid32" UUID PRIMARY KEY DEFAULT uuid_generate_v4()
     );
 
 CREATE TABLE
