@@ -1,6 +1,6 @@
 CREATE TABLE
     IF NOT EXISTS "stream_user" (
-        "id" SERIAL PRIMARY KEY NOT NULL,
+        "id" SERIAL NOT NULL,
         "isDisabled" BOOLEAN NOT NULL DEFAULT false,
         "timeCreate" BIGINT NOT NULL DEFAULT 0,
         "timeUpdate" BIGINT NOT NULL DEFAULT 0,
