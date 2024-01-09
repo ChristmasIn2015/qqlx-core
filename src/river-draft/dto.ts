@@ -10,11 +10,6 @@ export enum ENUM_DRAFT_NODE_RELATION {
     OVERLOAD,
 }
 
-export type DraftNodeRelationJoined = DraftNodeRelation & {
-    joinParentNode?: DraftNode;
-    joinCurrentNode?: DraftNode;
-}
-
 export const PATH_RIVER_DRAFT_NODE = "/river/draft/node";
 /** 添加新节点
  * @pid 没有就说明在添加根节点
@@ -29,7 +24,7 @@ export type postDraftNodeRes = null;
 export type getDraftNodeDto = null;
 export type getDraftNodeRes = {
     rootNodeList: DraftNode[];
-    relationList: DraftNodeRelationJoined[];
+    relationList: DraftNodeRelation[];
 };
 /** 仅仅修改节点内容 */
 export type putDraftNodeDto = { entity: DraftNode };

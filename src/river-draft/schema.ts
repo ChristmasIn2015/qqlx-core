@@ -23,5 +23,8 @@ export type DraftNodeRelation = PgBaseSchema & _Owner & {
 
     relation: ENUM_DRAFT_NODE_RELATION;
     order: SMALLINT_PG;
+
+    joinParentNode?: DraftNode;
+    joinCurrentNode?: DraftNode;
 };
 export const RELATIONS_RIVER_DRAFT_NODE_RELATION = "river_draft_node_relation";

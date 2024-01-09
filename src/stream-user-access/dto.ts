@@ -2,13 +2,8 @@ import type { StreamUserAccessGroup, StreamUserAccess } from "./schema";
 import type { INTEGER_PG, PgBaseSchema, VARCHAR255_PG, VARCHAR50_PG } from "../../_/db.pg";
 import type { UserInfo } from "../stream-user/dto";
 
-export type StreamUserAccessJoined = StreamUserAccess & {
-    joinStreamAccessGroup?: StreamUserAccessGroup
-    joinUserInfo?: UserInfo
-}
-
 export type StreamUserAccessGroupJoined = StreamUserAccessGroup & {
-    userAccessList: StreamUserAccessJoined[]
+    userAccessList: StreamUserAccess[]
 }
 
 export const PATH_STREAM_USER_ACCESS_GROUP = "/pond/user/access/group";
@@ -24,11 +19,11 @@ export type deleteStreamAccessGroupRes = null;
 
 /** 根据范围获取群组 */
 export type getStreamAccessGroupByScopeDto = { scope: VARCHAR255_PG };
-export type getStreamAccessGroupByScopeDtoRes = StreamUserAccessJoined[];
+export type getStreamAccessGroupByScopeDtoRes = StreamUserAccess[];
 
 /** 根据用户获取群组 */
 export type getStreamAccessGroupByOwnerDto = { uuid32: VARCHAR50_PG };
-export type getStreamAccessGroupByOwnerDtoRes = StreamUserAccessJoined[];
+export type getStreamAccessGroupByOwnerDtoRes = StreamUserAccess[];
 
 export const PATH_STREAM_USER_ACCESS = "/pond/user/access";
 /** 资源范围中的所有者才能添加/删除具体的外部访客
