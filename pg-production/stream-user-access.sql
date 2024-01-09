@@ -4,7 +4,7 @@ CREATE TABLE
         "isDisabled" BOOLEAN NOT NULL DEFAULT false,
         "timeCreate" BIGINT NOT NULL DEFAULT 0,
         "timeUpdate" BIGINT NOT NULL DEFAULT 0,
-        "uuid32" VARCHAR(50) NOT NULL DEFAULT '',
+        "uuid32" VARCHAR(50) NOT NULL REFERENCES stream_user("uuid32"),
         "name" VARCHAR(50) NOT NULL DEFAULT '',
         "desc" VARCHAR(255) NOT NULL DEFAULT '',
         "scope" VARCHAR(255) NOT NULL DEFAULT '',
@@ -17,6 +17,6 @@ CREATE TABLE
         "isDisabled" BOOLEAN NOT NULL DEFAULT false,
         "timeCreate" BIGINT NOT NULL DEFAULT 0,
         "timeUpdate" BIGINT NOT NULL DEFAULT 0,
-        "uuid32" VARCHAR(50) NOT NULL DEFAULT '',
+        "uuid32" VARCHAR(50) NOT NULL REFERENCES stream_user("uuid32"),
         "gid" INTEGER NOT NULL REFERENCES stream_access_group(id)
     );

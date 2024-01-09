@@ -7,9 +7,9 @@ export type _Owner = {
 
 /** 唯一用户 */
 export type StreamUser = PgBaseSchema & _Owner & {
-    joinWeChat?: UserWeChat;
-    joinTelecom?: UserTelecom;
-    joinEmail?: UserEmail;
+    joinWeChatList?: UserWeChat[];
+    joinTelecomList?: UserTelecom[];
+    joinEmailList?: UserEmail[];
 };
 export const RELATIONS_STREAM_USER = "stream_user";
 
