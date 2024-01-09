@@ -4,7 +4,7 @@ CREATE TABLE
         "isDisabled" BOOLEAN NOT NULL DEFAULT false,
         "timeCreate" BIGINT NOT NULL DEFAULT 0,
         "timeUpdate" BIGINT NOT NULL DEFAULT 0,
-        "uuid32" UUID PRIMARY KEY DEFAULT uuid_generate_v4()
+        "uuid32" UUID DEFAULT uuid_generate_v4() PRIMARY KEY
     );
 
 CREATE TABLE
@@ -13,7 +13,7 @@ CREATE TABLE
         "isDisabled" BOOLEAN NOT NULL DEFAULT false,
         "timeCreate" BIGINT NOT NULL DEFAULT 0,
         "timeUpdate" BIGINT NOT NULL DEFAULT 0,
-        "uuid32" VARCHAR(50) NOT NULL REFERENCES "stream_user"("uuid32"),
+        "uuid32" UUID NOT NULL REFERENCES "stream_user"("uuid32"),
         "unionId" VARCHAR(50) NOT NULL DEFAULT '',
         "nickname" VARCHAR(50) NOT NULL DEFAULT '',
         "avator" VARCHAR(255) NOT NULL DEFAULT ''
@@ -25,7 +25,7 @@ CREATE TABLE
         "isDisabled" BOOLEAN NOT NULL DEFAULT false,
         "timeCreate" BIGINT NOT NULL DEFAULT 0,
         "timeUpdate" BIGINT NOT NULL DEFAULT 0,
-        "uuid32" VARCHAR(50) NOT NULL REFERENCES stream_user("uuid32"),
+        "uuid32" UUID NOT NULL REFERENCES stream_user("uuid32"),
         "phone" VARCHAR(50) NOT NULL DEFAULT ''
     );
 
@@ -35,6 +35,6 @@ CREATE TABLE
         "isDisabled" BOOLEAN NOT NULL DEFAULT false,
         "timeCreate" BIGINT NOT NULL DEFAULT 0,
         "timeUpdate" BIGINT NOT NULL DEFAULT 0,
-        "uuid32" VARCHAR(50) NOT NULL REFERENCES stream_user("uuid32"),
+        "uuid32" UUID NOT NULL REFERENCES stream_user("uuid32"),
         "email" VARCHAR(50) NOT NULL DEFAULT ''
     );
