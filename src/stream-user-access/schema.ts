@@ -13,6 +13,8 @@ export type StreamUserAccessGroup = PgBaseSchema & _Owner & {
     desc: VARCHAR255_PG;
     scope: VARCHAR255_PG;
     droit: SMALLINT_PG;
+
+    joinUserAccessList: StreamUserAccess[]
 };
 export const RELATIONS_STREAM_USER_ACCESS_GROUP = "stream_user_access_group";
 

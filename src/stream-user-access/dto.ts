@@ -2,10 +2,6 @@ import type { StreamUserAccessGroup, StreamUserAccess } from "./schema";
 import type { INTEGER_PG, PgBaseSchema, VARCHAR255_PG, VARCHAR50_PG } from "../../_/db.pg";
 import type { UserInfo } from "../stream-user/dto";
 
-export type StreamUserAccessGroupJoined = StreamUserAccessGroup & {
-    userAccessList: StreamUserAccess[]
-}
-
 export const PATH_STREAM_USER_ACCESS_GROUP = "/pond/user/access/group";
 /** 每个业务系统必须保证，权限范围中的资源所有权，必须和提交者一致
  * @scope 例如 brand:corp:10001:sale 主体的所有者必须是提交者

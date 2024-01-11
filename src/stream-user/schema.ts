@@ -1,9 +1,5 @@
 import type { PgBaseSchema, VARCHAR255_PG, VARCHAR50_PG } from "../../_/db.pg";
 
-export type _Owner = {
-    /** 32位uuid 用于唯一标识用户 */
-    uuid32: VARCHAR50_PG;
-}
 
 /** 唯一用户 */
 export type StreamUser = PgBaseSchema & _Owner & {
@@ -12,6 +8,10 @@ export type StreamUser = PgBaseSchema & _Owner & {
     joinEmailList?: UserEmail[];
 };
 export const RELATIONS_STREAM_USER = "stream_user";
+
+/** 资源是哪个用户的 */
+export type _Owner = { uuid32: VARCHAR50_PG; }
+
 
 /** 微信中的身份
  * @unionId 用户在 “开放平台” “公众平台” 唯一标识
