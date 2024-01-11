@@ -5,9 +5,9 @@ import type { UserWeChat, UserTelecom, UserEmail } from "./schema";
 export type UserInfo = {
     uuid32: string;
 
-    joinWeChatList?: UserWeChat;
-    joinTelecomList?: UserTelecom;
-    joinEmailList?: UserEmail;
+    joinWeChatList?: UserWeChat[];
+    joinTelecomList?: UserTelecom[];
+    joinEmailList?: UserEmail[];
 };
 
 export const PATH_STREAM_USER = "/stream/user";
