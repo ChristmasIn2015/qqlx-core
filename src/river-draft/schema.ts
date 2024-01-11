@@ -22,7 +22,7 @@ export type DraftNodeRelation = PgBaseSchema & _Owner & {
     isRoot: Boolean;
 
     relation: ENUM_DRAFT_NODE_RELATION;
-    order: SMALLINT_PG;
+    sequence: SMALLINT_PG;
 
     joinParentNode?: DraftNode;
     joinCurrentNode?: DraftNode;

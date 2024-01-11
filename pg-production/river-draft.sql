@@ -20,5 +20,5 @@ CREATE TABLE
         "cid" INTEGER NOT NULL REFERENCES river_draft_node(id),
         "isRoot" BOOLEAN NOT NULL DEFAULT false,
         "relation" SMALLINT NOT NULL DEFAULT 1000,
-        "order" SMALLINT NOT NULL DEFAULT -1
+        "sequence" SMALLINT NOT NULL DEFAULT -1
     );

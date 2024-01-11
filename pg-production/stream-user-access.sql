@@ -8,7 +8,8 @@ CREATE TABLE
         "name" VARCHAR(50) NOT NULL DEFAULT '',
         "desc" VARCHAR(255) NOT NULL DEFAULT '',
         "scope" VARCHAR(255) NOT NULL DEFAULT '',
-        "droit" SMALLINT NOT NULL DEFAULT 0
+        "droit" SMALLINT NOT NULL DEFAULT 0,
+        "sequence" SMALLINT NOT NULL DEFAULT 0,
     );
 
 CREATE TABLE
