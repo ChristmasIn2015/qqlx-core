@@ -9,7 +9,7 @@ CREATE TABLE
         "desc" VARCHAR(255) NOT NULL DEFAULT '',
         "scope" VARCHAR(255) NOT NULL DEFAULT '',
         "droit" SMALLINT NOT NULL DEFAULT 0,
-        "sequence" SMALLINT NOT NULL DEFAULT 0,
+        "sequence" SMALLINT NOT NULL DEFAULT 0
     );
 
 CREATE TABLE
