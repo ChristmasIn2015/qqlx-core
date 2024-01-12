@@ -5,8 +5,8 @@ import { ConditionList } from "../../_/search.match";
 
 export const PATH_STREAM_USER_ACCESS_GROUP = "/stream/user/access/group";
 /** @uuid32 查看 “我” 的权限组 */
-export type getStreamAccessGroupByScopeDto = { uuid32: VARCHAR50_PG };
-export type getStreamAccessGroupByScopeDtoRes = StreamUserAccessGroup[];
+export type getStreamAccessGroupDto = null;
+export type getStreamAccessGroupDtoRes = StreamUserAccessGroup[];
 export type postStreamAccessGroupDto = { schema: StreamUserAccessGroup };
 export type postStreamAccessGroupRes = null;
 export type putStreamAccessGroupDto = { entity: StreamUserAccessGroup };
