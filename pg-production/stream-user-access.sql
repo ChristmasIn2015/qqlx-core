@@ -1,5 +1,5 @@
 CREATE TABLE
-    IF NOT EXISTS "stream_user_access" (
+    IF NOT EXISTS "stream_user_access_group" (
         "id" SERIAL PRIMARY KEY NOT NULL,
         "isDisabled" BOOLEAN NOT NULL DEFAULT false,
         "timeCreate" BIGINT NOT NULL DEFAULT 0,
@@ -13,11 +13,11 @@ CREATE TABLE
     );
 
 CREATE TABLE
-    IF NOT EXISTS "stream_user_access_group" (
+    IF NOT EXISTS "stream_user_access" (
         "id" SERIAL PRIMARY KEY NOT NULL,
         "isDisabled" BOOLEAN NOT NULL DEFAULT false,
         "timeCreate" BIGINT NOT NULL DEFAULT 0,
         "timeUpdate" BIGINT NOT NULL DEFAULT 0,
         "uuid32" UUID NOT NULL REFERENCES stream_user("uuid32"),
-        "gid" INTEGER NOT NULL REFERENCES stream_access_group(id)
+        "gid" INTEGER NOT NULL REFERENCES stream_user_access_group(id)
     );
