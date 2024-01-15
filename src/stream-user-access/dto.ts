@@ -15,13 +15,14 @@ export type deleteStreamAccessGroupDto = { id: INTEGER_PG };
 export type deleteStreamAccessGroupRes = null;
 
 export const PATH_STREAM_USER_ACCESS = "/stream/user/access";
+export const DROPLET_STREAM_USER_ACCESS = "stream:user:access";
 /** 明细权限查询
  * @gid 查看权限组中的所有明细权限
  * @uuid32 查看 “我” 被授予的的权限
 */
-export type getStreamAccessByOwnerDto = { conditions: ConditionList<StreamUserAccess> };
-export type getStreamAccessByOwnerDtoRes = StreamUserAccess[];
-export type postStreamAccessGroupUserDto = { schema: StreamUserAccess };
-export type postStreamAccessGroupUserRes = null;
-export type deleteStreamAccessGroupUserDto = { id: INTEGER_PG };
-export type deleteStreamAccessGroupUserRes = null;
+export type getStreamAccessDto = { conditions: ConditionList<StreamUserAccess> };
+export type getStreamAccessDtoRes = StreamUserAccess[];
+export type postStreamAccessDto = { schema: StreamUserAccess };
+export type postStreamAccessRes = null;
+export type deleteStreamAccessDto = { id: INTEGER_PG };
+export type deleteStreamAccessRes = null;
