@@ -1,7 +1,7 @@
 import type { StreamUserAccessGroup, StreamUserAccess } from "./schema";
 import type { INTEGER_PG, PgBaseSchema, VARCHAR255_PG, VARCHAR50_PG } from "../../_/db.pg";
 import type { UserInfo } from "../stream-user/dto";
-import { ConditionList, ConditionMatchStr } from "../../_/search.match";
+import { ConditionList, ConditionMatchInteger, ConditionMatchStr } from "../../_/search.match";
 
 export const PATH_STREAM_USER_ACCESS_GROUP = "/stream/user/access/group";
 /** @uuid32 查看 “我” 的权限组 */
@@ -20,7 +20,7 @@ export const DROPLET_STREAM_USER_ACCESS = "stream:user:access";
  * @gid 查看权限组中的所有明细权限
  * @uuid32 查看 “我” 被授予的的权限
 */
-export type getStreamAccessDto = { condition: ConditionMatchStr<StreamUserAccess> };
+export type getStreamAccessDto = { gid: ConditionMatchInteger<StreamUserAccess> };
 export type getStreamAccessRes = StreamUserAccess[];
 export type postStreamAccessDto = { schema: StreamUserAccess };
 export type postStreamAccessRes = null;
