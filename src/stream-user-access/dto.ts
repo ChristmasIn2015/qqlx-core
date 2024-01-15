@@ -21,7 +21,7 @@ export const DROPLET_STREAM_USER_ACCESS = "stream:user:access";
  * @uuid32 查看 “我” 被授予的的权限
 */
 export type getStreamAccessDto = { conditions: ConditionList<StreamUserAccess> };
-export type getStreamAccessDtoRes = StreamUserAccess[];
+export type getStreamAccessRes = StreamUserAccess[];
 export type postStreamAccessDto = { schema: StreamUserAccess };
 export type postStreamAccessRes = null;
 export type deleteStreamAccessDto = { id: INTEGER_PG };
