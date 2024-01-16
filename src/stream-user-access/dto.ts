@@ -22,6 +22,10 @@ export const DROPLET_STREAM_USER_ACCESS = "stream:user:access";
 */
 export type getStreamAccessDto = { gid: ConditionMatchInteger<StreamUserAccess> };
 export type getStreamAccessRes = StreamUserAccess[];
+
+/** 获取权限组-令牌中的所有用户 */
+export type getStreamAccessUserDto = { scope: string };
+export type getStreamAccessUserRes = StreamUserAccess[];
 export type postStreamAccessDto = { schema: StreamUserAccess };
 export type postStreamAccessRes = null;
 export type deleteStreamAccessDto = { id: INTEGER_PG };

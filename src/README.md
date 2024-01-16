@@ -8,7 +8,7 @@
 
 -   stream-log：全链路日志，它不应该使用下面的任何服务
 -   stream-user：全链路用户鉴权，同上
--   stream-access：自定义权限控制
+-   stream-user-access：自定义权限控制
 
 ## 任意搭配的中台服务
 
