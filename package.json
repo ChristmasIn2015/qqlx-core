@@ -7,9 +7,9 @@
     "scripts": {
         "build": "tsc && git add . && git commit -m updates",
         "commit": "npm run build && git push",
-        "patch": "npm run commit && npm version patch && git push && npm publish",
-        "minor": "npm run commit && npm version minor && git push && npm publish",
-        "major": "npm run commit && npm version major && git push && npm publish"
+        "patch": "npm run commit && npm version patch && git push && npm publish --registry=http://static.qqlx.tech/verdaccio",
+        "minor": "npm run commit && npm version minor && git push && npm publish --registry=http://static.qqlx.tech/verdaccio",
+        "major": "npm run commit && npm version major && git push && npm publish --registry=http://static.qqlx.tech/verdaccio"
     },
     "keywords": [
         "qqlx"
